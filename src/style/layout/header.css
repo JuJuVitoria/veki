@@ -2,10 +2,6 @@
     --header-height: 60px;
 }
 
-body {
-    padding-top: var(--header-height);
-}
-
 .header {
     position: fixed;
     top: 0;
@@ -17,6 +13,7 @@ body {
     background-color: var(--white);
     box-shadow: var(--shadow-01);
     padding: 0.5rem 2rem;
+    margin-top: var(--alert-emergencias-ativas-height);
     height: var(--header-height);
     z-index: 1000;
 }
@@ -46,7 +43,8 @@ body {
     height: 3rem;
 }
 
-.menu-toggle__open, .menu-toggle__close {
+.menu-toggle__open,
+.menu-toggle__close {
     fill: var(--black);
 }
 
@@ -104,7 +102,7 @@ body {
 .header__nav-item:hover .header__nav-link {
     color: var(--dark-purple);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    background-color: rgba(67, 34, 115, 0.05); 
+    background-color: rgba(67, 34, 115, 0.05);
 }
 
 .header__button {
@@ -117,14 +115,14 @@ body {
     .header {
         padding: 0.5rem 1rem;
     }
-    
+
     .header__menu-toggle {
         display: block;
     }
-    
+
     .header__actions {
         position: fixed;
-        top: calc(var(--header-height) + 18px); 
+        top: calc(var(--header-height) + var(--alert-emergencias-ativas-height) + 18px);
         right: 0;
         width: 70%;
         height: calc(100vh - var(--header-height));
@@ -137,30 +135,41 @@ body {
         transition: transform 0.3s ease-in-out;
         z-index: 1000;
     }
-    
+
     .header__actions[data-visible="true"] {
         transform: translateX(0);
     }
-    
+
     .header__nav-list {
         flex-direction: column;
         width: 100%;
         gap: 1rem;
     }
-    
+
     .header__nav-item {
         width: 100%;
         padding: 0.5rem 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     }
-    
+
     .header__nav-link {
         padding: 1rem 0;
     }
-    
+
     .header__button {
         width: 70%;
         margin: 1.5rem auto 0 auto;
         padding: 0.8rem;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+        transition: margin-top 0.3s ease;
+    }
+
+    .header.with-alert {
+        margin-top: var(--alert-emergencias-ativas-height);
     }
 }

@@ -2,3 +2,7 @@
 @import url('/src/style/components/variables.css');
 @import url('/src/style/components/typografy.css');
 @import url('/src/style/components/button.css');
+
+body {
+    padding-top: calc(var(--header-height) + var(--alert-emergencias-ativas-height));
+}

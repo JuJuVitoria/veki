@@ -29,3 +29,13 @@ A plataforma conecta diferentes perfis para formar uma rede de apoio eficiente:
 * [Isabela Alaminos Encinas](https://github.com/alaminosisabela)
 * [Murillo Mendes Rodrigues](https://github.com/Mdragon777)
 * [Rafael Costa dos Santos](https://github.com/Rafaelcds-007)
+
+## 🙌 Créditos das Imagens
+
+As imagens utilizadas neste projeto são provenientes de bancos de imagens gratuitos e seguem os termos de uso de cada plataforma.
+
+## 🙌 Créditos dos icons
+
+- Megafone icon by [Vaadin Icons](https://iconscout.com/contributors/vaadin-icons) on [IconScout](https://iconscout.com)
+
+> Todas as imagens são usadas apenas para fins educacionais e sem fins comerciais.

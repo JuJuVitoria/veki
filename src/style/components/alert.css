@@ -1,0 +1,72 @@
+:root {
+    --alert-emergencias-ativas-height: 60px;
+}
+
+.alert-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--alert-emergencias-ativas-height);
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    background-image: linear-gradient(90deg, var(--dark-orange), var(--light-orange));
+}
+
+.alert-emergencias-ativas {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transform: scale(1);
+    animation: pulse 2s infinite;
+}
+
+.alert-emergencias-ativas__icon {
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.alert-emergencias-ativas__icon path {
+    fill: var(--white);
+}
+
+.alert-emergencias-ativas__text {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: 1.2rem;
+    color: var(--white);
+
+    transition: opacity 0.5s ease;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.98);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0.98);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --alert-emergencias-ativas-height: 80px;
+    }
+
+    .alert-container {
+        position: absolute;
+        top: 0;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .alert-emergencias-ativas.hidden {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
