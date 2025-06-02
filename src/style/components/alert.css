@@ -60,9 +60,11 @@
     }
 
     .alert-container {
-        position: absolute;
-        top: 0;
-        transition: transform 0.3s ease, opacity 0.3s ease;
+        position: fixed;
+        inset: 0 auto auto 0;
+        height: var(--alert-emergencias-ativas-height);
+        padding: 0 2rem;
+        box-sizing: border-box;
     }
 
     .alert-emergencias-ativas.hidden {

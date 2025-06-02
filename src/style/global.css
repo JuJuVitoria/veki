@@ -1,8 +1,16 @@
-@import url('/src/style/vendor/reset.css');
-@import url('/src/style/components/variables.css');
-@import url('/src/style/components/typografy.css');
-@import url('/src/style/components/button.css');
+@import url('../style/vendor/reset.css');
+@import url('../style/components/variables.css');
+@import url('../style/components/typografy.css');
+@import url('../style/components/button.css');
+
+html, body { 
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: rgba(0, 255, 0, 0.1); /* só para visualização */
+}
 
 body {
-    padding-top: calc(var(--header-height) + var(--alert-emergencias-ativas-height));
+  padding-top: calc(var(--header-height) + var(--alert-emergencias-ativas-height));
 }

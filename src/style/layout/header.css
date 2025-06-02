@@ -113,7 +113,14 @@
 
 @media (max-width: 768px) {
     .header {
-        padding: 0.5rem 1rem;
+        position: fixed;
+        top: 0;
+        margin-top: 0;
+        transition: margin-top 0.3s ease;
+    }
+    
+    .header.with-alert {
+        margin-top: var(--alert-emergencias-ativas-height);
     }
 
     .header__menu-toggle {
@@ -160,16 +167,5 @@
         width: 70%;
         margin: 1.5rem auto 0 auto;
         padding: 0.8rem;
-    }
-
-    .header {
-        position: fixed;
-        top: 0;
-        margin-top: 0;
-        transition: margin-top 0.3s ease;
-    }
-
-    .header.with-alert {
-        margin-top: var(--alert-emergencias-ativas-height);
     }
 }
