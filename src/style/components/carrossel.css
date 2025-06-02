@@ -1,0 +1,57 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.carrossel_home {
+    width: 100vw;
+    height: 100vh;
+}
+
+.carrossel_container {
+    position: relative;
+}
+
+
+.slide_carrossel_home {
+    display: none;
+}
+
+.slide_carrossel_home > img {
+    display: block;
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.slide_carrossel_home[data-active] {
+    opacity: 1;
+}
+
+.indicadores {
+    display: flex;
+    gap: 1rem;
+    position: inherit;
+}
+
+
+.indicador {
+    background-color: black;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+}
+
+.controles_btn {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+#btn_anterior svg, #btn_proximo svg {
+    fill: var(--black);
+}
