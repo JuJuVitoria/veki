@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../../style/layout/header.css">
     <link rel="stylesheet" href="../../style/layout/footer.css">
     <link rel="stylesheet" href="../../style/components/alert.css">
-    <link rel="stylesheet" href="../../style/layout/filter.css">
+    <link rel="stylesheet" href="../../style/components/filter.css">
 </head>
 
 <body>
@@ -86,12 +86,13 @@
 
                     <div class="form-group">
                         <label class="paragrafo" for="fPaisSearch">Buscar por país:</label>
-                        <input class="paragrafo" type="search" id="paisSearch" name="paisSearch" placeholder="Digite o país"
-                            aria-label="Buscar por país" autocomplete="country-name">
+                        <input class="paragrafo" type="search" id="paisSearch" name="paisSearch"
+                            placeholder="Digite o país" aria-label="Buscar por país" autocomplete="country-name">
                     </div>
                     <div class="form-group">
                         <label class="paragrafo" for="fCategoriaSearch">Categoria:</label>
-                        <select class="form-filtro__input-select paragrafo" name="fCategoriaSearch" id="fCategoriaSearch">
+                        <select class="form-filtro__input-select paragrafo" name="fCategoriaSearch"
+                            id="fCategoriaSearch">
                             <option value="">Todas</option>
                             <option value="Inundação">Inundação</option>
                             <option value="Incêndio">Incêndio</option>
@@ -119,6 +120,21 @@
                     </div>
                 </fieldset>
             </form>
+        </div>
+
+        <div class="cards-emergencias-container">
+
+            <div class="card-emergencia" data-pais="Brasil" data-categoria="Inundação" data-regiao="Sul"
+                data-setor="Infraestrutura" data-data="2025-06-01">
+                <div class="info-categoria"></div>
+                <h3>Enchente no Rio Grande do Sul</h3>
+                <p><strong>Pedidos:</strong> 154</p>
+                <p><strong>Região:</strong> Sul</p>
+                <p>Fortes chuvas causam inundações severas, afetando milhares de pessoas e infraestruturas.</p>
+                <p><strong>Setor:</strong> Infraestrutura</p>
+                <p><strong>Data:</strong> 01/06/2025</p>
+            </div>
+
         </div>
     </main>
 
