@@ -10,7 +10,19 @@
     --color-rlv-tx-critica: #D93D04;
 }
 
+.cards-emergencias-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 1rem auto;
+}
+
 .card-emergencia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 250px;
     height: 300px;
     padding: 0.8rem;
@@ -56,4 +68,57 @@
     background-color: var(--color-rlv-bg-critica);
     color: var(--color-rlv-tx-critica);
     border: solid 1px var(--color-rlv-tx-critica);
+}
+
+/* CARD INFORMAÇÕES DO EVENTO */
+.card-titulo {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: 1.2rem;
+    text-align: center;
+    color: var(--dark-purple);
+}
+
+.card-info-pedido div {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.2rem;
+}
+
+.card-info-pedido div svg {
+    width: 1rem;
+    height: 1rem;
+    fill: var(--black);
+}
+
+.card-info-pedido__localizacao, .card-info-pedido__data {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text-md);
+}
+
+.card-emergencia__descricao-pedido {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text-lg);
+}
+
+.card-emergencia__pedido-qnt {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-emergencia__pedido-qnt svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: var(--dark-orange);
+}
+
+.card-emergencia__pedido-qnt p {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-text-lg);
+    color: var(--dark-orange);
 }
