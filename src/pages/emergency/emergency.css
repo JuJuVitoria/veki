@@ -92,7 +92,7 @@
     fill: var(--black);
 }
 
-.card-info-pedido__localizacao, .card-info-pedido__data {
+.card-info-pedido__localizacao__p, .card-info-pedido__data__p {
     font-family: "Roboto", sans-serif;
     font-weight: var(--fw-regular);
     font-size: var(--fs-text-md);
