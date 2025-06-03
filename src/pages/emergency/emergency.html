@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../style/layout/header.css">
     <link rel="stylesheet" href="../../style/layout/footer.css">
     <link rel="stylesheet" href="../../style/components/alert.css">
+    <link rel="stylesheet" href="../../style/layout/filter.css">
 </head>
 
 <body>
@@ -75,7 +76,50 @@
     </header>
 
     <main>
-        <h1 class="titulo-principal">Conteudo aqui</h1>
+        <h1 class="titulo-principal">Eventos Extremos Atuais e Pedidos de Ajuda</h1>
+        <h2 class="subtitulo-primario">Saiba sobre os principais eventos extremos globais!</h2>
+
+        <div class="filtros">
+            <form action="" id="formFiltro">
+                <fieldset class="formFiltro">
+                    <legend class="form-filtro-legenda">Filtros de busca</legend>
+
+                    <div class="form-group">
+                        <label class="paragrafo" for="fPaisSearch">Buscar por país:</label>
+                        <input class="paragrafo" type="search" id="paisSearch" name="paisSearch" placeholder="Digite o país"
+                            aria-label="Buscar por país" autocomplete="country-name">
+                    </div>
+                    <div class="form-group">
+                        <label class="paragrafo" for="fCategoriaSearch">Categoria:</label>
+                        <select class="form-filtro__input-select paragrafo" name="fCategoriaSearch" id="fCategoriaSearch">
+                            <option value="">Todas</option>
+                            <option value="Inundação">Inundação</option>
+                            <option value="Incêndio">Incêndio</option>
+                            <option value="Falta de água">Falta de água</option>
+                            <option value="Deslizamento">Deslizamento</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="paragrafo" for="fDataOrdem">Ordenar por data:</label>
+                        <select class="paragrafo" name="fDataOrdem" id="fDataOrdem">
+                            <option value="recente">Mais recente</option>
+                            <option value="antigo">Mais antigo</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="paragrafo" for="fQuantidade">Ordenar por pedidos:</label>
+                        <select class="paragrafo" name="fQuantidade" id="fQuantidade">
+                            <option value="qtnMaior">Com mais pedidos</option>
+                            <option value="qtnMenor">Com menos pedidos</option>
+                        </select>
+                    </div>
+                    <div class="form-btns">
+                        <button type="submit" class="button-purple">Aplicar filtros</button>
+                        <button type="reset" class="button-purple">Limpar</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
     </main>
 
     <footer class="footer">
@@ -127,7 +171,8 @@
         <div class="sepador_horizontal"></div>
         <div class="footer__creditos">
             <p class="paragrafo">© 2024 Plataforma Solidária Inteligente. Todos os direitos reservados.</p>
-            <p class="paragrafo-complementar">Desenvolvido com coração para transformar o mundo através da solidariedade</p>
+            <p class="paragrafo-complementar">Desenvolvido com coração para transformar o mundo através da solidariedade
+            </p>
         </div>
     </footer>
 

@@ -8,10 +8,11 @@
     --dark-orange: #D93D04;
     --white: #fefefe;
     --black: #0C0C0C;
-    --light-gray: #CCCCCC;
+    --light-gray: #F2F2F2;
 
     /* ==== SHADOW ==== */
-    --shadow-01: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-01: rgba(0, 0, 0, 0.06) 0 2px 8px;
+    --shadow--02: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
     /* ==== TIPOGRAFIA ==== */
     /* Font size | Títulos */

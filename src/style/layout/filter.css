@@ -1,0 +1,75 @@
+.filtros {
+    background-color: var(--white);
+    margin: 2rem 4rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-02);
+}
+
+.formFiltro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-end;
+}
+
+.form-filtro-legenda {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-heading-lg-sm);
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1 1 200px;
+    min-width: 180px;
+    margin-bottom: 0;
+}
+
+input[type="search"],
+select {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid var(--light-gray);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: "Ubuntu", sans-serif;
+    transition: border-color 0.2s ease;
+    background-color: var(--white);
+}
+
+input[type="search"]:focus,
+select:focus {
+    outline: none;
+    border-color: var(--purple-500);
+    box-shadow: 0 0 0 2px rgba(128, 0, 255, 0.1);
+}
+
+.form-btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    .filtros {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .formFiltro {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .form-btns {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.5rem;
+    }
+}

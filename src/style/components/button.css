@@ -19,3 +19,25 @@
     color: white;
     transform: scale(1.1)
 }
+
+.button-purple {
+    background-color: var(--dark-purple);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-01);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.button-purple:hover {
+    background-color: var(--medium-purple);
+    color: white;
+    transform: scale(1.1)
+}
