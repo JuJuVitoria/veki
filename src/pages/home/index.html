@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="../../style/components/carrossel.css">
-    <link rel="stylesheet" href="../../style/global.css">
+    <title>Início - Veki</title>
+    <link rel="stylesheet" href="../../style/components/carrossel.css"> <!-- link css do carrossel -->
+    <link rel="stylesheet" href="../../style/global.css"> <!-- link css global -->
+    <link rel="stylesheet" href="../../style/layout/header.css"> <!-- link css header -->
 </head>
 
 <body>
+    <!-- mini banner emergências  -->
     <div class="alerta_banner">
         <span>Emergências Crescem 83% No Brasil</span>
     </div>
-
+    <!-- banner maior e principal lado esquerdo -->
     <section class="banner_principal">
         <div class="banner_principal_texto">
             <h1>
@@ -45,7 +47,7 @@
             </ul>
         </div>
     </section>
-
+    <!-- mensagens ilustrativas banner principal - primeira mensagem -->
     <div class="mensagens_banner_um">
         <p>
             Oii!! Vim me voluntariar hoje, foi muito legal, o que acha de participar comigo da próxima vez?
@@ -70,14 +72,14 @@
                 transform="translate(-1.03 -1106.225)scale(1.06642)" />
         </svg>
     </div>
-
+    <!-- mensagens ilustrativas banner principal - segunda mensagem  -->
     <div class="mensagens_banner_dois">
         <p>
             Beleza!! Vamos juntos então!!! Conto com você na plataforma do Veki!!!
         </p>
         <img src="../imgs/Foto_cracha_banner_principal.png" alt="Voluntário com crachá">
     </div>
-
+    <!-- estatísticas ilustrativas banner principal -->
     <section class="estatistica_banner_principal">
         <div class="estatistica_banner_principal_um">
             <strong>
@@ -100,7 +102,7 @@
             </span>
         </div>
     </section>
-
+    <!-- primeira sessão de texto - sobre o projeto -->
     <div class="primeiro_texto">
         <h2>
             SOBRE O PROJETO:
@@ -122,7 +124,7 @@
             automatizar e agilizar o encontro entre quem quer fazer a diferença e quem precisa de ajuda.
         </p>
     </div>
-
+    <!-- conjunto de três cards na horizontal -->
     <section class="tresCards_home">
         <div class="tresCards_home_um">
             <div class="icone_tresCards_home">
@@ -173,6 +175,8 @@
             </p>
         </div>
     </section>
+
+    <!-- um card estatística maior -->
     <div class="umCard_home">
         <h4>
             Escalabilidade Global, Impacto Local
@@ -206,7 +210,7 @@
             Monitorando
         </span>
     </div>
-
+    <!-- segunda sessão de texto - sobre a plataforma -->
     <div class="segundo_texto">
         <p>
             A plataforma é composta por um conjunto de funcionalidades que foram pensadas para atuar tanto em momentos
@@ -231,7 +235,7 @@
             sua casa ou no campo — com apenas alguns cliques.
         </p>
     </div>
-
+    <!-- cards de depoimentos de usuários  -->
     <section class="depoimentos_usuarios">
         <div class="titulo_sessao">
             <h2 class="titulo_priincipal">
@@ -241,8 +245,8 @@
                 Veja o que estão falando sobre a plataforma:
             </h3>
         </div>
-
-        <div class="doisCard_depoimentos">
+        <!-- primeiro card de depoimentos -->
+        <div class="tresCard_depoimentos">
             <img src="../../assets/img/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
             <div class="icone_depoimentos">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
@@ -258,8 +262,8 @@
                     tempore?
                 </p>
             </div>
-
-            <div class="doisCard_depoimentos">
+            <!-- segundo card de depoimentos -->
+            <div class="tresCard_depoimentos">
                 <img src="../../assets/img/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
                 <div class="icone_depoimentos">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
@@ -276,8 +280,25 @@
                     </p>
                 </div>
             </div>
+            <!-- terceiro card de depoimentos -->
+            <div class="tresCard_depoimentos">
+                <img src="../../assets/img/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
+                <div class="icone_depoimentos">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
+                        <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" />
+                    </svg>
+                </div>
+                <div class="texto_depoimentos">
+                    <h3>
+                        Angela B.
+                    </h3>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
+                        maiores tempore?
+                    </p>
+                </div>
     </section>
-
+    <!-- guia de uso da plataforma textos -->
     <section class="guia_plataforma">
         <div class="titulo_sessao">
             <h2 class="titulo_priincipal">
@@ -380,10 +401,10 @@
             Seja parte dessa rede. Cadastre-se. Participe. Ajude a mudar vidas — inclusive a sua. 💙
         </p>
     </section>
-
+    <!-- carrossel página home -->
     <div class="carrossel_home">
         <div class="carrossel_container">
-            <div class="slide" >
+            <div class="slide">
                 <div class="numeroTexto">1 / 12</div>
                 <img src="../../assets/img/imagem-slide-1.jpg" alt="">
             </div>
@@ -431,6 +452,7 @@
                 <div class="numeroTexto">12 / 12</div>
                 <img src="../../assets/img/imagem_slide_12.jpg" alt="">
             </div>
+            <!-- controladores do carrossel  -->
             <div class="controles_carrossel">
                 <a onclick="slideAnterior(-1)" id="btn_anterior">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
@@ -438,7 +460,7 @@
                         <path d="M560-240 320-480l240-240 56 56-184 184 184 184-56 56Z" />
                     </svg>
                 </a>
-
+                <!-- indicadores bolinhas -->
                 <div class="indicadores">
                     <span class="indicador" data-slide="1"></span>
                     <span class="indicador" data-slide="2"></span>
@@ -466,7 +488,7 @@
 
 
 
-     <script src="../../js/shared/carrossel.js"></script>
+    <script src="../../js/shared/carrossel.js"></script>
 </body>
 
 </html>
