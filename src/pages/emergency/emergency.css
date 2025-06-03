@@ -1,5 +1,59 @@
+:root {
+    /* Cores info categoria */
+    /* Inundação */
+    --color-ctg-bg-inundacao: #B7BFED;
+    --color-ctg-tx-inundacao: #0E44B0;
+
+    /* Cores info relevancia */
+    /* Crítica */
+    --color-rlv-bg-critica: #FFD2BA;
+    --color-rlv-tx-critica: #D93D04;
+}
+
 .card-emergencia {
-    width: 200px;
-    height: 250px;
+    width: 250px;
+    height: 300px;
+    padding: 0.8rem;
+    border-radius: 20px;
     background-color: var(--white);
+}
+
+.card-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-info__categoria,
+.card-info__relevancia {
+    width: fit-content;
+    padding: 0.5rem;
+}
+
+.card-info__categoria {
+    border-radius: 15px;
+}
+
+.card-info__relevancia {
+    border-radius: 8px;
+}
+
+.card-info__p {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text-md);
+}
+
+/* INFO CATEGORIA */
+
+[data-categoria="Inundação"] .card-info__categoria {
+    background-color: var(--color-ctg-bg-inundacao);
+    color: var(--color-ctg-tx-inundacao);
+}
+
+/* INFO RELEVANCIA */
+
+[data-relevancia="Crítica"] .card-info__relevancia {
+    background-color: var(--color-rlv-bg-critica);
+    color: var(--color-rlv-tx-critica);
+    border: solid 1px var(--color-rlv-tx-critica);
 }
