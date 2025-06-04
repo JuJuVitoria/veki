@@ -1,6 +1,8 @@
 import { emergencias } from "../../js/data/emergenciasData.js";
 import { svgIcons } from '../../js/shared/svgIcons.js';
 
+import { aplicarForm } from "../../js/shared/filter.js";
+
 function criarCard(emergencia) {
     const card = document.createElement('div');
     card.classList.add('card-emergencia');
@@ -89,3 +91,7 @@ emergencias.forEach((emergencia) => {
     const card = criarCard(emergencia);
     container.appendChild(card);
 });
+
+const form = document.getElementById('formFiltro');
+
+form.addEventListener('submit', aplicarForm);
