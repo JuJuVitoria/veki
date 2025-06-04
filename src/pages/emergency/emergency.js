@@ -1,6 +1,8 @@
 import { emergencias } from "../../js/data/emergenciasData.js";
 import { svgIcons } from '../../js/shared/svgIcons.js';
 
+import { aplicarForm } from "../../js/shared/filter.js";
+
 function criarCard(emergencia) {
     const card = document.createElement('div');
     card.classList.add('card-emergencia');
@@ -13,16 +15,16 @@ function criarCard(emergencia) {
     infoDiv.classList.add('card-info');
 
     const categoriaDiv = document.createElement('div');
-    categoriaDiv.classList.add('card-info__categoria');
+    categoriaDiv.classList.add('info__categoria');
     const textCategoria = document.createElement('p');
-    textCategoria.classList.add('card-info__p')
+    textCategoria.classList.add('info__p')
     textCategoria.innerText = emergencia.categoria;
     categoriaDiv.appendChild(textCategoria);
 
     const relevanciaDiv = document.createElement('div');
-    relevanciaDiv.classList.add('card-info__relevancia');
+    relevanciaDiv.classList.add('info__relevancia');
     const textRelevancia = document.createElement('p');
-    textRelevancia.classList.add('card-info__p');
+    textRelevancia.classList.add('info__p');
     textRelevancia.innerText = emergencia.relevancia;
     relevanciaDiv.appendChild(textRelevancia);
 
@@ -73,6 +75,15 @@ function criarCard(emergencia) {
     botao.classList.add('button-orange');
     botao.innerText = 'Ver mais sobre os pedidos';
 
+    botao.addEventListener("click", () => {
+        const telaPedidos = document.getElementById('telaPedidos');
+        if (telaPedidos.style.display === "flex") {
+            telaPedidos.style.display = "none";
+        } else {
+            telaPedidos.style.display = "block";
+        }
+    });
+
     // Monta tudo no card
     card.appendChild(infoDiv);
     card.appendChild(titulo);
@@ -88,4 +99,12 @@ const container = document.querySelector('.cards-emergencias-container');
 emergencias.forEach((emergencia) => {
     const card = criarCard(emergencia);
     container.appendChild(card);
+});
+
+const form = document.getElementById('formFiltro');
+
+form.addEventListener('submit', aplicarForm);
+
+document.getElementById("btnCloseTelaPedidos")?.addEventListener("click", () => {
+    document.getElementById("telaPedidos").style.display = "none";
 });

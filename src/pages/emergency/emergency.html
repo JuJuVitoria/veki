@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="../../style/components/filter.css">
 
     <link rel="stylesheet" href="../../pages/emergency/emergency.css">
+    <link rel="stylesheet" href="../../style/layout/telaPedidos.css">
+    <link rel="stylesheet" href="../../style/components/infoPedidos.css">
 </head>
 
 <body>
@@ -69,7 +71,7 @@
                         <a href="../../pages/emergency/emergency.html" class="header__nav-link paragrafo">Emergência</a>
                     </li>
                     <li class="header__nav-item">
-                        <a href="#" class="header__nav-link paragrafo">Pedidos</a>
+                        <a href="../../pages/Pedidos/pedidos.html" class="header__nav-link paragrafo">Pedidos</a>
                     </li>
                 </ul>
             </nav>
@@ -167,10 +169,91 @@
                     </svg>
                     <p>Pedidos de ajuda: 1250</p>
                 </div>
-                <button class="button-orange">Ver mais sobre os pedidos</button>
+                <button id="btnOpenTelaPedidos" class="button-orange">Ver mais sobre os pedidos</button>
             </div> -->
 
-        </div>
+            <div class="tela-pedidos" id="telaPedidos">
+                <div class="tela-pedidos__descricao-emergencia" data-categoria="Inundação" data-relevancia="Crítica">
+                    <button id="btnCloseTelaPedidos" class="tela-pedidos__descricao-emergencia__btn-close">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e3e3e3">
+                            <path
+                                d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                        </svg>
+                    </button>
+
+                    <div class="tela-pedidos__descricao-emergencia__info">
+                        <div class="info__categoria">
+                            <p class="info__p">Inundação</p>
+                        </div>
+                        <div class="info__relevancia">
+                            <p class="info__p">Crítica</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="tela-pedidos__descricao-emergencia__titulo">Enchente no Rio Grande do Sul</h2>
+                        <p class="tela-pedidos__descricao-emergencia__descrição paragrafo">Neste momento, o Rio Grande
+                            do Sul enfrenta uma das maiores catástrofes climáticas da sua
+                            história. Fortes chuvas que não dão trégua desde o início da semana vêm causando
+                            enchentes devastadoras em diversas cidades do estado. Rios transbordaram, invadindo
+                            bairros inteiros, arrastando casas, veículos e destruindo pontes, estradas e tudo o que
+                            encontra pelo caminho.
+                            Milhares de famílias estão desabrigadas, muitas precisaram abandonar suas casas às
+                            pressas, levando apenas o que conseguiram carregar. Abrigos estão lotados, e voluntários
+                            se mobilizam incansavelmente para prestar ajuda, levando alimentos, roupas, água potável
+                            e itens de higiene para quem perdeu tudo. </p>
+                    </div>
+                </div>
+
+                <h3 class="tela-pedidos__titulo-pedido">Pedidos</h3>
+
+                <div class="tela-pedidos__cards-pedidos-container">
+
+                    <div class="cards-pedidos-container__card" data-pais="Brasil" data-categoria="Inundação"
+                        data-relevancia="Crítica" data-regiao="Sul" data-setor="Infraestrutura" data-data="2025-06-01">
+                        <div class="cards-pedidos-container__card__informacoes-do-pedido">
+                            <img src="../../assets/img/emergency/foto-usuários/mulher-01.jpg"
+                                alt="Foto de perfil de usuário" class="cards-pedidos-container__card__foto-perfil">
+
+                            <div>
+                                <div class="cards-pedidos-container__card__heading">
+                                    <h4 class="cards-pedidos-container__card__user-name">Ana Souza</h4>
+
+                                    <div class="info__categoria">
+                                        <p class="info__p">Inundação</p>
+                                    </div>
+                                </div>
+                                <p class="cards-pedidos-container__card__descricao-pedido paragrafo">Precisamos de água
+                                    potável para um abrigo com mais de 200 pessoas.</p>
+
+                                <div class="cards-pedidos-container__card__detalhes">
+                                    <div class="cards-pedidos-container__card__data">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                            width="24px" fill="#e3e3e3">
+                                            <path
+                                                d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                        </svg>
+                                        <p>Há um dia</p>
+                                    </div>
+                                    <div class="cards-pedidos-container__card__localizacao">
+                                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                            width="24px" fill="#e3e3e3">
+                                            <path
+                                                d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                        </svg>
+                                        <p>Porto Alegre, bairro Sarandi</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a class="button-purple paragrafo">Ver mais sobre o pedido</a>
+                    </div>
+
+                </div>
+            </div>
+
     </main>
 
     <footer class="footer">

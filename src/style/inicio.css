@@ -1,0 +1,165 @@
+.primeiraSessao_inteira {
+    width: 100%;
+    height: 850px;
+    padding: 20px;
+    background-image: url(../assets/img/imagem\ de\ fundo\ primeira\ sessao.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.alerta_banner {
+    width: 400px;
+    padding: 10px;
+    margin: 50px 15px 15px 50px;
+    background-color: #ffcec6;
+    border-radius: 25px;
+}
+
+#primeiraSessao_inicio {
+    width: 100%;
+    height: 630px;
+    display: flex;
+    gap: 10px;
+}
+
+.banner_principal_ladoEsquerdo {
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    margin: 15px 15px 20px 50px;
+    width: 600px;
+}
+
+#texto_banner_principal {
+    text-align: left;
+    line-height: 70px;
+    align-items: top;
+    margin: 0 0 5px 10px;
+    color: var(--dark-purple);
+}
+
+#texto_banner_principal_laranja {
+    color: var(--medium-orange);
+}
+
+#texto_banner_principal_vermelho {
+    color: var(--dark-orange);
+}
+
+#texto_alerta_banner_principal {
+    color: var(--dark-purple);
+}
+
+.botao_cadastro {
+    background-color: var(--white);
+    color: var(--dark-purple);
+    padding: 15px 20px 15px 20px;
+    margin: 15px 25px 15px 15px;
+    border: solid;
+    border-color: var(--dark-purple);
+    border-radius: 25px;
+    box-shadow: var(--shadow-01);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+
+.botao_cadastro:hover {
+    background-color: var(--dark-purple);
+    color: white;
+    transform: scale(1.1)
+}
+
+.botao_saibaMais_texto {
+    text-decoration: none;
+    color: var(--dark-purple);
+}
+
+.icone_saibaMais {
+    fill: var(--dark-purple);
+}
+
+#botoes_banner_principal {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.descricao_banner_principal {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--black);
+    font-size: 20px;
+    text-align: left;
+    margin: .8rem 0 .5rem 0;
+    line-height: 30px;
+}
+
+.lista_banner_principal {
+    color: var(--dark-orange);
+    line-height: 30px;
+    text-align: left;
+    margin: .8rem 0 .5rem 0;
+}
+
+.mensagens_banner_um {
+    color: var(--dark-purple);
+    align-items: left;
+    width: 300px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 15px 50px 15px 15px;
+}
+
+.mensagemAudio_banner {
+    display: flex;
+    width: 300px;
+    height: 50px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 15px 15px 150px;
+    position: relative3;
+}
+
+.svg_mensagem_audio_user {
+    align-items: right;
+    width: 60px;
+    fill: var(--dark-purple);
+    margin: auto;
+    position: absolute;
+}
+
+.svg_mensagem_audio_som {
+    width: 140px;
+    justify-content: center;
+}
+
+.mensagens_banner_dois {
+    color: var(--dark-purple);
+    align-items: left;
+    width: 300px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 15px 50px 15px 15px;
+}
+
+.imagemBanner_mensagem_bannerPrincipal {
+    width: 260px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 15px 50px 15px 15px;
+}
+
+.estatistica_banner_principal {
+    color: var(--white);
+
+}

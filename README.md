@@ -34,6 +34,9 @@ A plataforma conecta diferentes perfis para formar uma rede de apoio eficiente:
 
 As imagens utilizadas neste projeto são provenientes de bancos de imagens gratuitos e seguem os termos de uso de cada plataforma.
 
+- Imagem enchente by [Kelly Sikkema](https://unsplash.com/@kellysikkema?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/traffic-light-sign-underwater-_whs7FPfkwQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+- Imagem - foto de perfil de usuario - de [Pexels](https://pixabay.com/pt/users/pexels-2286921/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1869761) por [Pixabay](https://pixabay.com/pt//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1869761)
+
 ## 🙌 Créditos dos icons
 
 - Megafone icon by [Vaadin Icons](https://iconscout.com/contributors/vaadin-icons) on [IconScout](https://iconscout.com)

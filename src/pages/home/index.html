@@ -5,122 +5,203 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Início - Veki</title>
-    <link rel="stylesheet" href="../../style/components/carrossel.css"> <!-- link css do carrossel -->
+    <link rel="stylesheet" href="../../style/components/carrossel.css">
     <link rel="stylesheet" href="../../style/global.css"> <!-- link css global -->
+    <link rel="stylesheet" href="../../style/components/alert.css">
     <link rel="stylesheet" href="../../style/layout/header.css"> <!-- link css header -->
+    <link rel="stylesheet" href="../../style/layout/footer.css">
+    <link rel="stylesheet" href="../../style/inicio.css">
 </head>
 
 <body>
-    <!-- mini banner emergências  -->
-    <div class="alerta_banner">
-        <span>Emergências Crescem 83% No Brasil</span>
-    </div>
-    <!-- banner maior e principal lado esquerdo -->
-    <section class="banner_principal">
-        <div class="banner_principal_texto">
-            <h1>
-                TRANSFORMANDO
-                <span>
-                    BOAS INTENÇÕES
-                </span>
-                EM
-                <span>
-                    IMPACTOS REAIS
-                </span>
-            </h1>
-            <div class="botoes_banner_principal">
-                <a href="#" class="botao_cadastro">
-                    Cadastre-se Aqui
-                </a>
-                <a href="#" class="botao_saibaMais">
-                    Saiba Mais
-                </a>
-            </div>
-            <p class="descricao_banner_principal">
-                Conectamos Voluntários Qualificados A Instituições E Comunidades Em Situações De Emergência.
-                Quebre a Barreira Do "Não Sei Como Ajudar" Com Nossa Tecnologia De Match Inteligente.
-            </p>
-            <ul class="listaTexto_banner_principal">
-                <li>Mais Impacto Global</li>
-                <li>Mais Visibilidade Do Trabalho Voluntário</li>
-                <li>Menos Dificuldade Para Achar Ajuda Em Momentos De Vulnerabilidade</li>
-            </ul>
+    <div class="alert-container">
+        <div class="alert-emergencias-ativas">
+            <svg class="alert-emergencias-ativas__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                viewBox="0 0 16 16" id="megafone">
+                <path fill="#444"
+                    d="M15.5 5.4L15 5V1c0-.6-.4-1-1-1s-1 .4-1 1v.5C11 2.4 8 4 5 4H2.5C1.1 4 0 5.2 0 6.5c0 .9.5 1.7 1.2 2.1l1.1 5.9c0 .3.3.5.7.5h.2l3.6-.7c.4-.1.6-.4.5-.7-.3-.6-.8-1.5-1.2-1.8-.2-.1-.5-.9-.7-1.8H6v-.9c2.7.3 6 1.6 7 2.4v.5c0 .6.4 1 1 1s1-.4 1-1V8l.4-.3c.4-.3.6-.7.6-1.1v-.2c0-.4-.2-.7-.5-1zM2 5h3v1H2V5zm3.6 7.6c.1 0 .3.3.5.7l-2.8.7-1-5h1.9c.2 1.3.6 3.2 1.4 3.6zm7.4-2.3c-1.6-.8-4.4-2-7-2.3V5c2.6-.3 5.4-1.4 7-2.3v7.6z">
+                </path>
+            </svg>
+            <div class="alert-emergencias-ativas__text">Mensagem padrão</div>
         </div>
-    </section>
-    <!-- mensagens ilustrativas banner principal - primeira mensagem -->
-    <div class="mensagens_banner_um">
-        <p>
-            Oii!! Vim me voluntariar hoje, foi muito legal, o que acha de participar comigo da próxima vez?
-        </p>
     </div>
 
-    <div class="mensagemAudio_banner">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" id="user">
-            <path
-                d="M14.5 2A12.514 12.514 0 0 0 2 14.5 12.521 12.521 0 0 0 14.5 27a12.5 12.5 0 0 0 0-25Zm7.603 19.713a8.48 8.48 0 0 0-15.199.008A10.367 10.367 0 0 1 4 14.5a10.5 10.5 0 0 1 21 0 10.368 10.368 0 0 1-2.897 7.213ZM14.5 7a4.5 4.5 0 1 0 4.5 4.5A4.5 4.5 0 0 0 14.5 7Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
-            clip-rule="evenodd" viewBox="0 0 512 512" id="digital-wave-audio">
-            <path
-                d="M131,164.1L131,347.9C131,350.659 133.24,352.9 136,352.9C138.76,352.9 141,350.659 141,347.9L141,164.1C141,161.341 138.76,159.1 136,159.1C133.24,159.1 131,161.341 131,164.1ZM419,164.1L419,347.9C419,350.659 421.24,352.9 424,352.9C426.76,352.9 429,350.659 429,347.9L429,164.1C429,161.341 426.76,159.1 424,159.1C421.24,159.1 419,161.341 419,164.1ZM275,164.1L275,347.9C275,350.659 277.24,352.9 280,352.9C282.76,352.9 285,350.659 285,347.9L285,164.1C285,161.341 282.76,159.1 280,159.1C277.24,159.1 275,161.341 275,164.1ZM467,187.075L467,324.925C467,327.684 469.24,329.925 472,329.925C474.76,329.925 477,327.684 477,324.925L477,187.075C477,184.316 474.76,182.075 472,182.075C469.24,182.075 467,184.316 467,187.075ZM83,187.075L83,324.925C83,327.684 85.24,329.925 88,329.925C90.76,329.925 93,327.684 93,324.925L93,187.075C93,184.316 90.76,182.075 88,182.075C85.24,182.075 83,184.316 83,187.075ZM323,187.075L323,324.925C323,327.684 325.24,329.925 328,329.925C330.76,329.925 333,327.684 333,324.925L333,187.075C333,184.316 330.76,182.075 328,182.075C325.24,182.075 323,184.316 323,187.075ZM227,187.075L227,324.925C227,327.684 229.24,329.925 232,329.925C234.76,329.925 237,327.684 237,324.925L237,187.075C237,184.316 234.76,182.075 232,182.075C229.24,182.075 227,184.316 227,187.075ZM179,187.075L179,324.925C179,327.684 181.24,329.925 184,329.925C186.76,329.925 189,327.684 189,324.925L189,187.075C189,184.316 186.76,182.075 184,182.075C181.24,182.075 179,184.316 179,187.075ZM371,187.075L371,324.925C371,327.684 373.24,329.925 376,329.925C378.76,329.925 381,327.684 381,324.925L381,187.075C381,184.316 378.76,182.075 376,182.075C373.24,182.075 371,184.316 371,187.075ZM107,203.22L107,308.78C107,311.54 109.24,313.78 112,313.78C114.76,313.78 117,311.54 117,308.78L117,203.22C117,200.46 114.76,198.22 112,198.22C109.24,198.22 107,200.46 107,203.22ZM155,203.22L155,308.78C155,311.54 157.24,313.78 160,313.78C162.76,313.78 165,311.54 165,308.78L165,203.22C165,200.46 162.76,198.22 160,198.22C157.24,198.22 155,200.46 155,203.22ZM299,203.22L299,308.78C299,311.54 301.24,313.78 304,313.78C306.76,313.78 309,311.54 309,308.78L309,203.22C309,200.46 306.76,198.22 304,198.22C301.24,198.22 299,200.46 299,203.22ZM395,203.22L395,308.78C395,311.54 397.24,313.78 400,313.78C402.76,313.78 405,311.54 405,308.78L405,203.22C405,200.46 402.76,198.22 400,198.22C397.24,198.22 395,200.46 395,203.22ZM251,203.22L251,308.78C251,311.54 253.24,313.78 256,313.78C258.76,313.78 261,311.54 261,308.78L261,203.22C261,200.46 258.76,198.22 256,198.22C253.24,198.22 251,200.46 251,203.22ZM443,203.22L443,308.78C443,311.54 445.24,313.78 448,313.78C450.76,313.78 453,311.54 453,308.78L453,203.22C453,200.46 450.76,198.22 448,198.22C445.24,198.22 443,200.46 443,203.22ZM35,206.945L35,305.055C35,307.814 37.24,310.055 40,310.055C42.76,310.055 45,307.814 45,305.055L45,206.945C45,204.186 42.76,201.945 40,201.945C37.24,201.945 35,204.186 35,206.945ZM11,233.025L11,278.975C11,281.735 13.24,283.975 16,283.975C18.76,283.975 21,281.735 21,278.975L21,233.025C21,230.265 18.76,228.025 16,228.025C13.24,228.025 11,230.265 11,233.025ZM203,233.025L203,278.975C203,281.735 205.24,283.975 208,283.975C210.76,283.975 213,281.735 213,278.975L213,233.025C213,230.265 210.76,228.025 208,228.025C205.24,228.025 203,230.265 203,233.025ZM59,233.025L59,278.975C59,281.735 61.24,283.975 64,283.975C66.76,283.975 69,281.735 69,278.975L69,233.025C69,230.265 66.76,228.025 64,228.025C61.24,228.025 59,230.265 59,233.025ZM491,233.025L491,278.975C491,281.735 493.24,283.975 496,283.975C498.76,283.975 501,281.735 501,278.975L501,233.025C501,230.265 498.76,228.025 496,228.025C493.24,228.025 491,230.265 491,233.025ZM347,233.025L347,278.975C347,281.735 349.24,283.975 352,283.975C354.76,283.975 357,281.735 357,278.975L357,233.025C357,230.265 354.76,228.025 352,228.025C349.24,228.025 347,230.265 347,233.025Z" />
-        </svg>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="play">
-            <path
-                d="M3.293 1039.204a.47.47 0 0 0-.452.469v10.312a.469.469 0 0 0 .76.37l6.563-5.157a.469.469 0 0 0 0-.736l-6.563-5.157a.47.47 0 0 0-.308-.101z"
-                color="#000" font-family="sans-serif" font-weight="400" overflow="visible"
-                style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal;marker:none"
-                transform="translate(-1.03 -1106.225)scale(1.06642)" />
-        </svg>
-    </div>
-    <!-- mensagens ilustrativas banner principal - segunda mensagem  -->
-    <div class="mensagens_banner_dois">
-        <p>
-            Beleza!! Vamos juntos então!!! Conto com você na plataforma do Veki!!!
-        </p>
-        <img src="../imgs/Foto_cracha_banner_principal.png" alt="Voluntário com crachá">
-    </div>
-    <!-- estatísticas ilustrativas banner principal -->
-    <section class="estatistica_banner_principal">
-        <div class="estatistica_banner_principal_um">
-            <strong>
-                2.847
-            </strong>
-            <span>
-                Voluntários Ativos
-            </span>
-            <strong>
-                1.293
-            </strong>
-            <span>
-                Matches Realizados
-            </span>
-            <strong>
-                89%
-            </strong>
-            <span>
-                Taxa de Sucesso
-            </span>
+    <header class="header">
+        <div class="header__logo">
+            <div class="header__logo-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#e3e3e3" class="header__logo-icon-svg">
+                    <path
+                        d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+                </svg>
+            </div>
+            <div class="header__logo-text">
+                <svg xmlns="http://www.w3.org/2000/svg" width="38" height="30" viewBox="0 0 38 30" fill="none">
+                    <path
+                        d="M3.86 24L0.94 7.8H4L5.74 18.8L7.36 7.8H10.6L7.64 24H3.86ZM12.2273 24V7.8H19.5073V10.24H15.8073V14.26H18.6273V16.74H15.8073V21.58H19.5473V24H12.2273ZM21.1727 24V7.8H24.7527V14.42L27.4727 7.8H30.9727L27.9727 15.12L31.1127 24H27.4727L25.1327 16.84L24.7527 17.48V24H21.1727ZM32.5403 24V7.8H36.1203V24H32.5403Z"
+                        fill="#432273" />
+                </svg>
+            </div>
         </div>
-    </section>
+
+        <button class="header__menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+            <svg class="menu-toggle__open" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px" fill="#e3e3e3">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </svg>
+            <svg class="menu-toggle__close" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                width="24px" fill="#e3e3e3">
+                <path
+                    d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+            </svg>
+        </button>
+
+        <div class="header__actions">
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="../../pages/home/index.html" class="header__nav-link paragrafo">Início</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="../../pages/emergency/emergency.html" class="header__nav-link paragrafo">Emergência</a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#" class="header__nav-link paragrafo">Pedidos</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="" class="header__button button-orange paragrafo">Entrar</a>
+        </div>
+    </header>
+    <div class="primeiraSessao_inteira">
+        <!-- mini banner emergências  -->
+        <div class="alerta_banner">
+            <span class="paragrafo" id="texto_alerta_banner_principal">Emergências Crescem 83% No Brasil</span>
+        </div>
+
+        <div id="primeiraSessao_inicio">
+            <!-- banner maior e principal primeira tela -->
+            <div class="banner_principal_ladoEsquerdo">
+                <div class="banner_principal_texto">
+                    <h1 class="titulo-principal" id="texto_banner_principal">
+                        TRANSFORMANDO
+                        <span id="texto_banner_principal_laranja">
+                            BOAS INTENÇÕES
+                        </span>
+                        EM
+                        <span id="texto_banner_principal_vermelho">
+                            IMPACTOS REAIS
+                        </span>
+                    </h1>
+                    <div class="paragrafo" id="botoes_banner_principal">
+                        <a href="#" class="botao_cadastro">
+                            Cadastre-se Aqui!!!
+                        </a>
+                        <a href="#" class="botao_saibaMais_texto">
+                            Saiba Mais
+                        </a>
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#FFFFFF">
+                            <path d="M504-480 320-664l56-56 240 240-240 240-56-56 184-184Z" class="icone_saibaMais" />
+                        </svg>
+                    </div>
+                    <p class="descricao_banner_principal">
+                        Conectamos Voluntários Qualificados A Instituições E Comunidades Em Situações De Emergência.
+                        Quebre a Barreira Do "Não Sei Como Ajudar" Com Nossa Tecnologia De Match Inteligente.
+                    </p>
+                    <ul class="lista_banner_principal">
+                        <li class="paragrafo">Mais Impacto Global</li>
+                        <li class="paragrafo">Mais Visibilidade Do Trabalho Voluntário</li>
+                        <li class="paragrafo">Menos Dificuldade Para Achar Ajuda Em Momentos De Vulnerabilidade</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mensagens_banner">
+                <div class="mensagens_banner_um">
+                    <p class="paragrafo">
+                        Oii!! Vim me voluntariar hoje, foi muito legal, o que acha de participar comigo da próxima vez?
+                    </p>
+                </div>
+
+                <div class="mensagemAudio_banner">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" id="play" class="svg_mensagem_audio_play">
+                        <path
+                            d="M3.293 1039.204a.47.47 0 0 0-.452.469v10.312a.469.469 0 0 0 .76.37l6.563-5.157a.469.469 0 0 0 0-.736l-6.563-5.157a.47.47 0 0 0-.308-.101z"
+                            color="#000" font-family="sans-serif" font-weight="400" overflow="visible"
+                            style="line-height:normal;text-indent:0;text-align:start;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000;text-transform:none;block-progression:tb;isolation:auto;mix-blend-mode:normal;marker:none"
+                            transform="translate(-1.03 -1106.225)scale(1.06642)" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" stroke-linejoin="round"
+                        stroke-miterlimit="2" clip-rule="evenodd" viewBox="0 0 512 512" id="digital-wave-audio" class="svg_mensagem_audio_som">
+                        <path
+                            d="M131,164.1L131,347.9C131,350.659 133.24,352.9 136,352.9C138.76,352.9 141,350.659 141,347.9L141,164.1C141,161.341 138.76,159.1 136,159.1C133.24,159.1 131,161.341 131,164.1ZM419,164.1L419,347.9C419,350.659 421.24,352.9 424,352.9C426.76,352.9 429,350.659 429,347.9L429,164.1C429,161.341 426.76,159.1 424,159.1C421.24,159.1 419,161.341 419,164.1ZM275,164.1L275,347.9C275,350.659 277.24,352.9 280,352.9C282.76,352.9 285,350.659 285,347.9L285,164.1C285,161.341 282.76,159.1 280,159.1C277.24,159.1 275,161.341 275,164.1ZM467,187.075L467,324.925C467,327.684 469.24,329.925 472,329.925C474.76,329.925 477,327.684 477,324.925L477,187.075C477,184.316 474.76,182.075 472,182.075C469.24,182.075 467,184.316 467,187.075ZM83,187.075L83,324.925C83,327.684 85.24,329.925 88,329.925C90.76,329.925 93,327.684 93,324.925L93,187.075C93,184.316 90.76,182.075 88,182.075C85.24,182.075 83,184.316 83,187.075ZM323,187.075L323,324.925C323,327.684 325.24,329.925 328,329.925C330.76,329.925 333,327.684 333,324.925L333,187.075C333,184.316 330.76,182.075 328,182.075C325.24,182.075 323,184.316 323,187.075ZM227,187.075L227,324.925C227,327.684 229.24,329.925 232,329.925C234.76,329.925 237,327.684 237,324.925L237,187.075C237,184.316 234.76,182.075 232,182.075C229.24,182.075 227,184.316 227,187.075ZM179,187.075L179,324.925C179,327.684 181.24,329.925 184,329.925C186.76,329.925 189,327.684 189,324.925L189,187.075C189,184.316 186.76,182.075 184,182.075C181.24,182.075 179,184.316 179,187.075ZM371,187.075L371,324.925C371,327.684 373.24,329.925 376,329.925C378.76,329.925 381,327.684 381,324.925L381,187.075C381,184.316 378.76,182.075 376,182.075C373.24,182.075 371,184.316 371,187.075ZM107,203.22L107,308.78C107,311.54 109.24,313.78 112,313.78C114.76,313.78 117,311.54 117,308.78L117,203.22C117,200.46 114.76,198.22 112,198.22C109.24,198.22 107,200.46 107,203.22ZM155,203.22L155,308.78C155,311.54 157.24,313.78 160,313.78C162.76,313.78 165,311.54 165,308.78L165,203.22C165,200.46 162.76,198.22 160,198.22C157.24,198.22 155,200.46 155,203.22ZM299,203.22L299,308.78C299,311.54 301.24,313.78 304,313.78C306.76,313.78 309,311.54 309,308.78L309,203.22C309,200.46 306.76,198.22 304,198.22C301.24,198.22 299,200.46 299,203.22ZM395,203.22L395,308.78C395,311.54 397.24,313.78 400,313.78C402.76,313.78 405,311.54 405,308.78L405,203.22C405,200.46 402.76,198.22 400,198.22C397.24,198.22 395,200.46 395,203.22ZM251,203.22L251,308.78C251,311.54 253.24,313.78 256,313.78C258.76,313.78 261,311.54 261,308.78L261,203.22C261,200.46 258.76,198.22 256,198.22C253.24,198.22 251,200.46 251,203.22ZM443,203.22L443,308.78C443,311.54 445.24,313.78 448,313.78C450.76,313.78 453,311.54 453,308.78L453,203.22C453,200.46 450.76,198.22 448,198.22C445.24,198.22 443,200.46 443,203.22ZM35,206.945L35,305.055C35,307.814 37.24,310.055 40,310.055C42.76,310.055 45,307.814 45,305.055L45,206.945C45,204.186 42.76,201.945 40,201.945C37.24,201.945 35,204.186 35,206.945ZM11,233.025L11,278.975C11,281.735 13.24,283.975 16,283.975C18.76,283.975 21,281.735 21,278.975L21,233.025C21,230.265 18.76,228.025 16,228.025C13.24,228.025 11,230.265 11,233.025ZM203,233.025L203,278.975C203,281.735 205.24,283.975 208,283.975C210.76,283.975 213,281.735 213,278.975L213,233.025C213,230.265 210.76,228.025 208,228.025C205.24,228.025 203,230.265 203,233.025ZM59,233.025L59,278.975C59,281.735 61.24,283.975 64,283.975C66.76,283.975 69,281.735 69,278.975L69,233.025C69,230.265 66.76,228.025 64,228.025C61.24,228.025 59,230.265 59,233.025ZM491,233.025L491,278.975C491,281.735 493.24,283.975 496,283.975C498.76,283.975 501,281.735 501,278.975L501,233.025C501,230.265 498.76,228.025 496,228.025C493.24,228.025 491,230.265 491,233.025ZM347,233.025L347,278.975C347,281.735 349.24,283.975 352,283.975C354.76,283.975 357,281.735 357,278.975L357,233.025C357,230.265 354.76,228.025 352,228.025C349.24,228.025 347,230.265 347,233.025Z" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 29 29" id="user" class="svg_mensagem_audio_user">
+                        <path
+                            d="M14.5 2A12.514 12.514 0 0 0 2 14.5 12.521 12.521 0 0 0 14.5 27a12.5 12.5 0 0 0 0-25Zm7.603 19.713a8.48 8.48 0 0 0-15.199.008A10.367 10.367 0 0 1 4 14.5a10.5 10.5 0 0 1 21 0 10.368 10.368 0 0 1-2.897 7.213ZM14.5 7a4.5 4.5 0 1 0 4.5 4.5A4.5 4.5 0 0 0 14.5 7Z" />
+                    </svg>
+                </div>
+                <!-- mensagens ilustrativas banner principal - segunda mensagem  -->
+                <div class="mensagens_banner_dois">
+                    <p class="paragrafo">
+                        Beleza!! Vamos juntos então!!! Conto com você na plataforma do Veki!!!
+                    </p>
+                </div>
+                <div class="imagemBanner_mensagem_bannerPrincipal">
+                    <img class="imagem_mensagem_bannerPrincipal" "../../assets/img/imagem_mensagens_inicio.jpg" alt="Pessoa com camiseta escrita voluntario">
+                </div>
+            </div>
+        </div>
+        <!-- mensagens ilustrativas banner principal - primeira mensagem -->
+
+        <!-- estatísticas ilustrativas banner principal -->
+        <div class="estatistica_banner_principal">
+            <div class="subtitulo-secundario">
+                <strong>
+                    2.847
+                </strong>
+                <span>
+                    Voluntários Ativos
+                </span>
+                <strong>
+                    1.293
+                </strong>
+                <span>
+                    Matches Realizados
+                </span>
+                <strong>
+                    89%
+                </strong>
+                <span>
+                    Taxa de Sucesso
+                </span>
+            </div>
+        </div>
+    </div>
     <!-- primeira sessão de texto - sobre o projeto -->
     <div class="primeiro_texto">
         <h2>
             SOBRE O PROJETO:
         </h2>
         <p>
-            Desastres naturais como enchentes, incêndios, deslizamentos e ondas de calor estão se tornando cada vez mais
+            Desastres naturais como enchentes, incêndios, deslizamentos e ondas de calor estão se tornando cada vez
+            mais
             frequentes e intensos. Quando esses eventos extremos acontecem, comunidades inteiras sofrem com perdas
             materiais, colapso dos serviços públicos e danos emocionais profundos. Nessas horas, a solidariedade e a
-            mobilização coletiva podem salvar vidas — mas nem sempre as boas intenções conseguem se transformar em ações
+            mobilização coletiva podem salvar vidas — mas nem sempre as boas intenções conseguem se transformar em
+            ações
             reais.
-            Muitas pessoas querem ajudar, mas não sabem como. Outras acham que não têm as habilidades necessárias, ou
+            Muitas pessoas querem ajudar, mas não sabem como. Outras acham que não têm as habilidades necessárias,
+            ou
             não conhecem instituições confiáveis para se engajar. Ao mesmo tempo, ONGs, escolas, abrigos e órgãos
-            públicos precisam urgentemente de apoio, mas enfrentam dificuldades para encontrar voluntários disponíveis e
+            públicos precisam urgentemente de apoio, mas enfrentam dificuldades para encontrar voluntários
+            disponíveis e
             qualificados no tempo certo.
             Essa desconexão entre quem quer ajudar e quem precisa de ajuda é o problema que queremos resolver.
             A Plataforma Solidária Inteligente para Eventos Extremos nasce com o objetivo de criar essa ponte. Ela
             conecta voluntários — com ou sem formação técnica — a instituições e comunidades que enfrentam situações
-            emergenciais ou necessitam de apoio contínuo. A ideia é simples: usar tecnologia acessível para organizar,
+            emergenciais ou necessitam de apoio contínuo. A ideia é simples: usar tecnologia acessível para
+            organizar,
             automatizar e agilizar o encontro entre quem quer fazer a diferença e quem precisa de ajuda.
         </p>
     </div>
@@ -213,14 +294,19 @@
     <!-- segunda sessão de texto - sobre a plataforma -->
     <div class="segundo_texto">
         <p>
-            A plataforma é composta por um conjunto de funcionalidades que foram pensadas para atuar tanto em momentos
-            de crise quanto em ações sociais regulares. O coração da proposta está no sistema de match solidário, que
+            A plataforma é composta por um conjunto de funcionalidades que foram pensadas para atuar tanto em
+            momentos
+            de crise quanto em ações sociais regulares. O coração da proposta está no sistema de match solidário,
+            que
             compara o perfil dos voluntários com as demandas das instituições, levando em conta área de atuação,
             urgência, localização e tipo de ajuda (presencial ou remota). Dessa forma, o voluntário certo chega mais
             rápido ao lugar certo.
-            Quando há um desastre, como uma enchente, o site entra em modo emergência, exibindo alertas em destaque e
-            priorizando pedidos de ajuda urgentes. Isso agiliza a resposta e amplia a eficiência das ações locais. Fora
-            dos momentos críticos, a plataforma também oferece suporte a projetos de longo prazo, como reforço escolar,
+            Quando há um desastre, como uma enchente, o site entra em modo emergência, exibindo alertas em destaque
+            e
+            priorizando pedidos de ajuda urgentes. Isso agiliza a resposta e amplia a eficiência das ações locais.
+            Fora
+            dos momentos críticos, a plataforma também oferece suporte a projetos de longo prazo, como reforço
+            escolar,
             acolhimento psicológico online e alfabetização digital.
             Outros diferenciais incluem:
             Mapa de ações próximas, incentivando a participação presencial com base na geolocalização;
@@ -230,8 +316,10 @@
             Espaço colaborativo para ideias sociais, onde os usuários podem propor novos projetos e formar redes de
             apoio;
             Escalabilidade, com possibilidade de adaptação para diferentes regiões e línguas.
-            Mais do que uma simples lista de oportunidades, essa plataforma é um sistema inteligente de solidariedade.
-            Um lugar onde a tecnologia multiplica o impacto da empatia. Onde qualquer pessoa pode fazer a diferença — da
+            Mais do que uma simples lista de oportunidades, essa plataforma é um sistema inteligente de
+            solidariedade.
+            Um lugar onde a tecnologia multiplica o impacto da empatia. Onde qualquer pessoa pode fazer a diferença
+            — da
             sua casa ou no campo — com apenas alguns cliques.
         </p>
     </div>
@@ -247,7 +335,7 @@
         </div>
         <!-- primeiro card de depoimentos -->
         <div class="tresCard_depoimentos">
-            <img src="../../assets/img/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
+            <img src="../../assets/img/index/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
             <div class="icone_depoimentos">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
                     <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" />
@@ -258,13 +346,14 @@
                     Matheus F.
                 </h3>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non maiores
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
+                    maiores
                     tempore?
                 </p>
             </div>
             <!-- segundo card de depoimentos -->
             <div class="tresCard_depoimentos">
-                <img src="../../assets/img/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
+                <img src="../../assets/img/index/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
                 <div class="icone_depoimentos">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
                         <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" />
@@ -282,7 +371,7 @@
             </div>
             <!-- terceiro card de depoimentos -->
             <div class="tresCard_depoimentos">
-                <img src="../../assets/img/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
+                <img src="../../assets/img/index/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
                 <div class="icone_depoimentos">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
                         <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" />
@@ -312,7 +401,8 @@
         <p>
             A Plataforma Solidária Inteligente para Eventos Extremos foi desenvolvida para ser simples, eficiente e
             acolhedora. Seja você um voluntário que deseja oferecer seu tempo, uma ONG buscando apoio, ou um órgão
-            público tentando organizar ações emergenciais, a experiência na plataforma foi pensada para funcionar com
+            público tentando organizar ações emergenciais, a experiência na plataforma foi pensada para funcionar
+            com
             clareza, rapidez e propósito.
         </p>
 
@@ -322,10 +412,14 @@
 
         <p>
             O primeiro passo para participar é criar um perfil de voluntário. Basta acessar a página de cadastro,
-            preencher seu nome, e-mail, telefone e selecionar suas habilidades ou áreas de atuação. Isso pode incluir
-            desde conhecimentos técnicos — como informática, enfermagem, psicologia, educação — até disponibilidade para
-            ajudar com atividades simples, como organização de doações, preparo de alimentos ou atendimento ao público.
-            Você também poderá informar sua disponibilidade de horário, se prefere atuar presencialmente ou remotamente,
+            preencher seu nome, e-mail, telefone e selecionar suas habilidades ou áreas de atuação. Isso pode
+            incluir
+            desde conhecimentos técnicos — como informática, enfermagem, psicologia, educação — até disponibilidade
+            para
+            ajudar com atividades simples, como organização de doações, preparo de alimentos ou atendimento ao
+            público.
+            Você também poderá informar sua disponibilidade de horário, se prefere atuar presencialmente ou
+            remotamente,
             e em quais regiões pode atender. Todas essas informações são utilizadas pelo sistema para encontrar
             oportunidades que combinam com você.
             A plataforma foi pensada para acolher todos os perfis de ajuda, e não apenas profissionais. Se você tem
@@ -338,10 +432,13 @@
 
         <p>
             Depois de se cadastrar, você pode acessar a página de pedidos. Ali, diversas organizações — como ONGs,
-            escolas, abrigos e projetos comunitários — publicam suas necessidades de apoio. Os pedidos são organizados
+            escolas, abrigos e projetos comunitários — publicam suas necessidades de apoio. Os pedidos são
+            organizados
             por área (educação, saúde, suporte técnico, apoio emocional etc.), por urgência e por localização.
-            Você pode usar filtros para encontrar facilmente as oportunidades que combinam com seu perfil. Por exemplo:
-            se você se cadastrou como psicóloga voluntária e indicou que pode atender remotamente, verá prioritariamente
+            Você pode usar filtros para encontrar facilmente as oportunidades que combinam com seu perfil. Por
+            exemplo:
+            se você se cadastrou como psicóloga voluntária e indicou que pode atender remotamente, verá
+            prioritariamente
             pedidos de acolhimento psicológico à distância. Se você informou que pode se deslocar até determinada
             cidade, os pedidos presenciais naquela região também aparecerão para você.
         </p>
@@ -351,16 +448,21 @@
         </h2>
 
         <p>
-            Quando um evento extremo acontece — como uma enchente, um incêndio ou um deslizamento — a plataforma entra
+            Quando um evento extremo acontece — como uma enchente, um incêndio ou um deslizamento — a plataforma
+            entra
             automaticamente em modo emergência. Um alerta visual é exibido na tela inicial, destacando os pedidos de
             ajuda mais urgentes daquela localidade.
-            Você será notificado (por e-mail ou dentro da plataforma) caso tenha um perfil compatível com as demandas
-            emergenciais. Isso permite respostas rápidas, organizadas e direcionadas — exatamente o que faz a diferença
+            Você será notificado (por e-mail ou dentro da plataforma) caso tenha um perfil compatível com as
+            demandas
+            emergenciais. Isso permite respostas rápidas, organizadas e direcionadas — exatamente o que faz a
+            diferença
             em momentos críticos.
             Além disso, cada evento conta com uma página dedicada, onde são exibidos os pedidos relacionados, as
-            informações públicas sobre a situação (notícias, status do atendimento, orientações) e os detalhes de quem
+            informações públicas sobre a situação (notícias, status do atendimento, orientações) e os detalhes de
+            quem
             está solicitando ajuda. Você pode clicar em “Ver mais” para acessar o perfil da instituição ou do
-            solicitante e, se quiser ajudar, basta clicar em “Me voluntariar” — e pronto, sua inscrição está registrada
+            solicitante e, se quiser ajudar, basta clicar em “Me voluntariar” — e pronto, sua inscrição está
+            registrada
             e um alerta confirma o sucesso da ação.
         </p>
 
@@ -382,16 +484,20 @@
         </h2>
 
         <p>
-            A plataforma também abriga uma área dedicada a ações contínuas, como alfabetização digital, reforço escolar
+            A plataforma também abriga uma área dedicada a ações contínuas, como alfabetização digital, reforço
+            escolar
             online, oficinas culturais e suporte emocional. Você pode navegar por essas iniciativas, conhecer os
-            projetos e se inscrever quando quiser. Isso permite que a solidariedade não seja algo pontual, mas parte da
+            projetos e se inscrever quando quiser. Isso permite que a solidariedade não seja algo pontual, mas parte
+            da
             rotina — mesmo fora de situações emergenciais.
             Além disso, há espaço para que voluntários proponham novas ideias de ação, compartilhem boas práticas,
             formem grupos e se organizem em torno de causas que vão além da resposta a desastres.
 
 
-            A experiência de uso da plataforma é centrada em simplicidade, empatia e agilidade. Em poucos minutos, você
-            cria seu perfil, encontra oportunidades reais e se conecta a quem mais precisa. E o mais importante: você vê
+            A experiência de uso da plataforma é centrada em simplicidade, empatia e agilidade. Em poucos minutos,
+            você
+            cria seu perfil, encontra oportunidades reais e se conecta a quem mais precisa. E o mais importante:
+            você vê
             o impacto direto das suas ações.
             Você não precisa ser especialista em nada. Precisa apenas de algo que já tem: vontade de ajudar. A
             plataforma cuida do resto — conecta, organiza, direciona. E transforma o “quero ajudar” em “eu ajudei”.
@@ -405,52 +511,40 @@
     <div class="carrossel_home">
         <div class="carrossel_container">
             <div class="slide">
-                <div class="numeroTexto">1 / 12</div>
-                <img src="../../assets/img/imagem-slide-1.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-1.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">2 / 12</div>
-                <img src="../../assets/img/imagem_slide_2.jpg" alt="">
-            </div>
-            <div class="slide" v>
-                <div class="numeroTexto">3 / 12</div>
-                <img src="../../assets/img/imagem_slide_3.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-2.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">4 / 12</div>
-                <img src="../../assets/img/imagem_slide_4.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-3.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">5 / 12</div>
-                <img src="../../assets/img/imagem_slide_5.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-4.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">6 / 12</div>
-                <img src="../../assets/img/imagem_slide_6.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-5.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">7 / 12</div>
-                <img src="../../assets/img/imagem_slide_7.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-6.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">8 / 12</div>
-                <img src="../../assets/img/imagem_slide_8.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-7.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">9 / 12</div>
-                <img src="../../assets/img/imagem_slide_9.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-8.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">10 / 12</div>
-                <img src="../../assets/img/imagem_slide_10.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-9.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">11 / 12</div>
-                <img src="../../assets/img/imagem_slide_11.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-10.jpg" alt="">
             </div>
             <div class="slide">
-                <div class="numeroTexto">12 / 12</div>
-                <img src="../../assets/img/imagem_slide_12.jpg" alt="">
+                <img src="../../assets/img/index/carrossel/imagem-slide-11.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="../../assets/img/index/carrossel/imagem-slide-12.jpg" alt="">
             </div>
             <!-- controladores do carrossel  -->
             <div class="controles_carrossel">
@@ -489,6 +583,8 @@
 
 
     <script src="../../js/shared/carrossel.js"></script>
+    <script type="module" src="../../js/main.js"></script>
+
 </body>
 
 </html>

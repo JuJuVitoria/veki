@@ -13,6 +13,7 @@
     /* ==== SHADOW ==== */
     --shadow-01: rgba(0, 0, 0, 0.06) 0 2px 8px;
     --shadow--02: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    --shadow--03: rgba(0, 0, 0, 0.103) 0px 0px 40px;
 
     /* ==== TIPOGRAFIA ==== */
     /* Font size | Títulos */
@@ -32,4 +33,10 @@
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-bold: 700;
+
+    --z-index-1: 100;
+    --z-index-2: 200;
+    --z-index-3: 300;
+    --z-index04: 400;
+    --z-index05: 500;
 }

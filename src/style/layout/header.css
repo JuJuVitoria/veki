@@ -15,7 +15,7 @@
     padding: 0.5rem 2rem;
     margin-top: var(--alert-emergencias-ativas-height);
     height: var(--header-height);
-    z-index: 1000;
+    z-index: var(--z-index-4);
 }
 
 .header__logo {
@@ -140,7 +140,7 @@
         box-shadow: -2px 0 5px -3px rgba(0, 0, 0, 0.3);
         transform: translateX(100%);
         transition: transform 0.3s ease-in-out;
-        z-index: 1000;
+        z-index: var(--z-index-4);
     }
 
     .header__actions[data-visible="true"] {
