@@ -1,0 +1,148 @@
+:root {
+    /* Cores info categoria */
+    /* Inundação */
+    --color-ctg-bg-inundacao: #B7BFED;
+    --color-ctg-tx-inundacao: #0E44B0;
+
+    /* Incêndio */
+    --color-ctg-bg-incendio: #FFD1D1;
+    --color-ctg-tx-incendio: #B30000;
+
+    /* Saúde */
+    --color-ctg-bg-saude: #D1FFD1;
+    --color-ctg-tx-saude: #107C10;
+
+    /* Deslizamento */
+    --color-ctg-bg-deslizamento: #FFEFC2;
+    --color-ctg-tx-deslizamento: #A67C00;
+
+    /* Terremoto */
+    --color-ctg-bg-terremoto: #E0E0E0;
+    --color-ctg-tx-terremoto: #4F4F4F;
+
+    /* Tsunami */
+    --color-ctg-bg-tsunami: #C2F0FF;
+    --color-ctg-tx-tsunami: #007EA7;
+
+    /* Calor extremo */
+    --color-ctg-bg-calor-extremo: #FFD6A5;
+    --color-ctg-tx-calor-extremo: #D14900;
+
+    /* Crises humanitárias */
+    --color-ctg-bg-crises-humanitarias: #F5CCE8;
+    --color-ctg-tx-crises-humanitarias: #7B2D5A;
+
+    /* Ciclone e furacão */
+    --color-ctg-bg-ciclone-furacao: #D1E8FF;
+    --color-ctg-tx-ciclone-furacao: #004C99;
+
+    /* Cores info relevancia */
+    /* Crítica */
+    --color-rlv-bg-critica: #FFD2BA;
+    --color-rlv-tx-critica: #D93D04;
+
+    /* Alta */
+    --color-rlv-bg-alta: #FFE8A3;
+    --color-rlv-tx-alta: #D98600;
+
+    /* Média */
+    --color-rlv-bg-media: #D6F5FF;
+    --color-rlv-tx-media: #007C91;
+
+    /* Baixa */
+    --color-rlv-bg-baixa: #E1F7D5;
+    --color-rlv-tx-baixa: #3A8C16;
+}
+
+.info__categoria,
+.info__relevancia {
+    width: fit-content;
+    padding: 0.5rem;
+}
+
+.info__categoria {
+    border-radius: 15px;
+}
+
+.info__relevancia {
+    border-radius: 8px;
+}
+
+.info__p {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-text-md);
+}
+
+/* INFO CATEGORIA */
+
+[data-categoria="Inundação"] .info__categoria {
+    background-color: var(--color-ctg-bg-inundacao);
+    color: var(--color-ctg-tx-inundacao);
+}
+
+[data-categoria="Incêndio"] .info__categoria {
+    background-color: var(--color-ctg-bg-incendio);
+    color: var(--color-ctg-tx-incendio);
+}
+
+[data-categoria="Saúde"] .info__categoria {
+    background-color: var(--color-ctg-bg-saude);
+    color: var(--color-ctg-tx-saude);
+}
+
+[data-categoria="Deslizamento"] .info__categoria {
+    background-color: var(--color-ctg-bg-deslizamento);
+    color: var(--color-ctg-tx-deslizamento);
+}
+
+[data-categoria="Terremoto"] .info__categoria {
+    background-color: var(--color-ctg-bg-terremoto);
+    color: var(--color-ctg-tx-terremoto);
+}
+
+[data-categoria="Tsunami"] .info__categoria {
+    background-color: var(--color-ctg-bg-tsunami);
+    color: var(--color-ctg-tx-tsunami);
+}
+
+[data-categoria="Calor extremo"] .info__categoria {
+    background-color: var(--color-ctg-bg-calor-extremo);
+    color: var(--color-ctg-tx-calor-extremo);
+}
+
+[data-categoria="Crises humanitarias"] .info__categoria {
+    background-color: var(--color-ctg-bg-crises-humanitarias);
+    color: var(--color-ctg-tx-crises-humanitarias);
+}
+
+[data-categoria="Ciclone e furacão"] .info__categoria {
+    background-color: var(--color-ctg-bg-ciclone-furacao);
+    color: var(--color-ctg-tx-ciclone-furacao);
+}
+
+/* INFO RELEVANCIA */
+
+[data-relevancia="Crítica"] .info__relevancia {
+    background-color: var(--color-rlv-bg-critica);
+    color: var(--color-rlv-tx-critica);
+    border: solid 1px var(--color-rlv-tx-critica);
+}
+
+[data-relevancia="Alta"] .info__relevancia {
+    background-color: var(--color-rlv-bg-alta);
+    color: var(--color-rlv-tx-alta);
+    border: solid 1px var(--color-rlv-tx-alta);
+}
+
+[data-relevancia="Média"] .info__relevancia {
+    background-color: var(--color-rlv-bg-media);
+    color: var(--color-rlv-tx-media);
+    border: solid 1px var(--color-rlv-tx-media);
+}
+
+[data-relevancia="Baixa"] .info__relevancia {
+    background-color: var(--color-rlv-bg-baixa);
+    color: var(--color-rlv-tx-baixa);
+    border: solid 1px var(--color-rlv-tx-baixa);
+}

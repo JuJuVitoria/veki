@@ -1,0 +1,172 @@
+.tela-pedidos {
+    position: fixed;
+    z-index: var(--z-index05);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background-color: var(--light-gray);
+    box-shadow: var(--shadow--03);
+    border-radius: 20px;
+    border: solid 1px #d3d3d3;
+    overflow-y: scroll;
+    padding-bottom: 2rem;
+
+    transition: display 1s;
+    display: none;
+}
+
+.tela-pedidos__descricao-emergencia {
+    height: 40vh;
+    background-image: url('../../assets/img/emergency/enchente.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 2rem;
+    margin-bottom: 2rem
+}
+
+.tela-pedidos__descricao-emergencia__btn-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.tela-pedidos__descricao-emergencia__btn-close svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Info */
+
+.tela-pedidos__descricao-emergencia__info {
+    display: flex;
+    gap: 2rem;
+}
+
+.tela-pedidos__descricao-emergencia__titulo {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-heading-lg-lg);
+    margin: 1rem 0 .8rem 0;
+    text-transform: uppercase;
+    color: var(--dark-purple);
+}
+
+.tela-pedidos__descricao-emergencia__titulo,
+.tela-pedidos__descricao-emergencia__descrição {
+    color: var(--white);
+}
+
+.tela-pedidos__titulo-pedido {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-heading-lg-md);
+    text-align: center;
+    margin: 1rem 0 2rem 0;
+    text-transform: capitalize;
+    color: var(--dark-purple);
+}
+
+/* Container cards */
+
+.tela-pedidos__cards-pedidos-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+
+/* Estilização dos cards */
+
+.cards-pedidos-container__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 420px;
+    background-color: var(--white);
+    margin: 0 1rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow--03);
+}
+
+.cards-pedidos-container__card__informacoes-do-pedido {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.cards-pedidos-container__card__heading {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.cards-pedidos-container__card__foto-perfil {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+}
+
+.cards-pedidos-container__card__user-name {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-heading-lg-md);
+    text-transform: capitalize;
+}
+
+.cards-pedidos-container__card__detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    margin-top: 0.5rem;
+}
+
+.cards-pedidos-container__card__data,
+.cards-pedidos-container__card__localizacao {
+    display: flex;
+    align-items: center;
+}
+
+.cards-pedidos-container__card__data p,
+.cards-pedidos-container__card__localizacao p {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text-md);
+}
+
+.cards-pedidos-container__card__data svg,
+.cards-pedidos-container__card__localizacao svg {
+    fill: var(--black);
+}
+
+
+@media screen and (max-width: 768px) {
+    .tela-pedidos {
+        width: 90vw;
+        height: 90vh;
+    }
+
+    .tela-pedidos__descricao-emergencia {
+        height: 75vh;
+    }
+
+    .cards-pedidos-container__card__informacoes-do-pedido {
+        flex-direction: column;
+    }
+}
