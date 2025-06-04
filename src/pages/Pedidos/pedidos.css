@@ -1,49 +1,125 @@
+/* Configurações Globais */
 .pedidos-container {
-    max-width: 1200px;
-    margin: 2rem auto;
+    max-width: 1400px;
+    margin: 0 auto;
     padding: 0 1rem;
 }
 
-.pedidos-header {
-    margin-bottom: 2rem;
+/* Barra de Pesquisa (Topo) */
+.search-bar-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
 }
 
 .pedidos-filtros {
+    width: 100%;
+    max-width: 800px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
     display: flex;
     gap: 1rem;
-    margin-top: 1rem;
 }
 
 .pedidos-pesquisa {
     flex: 1;
-    padding: 0.75rem 1rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 1rem;
 }
 
 .pedidos-filter {
-    padding: 0.75rem 1rem;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
+    width: 200px;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     font-size: 1rem;
-    min-width: 150px;
 }
 
-.pedidos-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+/* Layout Principal */
+.pedidos-layout {
+    display: flex;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
-.pedido-card {
+/* Sidebar com Checkboxes (Esquerda) */
+.pedidos-sidebar {
+    flex: 0 0 250px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+}
+
+.pedidos-checkbox-group {
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.75rem;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #444;
+    cursor: pointer;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #432273;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+/* Botão Aplicar Filtros */
+.button-roxo {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #432273;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    align-self: flex-end;
+    transition: background-color 0.2s;
+}
+
+/* Área de Conteúdo (Cards) */
+.pedidos-content {
+    flex: 1;
+    max-width: calc(100% - 250px - 2rem);
+}
+
+.pedidos-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+/* Estilo dos Cards */
+.pedido-card {
+    flex: 0 0 300px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
 }
 
 .pedido-card__header {
@@ -53,16 +129,13 @@
     gap: 1rem;
 }
 
-.pedido-tag {
+.pedido-tag-Saude {
+    background-color: #E5F6FF;
+    color: #0088CC;
     padding: 0.25rem 0.75rem;
     border-radius: 16px;
     font-size: 0.875rem;
     font-weight: 500;
-}
-
-.pedido-tag-Saude {
-    background-color: #E5F6FF;
-    color: #0088CC;
 }
 
 .pedido-titulo {
@@ -70,6 +143,12 @@
     font-weight: 600;
     color: #333;
     margin: 0;
+}
+
+.pedido-card__content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .pedido-descricao {
@@ -96,6 +175,7 @@
     fill: currentColor;
 }
 
+/* Botões dos Cards */
 .pedido-button {
     width: 100%;
     padding: 0.75rem;
@@ -104,9 +184,10 @@
     font-weight: 500;
     cursor: pointer;
     transition: background-color 0.2s;
+    margin-top: 5px;
 }
 
-.button-laranja{
+.button-laranja {
     background-color: #FF6B00;
     color: white;
 }
@@ -115,17 +196,34 @@
     background-color: #E65C00;
 }
 
-/* Responsive adjustments */
+/* Responsividade */
 @media (max-width: 768px) {
     .pedidos-filtros {
         flex-direction: column;
     }
-    
+
+    .pedidos-filter {
+        width: 100%;
+    }
+
+    .pedidos-layout {
+        flex-direction: column;
+    }
+
+    .pedidos-sidebar {
+        position: static;
+        width: 100%;
+    }
+
+    .pedidos-content {
+        max-width: 100%;
+    }
+
     .pedidos-grid {
-        grid-template-columns: 1fr;
+        justify-content: center;
     }
     
     .pedido-card {
-        padding: 1rem;
+        flex: 0 0 100%;
     }
 } 
