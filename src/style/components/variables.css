@@ -9,11 +9,13 @@
     --white: #fefefe;
     --black: #0C0C0C;
     --light-gray: #F2F2F2;
+    --medium-gray: #858585;
+    --dark-gray: #4d4d4d;
 
     /* ==== SHADOW ==== */
-    --shadow-01: rgba(0, 0, 0, 0.06) 0 2px 8px;
-    --shadow--02: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    --shadow--03: rgba(0, 0, 0, 0.103) 0px 0px 40px;
+    --shadow-01: 0 4px 24px rgba(0, 0, 0, 0.2);
+    --shadow--02: 0px 5px 15px rgba(0, 0, 0, 0.35);
+    --shadow--03: 0px 0px 40px rgba(0, 0, 0, 0.103);
 
     /* ==== TIPOGRAFIA ==== */
     /* Font size | Títulos */
@@ -39,4 +41,7 @@
     --z-index-3: 300;
     --z-index04: 400;
     --z-index05: 500;
+
+    --radius: 1.25rem;
+    --transition: 0.3s ease;
 }
