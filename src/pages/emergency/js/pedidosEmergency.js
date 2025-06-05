@@ -36,7 +36,6 @@ function exibeDescricaoEmergencia(listaEmergencias, id) {
     descricaoEmergencia.dataset.categoria = emergencia.categoria;
     descricaoEmergencia.dataset.relevancia = emergencia.relevancia;
 
-    console.log(emergencia.categoria)
     descricaoEmergencia.style.backgroundImage = imgs[emergencia.categoria];
     descricaoEmergencia.style.backgroundSize = 'cover';
     descricaoEmergencia.style.backgroundPosition = 'center';

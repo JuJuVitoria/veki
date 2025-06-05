@@ -67,6 +67,7 @@
 .info__relevancia,
 .info__modalidade {
     width: fit-content;
+    height: fit-content;
     padding: 0.5rem;
 }
 
