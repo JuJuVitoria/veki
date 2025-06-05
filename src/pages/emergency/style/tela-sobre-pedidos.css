@@ -1,0 +1,185 @@
+.order-modal {
+    position: fixed;
+    z-index: var(--z-index05);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80vw;
+    height: 80vh;
+    background-color: var(--light-gray);
+    box-shadow: var(--shadow--03);
+    border-radius: 20px;
+    border: solid 1px #d3d3d3;
+    overflow-y: scroll;
+    padding: 2rem;
+    transition: display 1s;
+    /* display: none; */
+}
+
+/* Ações */
+.order-modal__actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.order-modal__button {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.order-modal__button svg {
+    fill: var(--black);
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Containers */
+.order-modal__profile,
+.order-modal__score,
+.order-modal__request-info {
+    background-color: var(--white);
+    box-shadow: var(--shadow--03);
+    border-radius: 15px;
+    padding: 1.5rem 1.5rem 2.5rem 1.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Perfil */
+.order-modal__profile-info {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.order-modal__avatar {
+    width: 7rem;
+    height: 7rem;
+    border-radius: 50%;
+}
+
+.order-modal__name {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-medium);
+    font-size: var(--fs-heading-lg-md);
+    text-transform: capitalize;
+}
+
+.order-modal__email,
+.order-modal__phone {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text-md);
+    color: #363636;
+    margin-bottom: .3rem;
+}
+
+.order-modal__separator {
+    height: 100px;
+    width: 2px;
+    background-color: var(--black);
+}
+
+.order-modal__details {
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.order-modal__details-info {
+    display: flex;
+    gap: 3rem;
+    justify-content: space-between;
+}
+
+/* Status */
+.order-modal__profile-status {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5rem;
+    border-radius: 15px;
+    margin: 0.5rem 0;
+}
+
+.order-modal__profile-status p {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-text-md);
+}
+
+[data-verified="true"] .order-modal__profile-status {
+    background-color: #65d88b;
+    color: #25683c;
+}
+
+[data-verified="false"] .order-modal__profile-status {
+    background-color: #ebad50;
+    color: #8a6329;
+}
+
+/* Labels */
+.order-modal__label {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: 1.2rem;
+    margin: .8rem 0 .5rem 0;
+}
+
+/* Biografia */
+.order-modal__bio {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.order-modal__bio-title {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: 1.2rem;
+    margin: .8rem 0 .5rem 0;
+}
+
+/* Pontuação */
+.order-modal__score-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Botão Voluntariar */
+.order-modal__button-volunteer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: "Ubuntu", sans-serif;
+    font-size: var(--fs-text-md);
+    transition: background-color 0.3s;
+}
+
+.order-modal__button-volunteer:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Informações do Pedido */
+.order-modal__request-details {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.order-modal__request-date,
+.order-modal__request-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
