@@ -52,15 +52,26 @@
     /* Baixa */
     --color-rlv-bg-baixa: #E1F7D5;
     --color-rlv-tx-baixa: #3A8C16;
+
+    /* Cores info modalidade */
+    /* Modalidade - Presencial */
+    --color-modalidade-bg-presencial: #EAF9D9;
+    --color-modalidade-tx-presencial: #1D6B00;
+
+    /* Modalidade - Remoto */
+    --color-modalidade-bg-remoto: #D3E8FD;
+    --color-modalidade-tx-remoto: #0B3D91;
 }
 
 .info__categoria,
-.info__relevancia {
+.info__relevancia,
+.info__modalidade {
     width: fit-content;
     padding: 0.5rem;
 }
 
-.info__categoria {
+.info__categoria,
+.info__modalidade {
     border-radius: 15px;
 }
 
@@ -72,6 +83,19 @@
     font-family: "Roboto", sans-serif;
     font-weight: var(--fw-bold);
     font-size: var(--fs-text-md);
+}
+
+/* INFO MODALIDADE */
+[data-modalidade="Remoto"] .info__modalidade {
+  background-color: var(--color-modalidade-bg-remoto);
+  color: var(--color-modalidade-tx-remoto);
+  border: 1px solid var(--color-modalidade-tx-remoto);
+}
+
+[data-modalidade="Presencial"] .info__modalidade {
+  background-color: var(--color-modalidade-bg-presencial);
+  color: var(--color-modalidade-tx-presencial);
+  border: 1px solid var(--color-modalidade-tx-presencial);
 }
 
 /* INFO CATEGORIA */
