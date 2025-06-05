@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Color.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="auth.css">
+    <title>Cadastro/Login</title>
+</head>
+<body>
+    <main>
+        <div id="login-container" class="login-container">
+            <div class="form-container">
+                <form class="form form-login">
+                    <h2 class="form-title">LOGIN</h2>
+                    <div class="form-input-container">
+                        <div class="input-container">
+                            <input type="text" id="input" required="">
+                            <label for="input" class="label">Nome</label>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="input-container">
+                            <input type="password" id="input" required="">
+                            <label for="input" class="label">Senha</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="form-button">Logar</button>
+                     <p class="mobile-text">Não tem conta? <a  id="open-register-mobile">Registre-se</a></p>
+                </form>
+                <form class="form form-register">
+                    <h2 class="form-title">Criar Conta</h2>
+                    <div class="form-input-container">
+                         <div class="input-container input-register">
+                            <input type="text" id="input" required="">
+                            <label for="input" class="label">Nome</label>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="input-container input-register">
+                            <input type="email" id="input" required="">
+                            <label for="input" class="label">Email</label>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="input-container input-register">
+                            <input type="tel" id="input" required="">
+                            <label for="input" class="label">Telefone</label>
+                            <div class="underline"></div>
+                        </div>
+                        <div class="input-container input-register">
+                            <input type="password" id="input" required="">
+                            <label for="input" class="label">Senha</label>
+                            <div class="underline"></div>
+                        </div>
+                    </div>
+                    <button type="button" class="form-button form-button-cadastrese">Cadastre-se</button>
+                     <p class="mobile-text">Não tem conta? <a  id="open-login-mobile">Registre-se</a></p>
+                </form>
+            </div>
+            <div class="overlay-container">
+                    <div class="overlay">
+                        <h2 class="form-title form-title-light">Ja tem conta?</h2>
+                        <p class="form-text">Para entrar em nossa plataforma faça login com suas informações</p>
+                        <button class="form-button-overlay form-button-light" id="open-login">Entrar</button>
+                    </div>
+                  <div class="overlay">
+                        <h2 class="form-title form-title-light">Não tem uma conta ainda?</h2>
+                        <p class="form-text">Cadastre-se e começe a usar nossa plataforma</p>
+                        <button class="form-button-overlay form-button-light form-button-mobile" id="open-register">Cadastre-se</button>
+                    </div>
+            </div>
+            
+        </div>
+
+    </main>
+    
+    <script src="auth.js"></script>
+</body>
+</html>
