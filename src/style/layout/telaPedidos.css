@@ -19,10 +19,10 @@
 
 .tela-pedidos__descricao-emergencia {
     height: 40vh;
-    background-image: url('../../assets/img/emergency/enchente.jpg');
+    /* background-image: url('../../assets/img/emergency/enchente.jpg');
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat; */
     display: flex;
     flex-direction: column;
     justify-content: end;

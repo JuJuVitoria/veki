@@ -1,6 +1,7 @@
 import { emergencias } from '../../../js/data/emergenciasData.js';
 import { pedidosEmergencia } from '../../../js/data/pedidosEmergenciaData.js';
 import { svgIcons } from '../../../js/shared/svgIcons.js';
+import { imgs } from '../../../js/shared/imgs.js';
 
 export function carregarPedidosPorEmergencia(emergenciaID) {
     const emergenciaData = pedidosEmergencia.find(
@@ -34,6 +35,12 @@ function exibeDescricaoEmergencia(listaEmergencias, id) {
     descricaoEmergencia.classList.add('tela-pedidos__descricao-emergencia');
     descricaoEmergencia.dataset.categoria = emergencia.categoria;
     descricaoEmergencia.dataset.relevancia = emergencia.relevancia;
+
+    console.log(emergencia.categoria)
+    descricaoEmergencia.style.backgroundImage = imgs[emergencia.categoria];
+    descricaoEmergencia.style.backgroundSize = 'cover';
+    descricaoEmergencia.style.backgroundPosition = 'center';
+    descricaoEmergencia.style.backgroundRepeat = 'no-repeat';
 
     const btnCloseTelaPedido = document.createElement('button');
     btnCloseTelaPedido.classList.add('tela-pedidos__descricao-emergencia__btn-close');
