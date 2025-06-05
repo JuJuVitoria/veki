@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="../../style/layout/header.css"> <!-- link css header -->
     <link rel="stylesheet" href="../../style/layout/footer.css">
     <link rel="stylesheet" href="inicio.css">
+    <link rel="stylesheet" href="../../style/layout/footer.css">
 </head>
 
 <body>
@@ -77,6 +78,11 @@
         <div class="primeiraSessao_inicio">
             <!-- mini banner emergências  -->
             <div class="alerta_banner">
+                <svg class="icones_banner_alerta" xmlns="http://www.w3.org/2000/svg" height="24px"
+                    viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
+                    <path
+                        d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm240-182v-196l-98 58H160v80h182l98 58Zm120 36v-268q27 24 43.5 58.5T620-480q0 41-16.5 75.5T560-346ZM300-480Z" />
+                </svg>
                 <span class="paragrafo" id="texto_alerta_banner_principal">Emergências Crescem 83% No Brasil</span>
             </div>
             <div class="alinhamento_banners">
@@ -188,7 +194,7 @@
             </h2>
         </div>
         <div class="primeiro_textoParagrafo">
-            <p class="paragrafo" id="primeiro_textoParagrafo_texto">
+            <p class="paragrafo">
                 Desastres naturais como enchentes, incêndios, deslizamentos e ondas de calor estão se tornando cada
                 vez
                 mais
@@ -280,41 +286,35 @@
 
     <!-- um card estatística maior -->
     <div class="umCard_home">
-        <h4>
+        <h4 class="titulo-complementar">
             Escalabilidade Global, Impacto Local
         </h4>
-        <p>
+        <p class="paragrafo">
             Nossa plataforma é projetada para ser aplicada em diferentes cidades, estados e países, adaptando-se às
             necessidades específicas de cada região.
         </p>
-        <strong>
-            +50
-        </strong>
-        <span>
-            Cidades Ativas
-        </span>
-        <strong>
-            12
-        </strong>
-        <span>
-            Estados
-        </span>
-        <strong>
-            3
-        </strong>
-        <span>
-            Países
-        </span>
-        <strong>
-            24/7
-        </strong>
-        <span>
-            Monitorando
-        </span>
+        <div class="estatisticas_home">
+            <div class="estatistica_item">
+                <strong class="titulo-complementar">+50</strong>
+                <span class="paragrafo">Cidades Ativas</span>
+            </div>
+            <div class="estatistica_item">
+                <strong class="titulo-complementar">12</strong>
+                <span class="paragrafo">Estados</span>
+            </div>
+            <div class="estatistica_item">
+                <strong class="titulo-complementar">3</strong>
+                <span class="paragrafo">Países</span>
+            </div>
+            <div class="estatistica_item">
+                <strong class="titulo-complementar">24/7</strong>
+                <span class="paragrafo">Monitorando</span>
+            </div>
+        </div>
     </div>
     <!-- segunda sessão de texto - sobre a plataforma -->
     <div class="segundo_texto">
-        <p>
+        <p class="paragrafo">
             A plataforma é composta por um conjunto de funcionalidades que foram pensadas para atuar tanto em
             momentos
             de crise quanto em ações sociais regulares. O coração da proposta está no sistema de match solidário,
@@ -330,13 +330,26 @@
             escolar,
             acolhimento psicológico online e alfabetização digital.
             Outros diferenciais incluem:
-            Mapa de ações próximas, incentivando a participação presencial com base na geolocalização;
-            Gamificação e reputação voluntária, com selos de reconhecimento e avaliações mútuas entre voluntários e
-            instituições;
-            Perfil com histórico de atuação, permitindo gerar comprovações para currículos ou certificados;
-            Espaço colaborativo para ideias sociais, onde os usuários podem propor novos projetos e formar redes de
-            apoio;
-            Escalabilidade, com possibilidade de adaptação para diferentes regiões e línguas.
+        <ul class="lista_segundoTexto">
+            <li class="paragrafo">
+                Mapa de ações próximas, incentivando a participação presencial com base na geolocalização;
+            </li>
+            <li class="paragrafo">
+                Gamificação e reputação voluntária, com selos de reconhecimento e avaliações mútuas entre voluntários e
+                instituições;
+            </li>
+            <li class="paragrafo">
+                Perfil com histórico de atuação, permitindo gerar comprovações para currículos ou certificados;
+            </li>
+            <li class="paragrafo">
+                Espaço colaborativo para ideias sociais, onde os usuários podem propor novos projetos e formar redes de
+                apoio;
+            </li>
+            <li class="paragrafo">
+                Escalabilidade, com possibilidade de adaptação para diferentes regiões e línguas.
+            </li>
+        </ul>
+        <p class="paragrafo">
             Mais do que uma simples lista de oportunidades, essa plataforma é um sistema inteligente de
             solidariedade.
             Um lugar onde a tecnologia multiplica o impacto da empatia. Onde qualquer pessoa pode fazer a diferença
@@ -356,182 +369,179 @@
                 </h3>
             </div>
         </div>
-        <!-- primeiro card de depoimentos -->
-        <div class="tresCard_depoimentos">
-            <img src="../../assets/img/index/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
-            <div class="icone_depoimentos">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
-                    <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" />
-                </svg>
+
+        <div class="container_cards_depoimentos ">
+            <!-- primeiro card de depoimentos -->
+            <div class="tresCard_depoimentos">
+                <div class="imagem_container">
+                    <img src="../../assets/img/index/imagem_depoimentos_usuarios2.jpg"
+                        alt="Imagem Ilustração de Usuário">
+                </div>
+                <div class="texto_depoimentos">
+                    <h3 class="texto_depoimentos_nome">Matheus F.</h3>
+                    <p class="paragrafo">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
+                        maiores
+                        tempore?
+                    </p>
+                </div>
             </div>
-            <div class="texto_depoimentos">
-                <h3 class="titulo-complementar">
-                    Matheus F.
-                </h3>
-                <p class="paragrafo">
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
-                    maiores
-                    tempore?
-                </p>
-            </div>
+
             <!-- segundo card de depoimentos -->
             <div class="tresCard_depoimentos">
-                <img src="../../assets/img/index/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
-                <div class="icone_depoimentos">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
-                        <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" />
-                    </svg>
+                <div class="imagem_container">
+                    <img src="../../assets/img/index/imagem_depoimentos_usuarios2.jpg"
+                        alt="Imagem Ilustração de Usuário">
                 </div>
                 <div class="texto_depoimentos">
-                    <h3 class="titulo-complementar">
-                        Fernando A.
-                    </h3>
+                    <h3 class="texto_depoimentos_nome">Angela B.</h3>
                     <p class="paragrafo">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
-                        maiores tempore?
+                        maiores
+                        tempore?
                     </p>
                 </div>
             </div>
+
             <!-- terceiro card de depoimentos -->
             <div class="tresCard_depoimentos">
-                <img src="../../assets/img/index/imagem_depoimentos.jpg" alt="Imagem Ilustração de Usuário">
-                <div class="icone_depoimentos">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" id="plus">
-                        <path d="M19,11H13V5a1,1,0,0,0-2,0v6H5a1,1,0,0,0,0,2h6v6a1,1,0,0,0,2,0V13h6a1,1,0,0,0,0-2Z" />
-                    </svg>
+                <div class="imagem_container">
+                    <img src="../../assets/img/index/imagem_depoimentos_usuarios2.jpg"
+                        alt="Imagem Ilustração de Usuário">
                 </div>
                 <div class="texto_depoimentos">
-                    <h3 class="titulo-complementar">
-                        Angela B.
-                    </h3>
+                    <h3 class="texto_depoimentos_nome">Fernando A.</h3>
                     <p class="paragrafo">
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
-                        maiores tempore?
+                        maiores
+                        tempore?
                     </p>
                 </div>
+            </div>
+        </div>
     </section>
     <!-- guia de uso da plataforma textos -->
-    <section class="guia_plataforma">
+    <div class="guia_plataforma">
         <div class="titulo_sessao">
             <h2 class="subtitulo-primario">
                 Como utilizar a plataforma:
             </h2>
             <div class="subtitulo_laranja">
-                <h3 class="subtitulo-primario">
+                <h3 class="subtitulo-secundario">
                     Um guia prático
                 </h3>
             </div>
         </div>
+        <div class="textos_sobrePlataforma_paragrafos">
+            <p class="paragrafo">
+                A Plataforma Solidária Inteligente para Eventos Extremos foi desenvolvida para ser simples, eficiente e
+                acolhedora. Seja você um voluntário que deseja oferecer seu tempo, uma ONG buscando apoio, ou um órgão
+                público tentando organizar ações emergenciais, a experiência na plataforma foi pensada para funcionar
+                com
+                clareza, rapidez e propósito.
+            </p>
+        </div>
+            <h2 class="titulo_sobrePlataforma">
+                1. Cadastro do voluntário: transforme sua vontade em ação
+            </h2>
+        <div class="textos_sobrePlataforma_paragrafos">
+            <p class="paragrafo">
+                O primeiro passo para participar é criar um perfil de voluntário. Basta acessar a página de cadastro,
+                preencher seu nome, e-mail, telefone e selecionar suas habilidades ou áreas de atuação. Isso pode
+                incluir
+                desde conhecimentos técnicos — como informática, enfermagem, psicologia, educação — até disponibilidade
+                para
+                ajudar com atividades simples, como organização de doações, preparo de alimentos ou atendimento ao
+                público.
+                Você também poderá informar sua disponibilidade de horário, se prefere atuar presencialmente ou
+                remotamente,
+                e em quais regiões pode atender. Todas essas informações são utilizadas pelo sistema para encontrar
+                oportunidades que combinam com você.
+                A plataforma foi pensada para acolher todos os perfis de ajuda, e não apenas profissionais. Se você tem
+                vontade de contribuir, sempre haverá uma forma de fazer isso.
+            </p>
+        </div>
+            <h2 class="titulo_sobrePlataforma">
+                2. Encontrando pedidos de ajuda
+            </h2>
+        <div class="textos_sobrePlataforma_paragrafos">
+            <p class="paragrafo">
+                Depois de se cadastrar, você pode acessar a página de pedidos. Ali, diversas organizações — como ONGs,
+                escolas, abrigos e projetos comunitários — publicam suas necessidades de apoio. Os pedidos são
+                organizados
+                por área (educação, saúde, suporte técnico, apoio emocional etc.), por urgência e por localização.
+                Você pode usar filtros para encontrar facilmente as oportunidades que combinam com seu perfil. Por
+                exemplo:
+                se você se cadastrou como psicóloga voluntária e indicou que pode atender remotamente, verá
+                prioritariamente
+                pedidos de acolhimento psicológico à distância. Se você informou que pode se deslocar até determinada
+                cidade, os pedidos presenciais naquela região também aparecerão para você.
+            </p>
+        </div>
+            <h2 class="titulo_sobrePlataforma">
+                3. Em situações de emergência: o modo crise
+            </h2>
+        <div class="textos_sobrePlataforma_paragrafos">
+            <p class="paragrafo">
+                Quando um evento extremo acontece — como uma enchente, um incêndio ou um deslizamento — a plataforma
+                entra
+                automaticamente em modo emergência. Um alerta visual é exibido na tela inicial, destacando os pedidos de
+                ajuda mais urgentes daquela localidade.
+                Você será notificado (por e-mail ou dentro da plataforma) caso tenha um perfil compatível com as
+                demandas
+                emergenciais. Isso permite respostas rápidas, organizadas e direcionadas — exatamente o que faz a
+                diferença
+                em momentos críticos.
+                Além disso, cada evento conta com uma página dedicada, onde são exibidos os pedidos relacionados, as
+                informações públicas sobre a situação (notícias, status do atendimento, orientações) e os detalhes de
+                quem
+                está solicitando ajuda. Você pode clicar em “Ver mais” para acessar o perfil da instituição ou do
+                solicitante e, se quiser ajudar, basta clicar em “Me voluntariar” — e pronto, sua inscrição está
+                registrada
+                e um alerta confirma o sucesso da ação.
+            </p>
+        </div>
+            <h2 class="titulo_sobrePlataforma">
+                4. Acompanhamento e histórico do voluntariado
+            </h2>
+        <div class="textos_sobrePlataforma_paragrafos">
+            <p class="paragrafo">
+                Toda ação em que você participa é registrada no seu perfil. Isso permite acompanhar suas contribuições,
+                manter um histórico pessoal de voluntariado e, futuramente, gerar certificados ou comprovações de
+                experiência.
+                O sistema também conta com elementos de gamificação: você pode ganhar selos de reconhecimento, medalhas
+                simbólicas e avaliações de impacto conforme suas participações. Isso estimula o engajamento e cria uma
+                cultura de valorização do voluntariado.
+            </p>
+        </div>
+            <h2 class="titulo_sobrePlataforma">
+                5. Continuar ajudando além da crise
+            </h2>
+        <div class="textos_sobrePlataforma_paragrafos">
+            <p class="paragrafo">
+                A plataforma também abriga uma área dedicada a ações contínuas, como alfabetização digital, reforço
+                escolar
+                online, oficinas culturais e suporte emocional. Você pode navegar por essas iniciativas, conhecer os
+                projetos e se inscrever quando quiser. Isso permite que a solidariedade não seja algo pontual, mas parte
+                da
+                rotina — mesmo fora de situações emergenciais.
+                Além disso, há espaço para que voluntários proponham novas ideias de ação, compartilhem boas práticas,
+                formem grupos e se organizem em torno de causas que vão além da resposta a desastres.
 
-        <p class="paragrafo">
-            A Plataforma Solidária Inteligente para Eventos Extremos foi desenvolvida para ser simples, eficiente e
-            acolhedora. Seja você um voluntário que deseja oferecer seu tempo, uma ONG buscando apoio, ou um órgão
-            público tentando organizar ações emergenciais, a experiência na plataforma foi pensada para funcionar
-            com
-            clareza, rapidez e propósito.
-        </p>
 
-        <h2 class="subSubTitulo_guia_plataforma">
-            1. Cadastro do voluntário: transforme sua vontade em ação
-        </h2>
-
-        <p>
-            O primeiro passo para participar é criar um perfil de voluntário. Basta acessar a página de cadastro,
-            preencher seu nome, e-mail, telefone e selecionar suas habilidades ou áreas de atuação. Isso pode
-            incluir
-            desde conhecimentos técnicos — como informática, enfermagem, psicologia, educação — até disponibilidade
-            para
-            ajudar com atividades simples, como organização de doações, preparo de alimentos ou atendimento ao
-            público.
-            Você também poderá informar sua disponibilidade de horário, se prefere atuar presencialmente ou
-            remotamente,
-            e em quais regiões pode atender. Todas essas informações são utilizadas pelo sistema para encontrar
-            oportunidades que combinam com você.
-            A plataforma foi pensada para acolher todos os perfis de ajuda, e não apenas profissionais. Se você tem
-            vontade de contribuir, sempre haverá uma forma de fazer isso.
-        </p>
-
-        <h2 class="subSubTitulo_guia_plataforma">
-            2. Encontrando pedidos de ajuda
-        </h2>
-
-        <p>
-            Depois de se cadastrar, você pode acessar a página de pedidos. Ali, diversas organizações — como ONGs,
-            escolas, abrigos e projetos comunitários — publicam suas necessidades de apoio. Os pedidos são
-            organizados
-            por área (educação, saúde, suporte técnico, apoio emocional etc.), por urgência e por localização.
-            Você pode usar filtros para encontrar facilmente as oportunidades que combinam com seu perfil. Por
-            exemplo:
-            se você se cadastrou como psicóloga voluntária e indicou que pode atender remotamente, verá
-            prioritariamente
-            pedidos de acolhimento psicológico à distância. Se você informou que pode se deslocar até determinada
-            cidade, os pedidos presenciais naquela região também aparecerão para você.
-        </p>
-
-        <h2 class="subSubTitulo_guia_plataforma">
-            3. Em situações de emergência: o modo crise
-        </h2>
-
-        <p>
-            Quando um evento extremo acontece — como uma enchente, um incêndio ou um deslizamento — a plataforma
-            entra
-            automaticamente em modo emergência. Um alerta visual é exibido na tela inicial, destacando os pedidos de
-            ajuda mais urgentes daquela localidade.
-            Você será notificado (por e-mail ou dentro da plataforma) caso tenha um perfil compatível com as
-            demandas
-            emergenciais. Isso permite respostas rápidas, organizadas e direcionadas — exatamente o que faz a
-            diferença
-            em momentos críticos.
-            Além disso, cada evento conta com uma página dedicada, onde são exibidos os pedidos relacionados, as
-            informações públicas sobre a situação (notícias, status do atendimento, orientações) e os detalhes de
-            quem
-            está solicitando ajuda. Você pode clicar em “Ver mais” para acessar o perfil da instituição ou do
-            solicitante e, se quiser ajudar, basta clicar em “Me voluntariar” — e pronto, sua inscrição está
-            registrada
-            e um alerta confirma o sucesso da ação.
-        </p>
-
-        <h2 class="subSubTitulo_guia_plataforma">
-            4. Acompanhamento e histórico do voluntariado
-        </h2>
-
-        <p>
-            Toda ação em que você participa é registrada no seu perfil. Isso permite acompanhar suas contribuições,
-            manter um histórico pessoal de voluntariado e, futuramente, gerar certificados ou comprovações de
-            experiência.
-            O sistema também conta com elementos de gamificação: você pode ganhar selos de reconhecimento, medalhas
-            simbólicas e avaliações de impacto conforme suas participações. Isso estimula o engajamento e cria uma
-            cultura de valorização do voluntariado.
-        </p>
-
-        <h2 class="subSubTitulo_guia_plataforma">
-            5. Continuar ajudando além da crise
-        </h2>
-
-        <p>
-            A plataforma também abriga uma área dedicada a ações contínuas, como alfabetização digital, reforço
-            escolar
-            online, oficinas culturais e suporte emocional. Você pode navegar por essas iniciativas, conhecer os
-            projetos e se inscrever quando quiser. Isso permite que a solidariedade não seja algo pontual, mas parte
-            da
-            rotina — mesmo fora de situações emergenciais.
-            Além disso, há espaço para que voluntários proponham novas ideias de ação, compartilhem boas práticas,
-            formem grupos e se organizem em torno de causas que vão além da resposta a desastres.
-
-
-            A experiência de uso da plataforma é centrada em simplicidade, empatia e agilidade. Em poucos minutos,
-            você
-            cria seu perfil, encontra oportunidades reais e se conecta a quem mais precisa. E o mais importante:
-            você vê
-            o impacto direto das suas ações.
-            Você não precisa ser especialista em nada. Precisa apenas de algo que já tem: vontade de ajudar. A
-            plataforma cuida do resto — conecta, organiza, direciona. E transforma o “quero ajudar” em “eu ajudei”.
-        </p>
-
-        <p>
-            Seja parte dessa rede. Cadastre-se. Participe. Ajude a mudar vidas — inclusive a sua. 💙
-        </p>
-    </section>
+                A experiência de uso da plataforma é centrada em simplicidade, empatia e agilidade. Em poucos minutos,
+                você
+                cria seu perfil, encontra oportunidades reais e se conecta a quem mais precisa. E o mais importante:
+                você vê
+                o impacto direto das suas ações.
+                Você não precisa ser especialista em nada. Precisa apenas de algo que já tem: vontade de ajudar. A
+                plataforma cuida do resto — conecta, organiza, direciona. E transforma o “quero ajudar” em “eu ajudei”.
+            </p>
+            <p class="paragrafo">
+                Seja parte dessa rede. Cadastre-se. Participe. Ajude a mudar vidas — inclusive a sua. 💙
+            </p>
+        </div>
+    </div>
     <!-- carrossel página home -->
     <div class="carrossel_home">
         <div class="carrossel_container">
@@ -604,7 +614,124 @@
         </div>
 
     </div>
+    <div>
+        <div class="titulo_sessao">
+            <h1 class="subtitulo-primario">Pronto para fazer a diferença</h1>
+        </div>
+        <div class="subtitulo_ultimosCards">
+            <p class="paragrafo">Junte-Se A Milhares De Voluntários Que Já Transformam Vidas Através Da Nossa Plataforma
+            </p>
+        </div>
+        <div class="alinhamento_ultimosCards">
+            <div class="ultimos_dois_cards">
+                <div class="card_individual">
+                    <div class="icone_ultimosCards_roxo">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#FFFFFF">
+                            <path
+                                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+                        </svg>
+                    </div>
+                    <div class="titulo_ultimosCards_roxo">
+                        <h2 class="titulo-complementar">Para Voluntários</h2>
+                    </div>
+                    <div class="paragrafo_ultimosCards">
+                        <p class="paragrafo">Cadastre Suas Habilidades E Seja Conectado Automaticamente A Quem Precisa
+                            Da
+                            Sua Ajuda.</p>
+                    </div>
+                    <div>
+                        <a href="#" class="btn_roxo_ultimosCards">Quero me voluntariar 🤍</a>
+                    </div>
+                </div>
+                <div class="card_individual">
+                    <div class="icone_ultimosCards_laranja">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#FFFFFF">
+                            <path
+                                d="M640-440v-80h160v80H640Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM120-360v-240h160l200-200v640L280-360H120Zm280-246-86 86H200v80h114l86 86v-252ZM300-480Z" />
+                        </svg>
+                    </div>
+                    <div class=" titulo_ultimosCards_laranja">
+                        <h2 class="titulo-complementar">Para Instituições</h2>
+                    </div>
+                    <div class="paragrafo_ultimosCards">
+                        <p class="paragrafo">Publique Suas Necessidades E Receba Ajuda Qualificada De Forma Rápida E
+                            Organizada.
+                        </p>
+                    </div>
+                    <a href="#" class="btn_laranja_ultimosCards">Solicitar Ajuda 📣</a>
+                </div>
+            </div>
 
+            <div class="alerta_banner">
+                <svg class="icones_banner_alerta" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                    fill="#FFFFFF">
+                    <path
+                        d="M720-440v-80h160v80H720Zm48 280-128-96 48-64 128 96-48 64Zm-80-480-48-64 128-96 48 64-128 96ZM200-200v-160h-40q-33 0-56.5-23.5T80-440v-80q0-33 23.5-56.5T160-600h160l200-120v480L320-360h-40v160h-80Zm240-182v-196l-98 58H160v80h182l98 58Zm120 36v-268q27 24 43.5 58.5T620-480q0 41-16.5 75.5T560-346ZM300-480Z" />
+                </svg>
+                <span class="paragrafo">Mais De 1.200 Matches Bem-Sucedidos Este Mês</span>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    </div>
+    <footer class="footer">
+        <div class="footer-conteudo">
+            <div>
+                <div class="footer__logo-img">
+                    <div class="footer__logo-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+                            fill="#e3e3e3" class="header__logo-icon-svg">
+                            <path
+                                d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z" />
+                        </svg>
+                    </div>
+                    <div class="footer__logo-text">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="38" height="30" viewBox="0 0 38 30" fill="none">
+                            <path
+                                d="M3.86 24L0.94 7.8H4L5.74 18.8L7.36 7.8H10.6L7.64 24H3.86ZM12.2273 24V7.8H19.5073V10.24H15.8073V14.26H18.6273V16.74H15.8073V21.58H19.5473V24H12.2273ZM21.1727 24V7.8H24.7527V14.42L27.4727 7.8H30.9727L27.9727 15.12L31.1127 24H27.4727L25.1327 16.84L24.7527 17.48V24H21.1727ZM32.5403 24V7.8H36.1203V24H32.5403Z"
+                                fill="#FEFEFE" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="footer__logo-slogan">
+                    <p class="paragrafo">Conectando voluntários a instituições em situações de emergência, transformando
+                        boas intenções em impactos reais através da tecnologia.</p>
+                </div>
+            </div>
+            <nav class="footer-nav">
+                <p class="footer-nav__titulo paragrafo">Principais links</p>
+                <ul class="footer-nav__list">
+                    <li class="footer-nav__list__item"><a class="footer-nav__list__item__link paragrafo"
+                            href="">Início</a>
+                    </li>
+                    <li class="footer-nav__list__item"><a class="footer-nav__list__item__link paragrafo"
+                            href="">Emergência</a></li>
+                    <li class="footer-nav__list__item"><a class="footer-nav__list__item__link paragrafo"
+                            href="">Pedidos</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="footer-contato">
+                <p class="footer-contato__titulo paragrafo">Contato</p>
+                <ul class="footer-contato__list">
+                    <li class="footer-contato__list__item paragrafo">contato@veki.com.br</li>
+                    <li class="footer-contato__list__item paragrafo">+55 (11) 9 9999-9999</li>
+                    <li class="footer-contato__list__item paragrafo">24h em emergências</li>
+                </ul>
+            </div>
+        </div>
+        <div class="sepador_horizontal"></div>
+        <div class="footer__creditos">
+            <p class="paragrafo">© 2025 Plataforma Solidária Inteligente. Todos os direitos reservados.</p>
+            <p class="paragrafo-complementar">Desenvolvido com coração para transformar o mundo através da solidariedade
+            </p>
+        </div>
+    </footer>
 
 
     <script src="../../js/shared/carrossel.js"></script>
