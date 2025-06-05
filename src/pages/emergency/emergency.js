@@ -13,8 +13,3 @@ emergencias.forEach((emergencia) => {
 // Para aplicar o filtro nos cards de emergência
 const form = document.getElementById('formFiltro');
 form.addEventListener('submit', aplicarForm);
-
-// Para fechar tela sobreposta
-document.getElementById("btnCloseTelaPedidos")?.addEventListener("click", () => {
-    document.getElementById("telaPedidos").style.display = "none";
-});

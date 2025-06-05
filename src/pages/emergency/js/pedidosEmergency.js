@@ -1,98 +1,152 @@
+import { emergencias } from '../../../js/data/emergenciasData.js';
 import { pedidosEmergencia } from '../../../js/data/pedidosEmergenciaData.js';
 import { svgIcons } from '../../../js/shared/svgIcons.js';
 
 export function carregarPedidosPorEmergencia(emergenciaID) {
-    const emergencia = pedidosEmergencia.find(
+    const emergenciaData = pedidosEmergencia.find(
         item => item.emergenciaId === Number(emergenciaID)
     );
 
-    if (emergencia) {
-        console.log(emergencia.pedidos);
-        exibirPedidosNaTela(emergencia.pedidos);
+    if (emergenciaData) {
+        limparTelaPedidos();
+
+        const telaPedido = document.getElementById('telaPedidos');
+        telaPedido.style.display = "block";
+
+        exibeDescricaoEmergencia(emergencias, emergenciaID);
+        exibirPedidosNaTela(emergenciaData.pedidos);
     } else {
         console.warn('Nenhuma emergência encontrada com esse ID:', emergenciaID);
     }
 }
 
-// function criaDescricaoEmergencia() {
+function limparTelaPedidos() {
+    const telaPedido = document.getElementById('telaPedidos');
+    telaPedido.innerHTML = '';
+}
 
-// }
+// Mostra descrição da emergência
+function exibeDescricaoEmergencia(listaEmergencias, id) {
+    const emergencia = listaEmergencias[id - 1];
+    const telaPedido = document.getElementById('telaPedidos');
+
+    const descricaoEmergencia = document.createElement('div');
+    descricaoEmergencia.classList.add('tela-pedidos__descricao-emergencia');
+    descricaoEmergencia.dataset.categoria = emergencia.categoria;
+    descricaoEmergencia.dataset.relevancia = emergencia.relevancia;
+
+    const btnCloseTelaPedido = document.createElement('button');
+    btnCloseTelaPedido.classList.add('tela-pedidos__descricao-emergencia__btn-close');
+    btnCloseTelaPedido.id = 'btnCloseTelaPedidos';
+    btnCloseTelaPedido.insertAdjacentHTML('beforeend', svgIcons.close);
+    btnCloseTelaPedido.addEventListener('click', () => {
+        const telaPedido = document.getElementById('telaPedidos');
+        telaPedido.style.display = "none";
+    });
+
+    descricaoEmergencia.appendChild(btnCloseTelaPedido);
+
+    const info = document.createElement('div');
+    info.classList.add('tela-pedidos__descricao-emergencia__info');
+
+    const categoria = document.createElement('div');
+    categoria.classList.add('info__categoria');
+    categoria.innerHTML = `<p class="info__p">${emergencia.categoria}</p>`;
+
+    const relevancia = document.createElement('div');
+    relevancia.classList.add('info__relevancia');
+    relevancia.innerHTML = `<p class="info__p">${emergencia.relevancia}</p>`;
+
+    info.appendChild(categoria);
+    info.appendChild(relevancia);
+
+    const titulo = document.createElement('h2');
+    titulo.classList.add('tela-pedidos__descricao-emergencia__titulo');
+    titulo.innerText = emergencia.titulo;
+
+    const descricaoTexto = document.createElement('p');
+    descricaoTexto.classList.add('tela-pedidos__descricao-emergencia__descrição', 'paragrafo');
+    descricaoTexto.innerText = emergencia.descricao;
+
+    descricaoEmergencia.appendChild(info);
+    descricaoEmergencia.appendChild(titulo);
+    descricaoEmergencia.appendChild(descricaoTexto);
+
+    telaPedido.appendChild(descricaoEmergencia);
+
+    const containerPedidos = document.createElement('div');
+    containerPedidos.classList.add('tela-pedidos__cards-pedidos-container');
+    telaPedido.appendChild(containerPedidos);
+}
 
 function exibirPedidosNaTela(pedidos) {
-    pedidos.forEach(pedidos => {
-        criaCardPedido(pedidos);
-    })
+    const container = document.querySelector('.tela-pedidos__cards-pedidos-container');
+    pedidos.forEach(pedido => {
+        const card = criaCardPedido(pedido);
+        container.appendChild(card);
+    });
 }
 
 function criaCardPedido(pedido) {
-    console.log(pedido)
-
-    const containerCards = document.getElementsByClassName('tela-pedidos__cards-pedidos-container')[0];
-
     const card = document.createElement('div');
     card.classList.add('cards-pedidos-container__card');
     card.dataset.modalidade = pedido.modalidade;
 
-    const cardInformacoes = document.createElement('div');
-    cardInformacoes.classList.add('cards-pedidos-container__card__informacoes-do-pedido');
-    cardInformacoes.insertAdjacentHTML('beforeend', '<img src="../../assets/img/emergency/foto-usuários/user.png" alt="Foto de perfil de usuário" class="cards-pedidos-container__card__foto-perfil">')
+    const cardInfo = document.createElement('div');
+    cardInfo.classList.add('cards-pedidos-container__card__informacoes-do-pedido');
 
-    const cardInformacoesDiv = document.createElement('div');
-    cardInformacoes.appendChild(cardInformacoesDiv);
+    cardInfo.insertAdjacentHTML(
+        'beforeend',
+        `<img src="../../assets/img/emergency/foto-usuários/user.png" alt="Foto de perfil de usuário" class="cards-pedidos-container__card__foto-perfil">`
+    );
 
-    // card heading
-    const cardHeading = document.createElement('div');
-    cardHeading.classList.add('cards-pedidos-container__card__heading');
+    const cardBody = document.createElement('div');
 
-    // Nome de usuário - Título
-    const userName = document.createElement('h4');
-    userName.classList.add('cards-pedidos-container__card__user-name');
-    userName.innerText = pedido.nome;
-    cardHeading.appendChild(userName);
-    // Info modalidade
-    const infoModalidade = document.createElement('div');
-    infoModalidade.classList.add('info__modalidade');
-    const infoModalideTexto = document.createElement('p');
-    infoModalideTexto.classList.add('info__p');
-    infoModalideTexto.innerText = pedido.modalidade;
-    infoModalidade.appendChild(infoModalideTexto);
-    cardHeading.appendChild(infoModalidade);
-    cardInformacoesDiv.appendChild(cardHeading);
+    const heading = document.createElement('div');
+    heading.classList.add('cards-pedidos-container__card__heading');
 
-    // Descrição do pedido
-    const descricaoPedido = document.createElement('p');
-    descricaoPedido.classList.add('paragrafo');
-    descricaoPedido.innerText = pedido.descricao;
-    cardInformacoesDiv.appendChild(descricaoPedido);
+    const nome = document.createElement('h4');
+    nome.classList.add('cards-pedidos-container__card__user-name');
+    nome.innerText = pedido.nome;
 
-    // card detalhes
-    const cardDetalhes = document.createElement('div');
-    cardDetalhes.classList.add('cards-pedidos-container__card__detalhes');
-    // detalhe data
-    const detalheData = document.createElement('div');
-    detalheData.classList.add('cards-pedidos-container__card__data');
-    detalheData.insertAdjacentHTML('beforeend', svgIcons.data);
-    const detalheTextoData = document.createElement('p');
-    detalheTextoData.innerText = `Há ${pedido.diasAtras} dias`;
-    detalheData.appendChild(detalheTextoData);
-    cardDetalhes.appendChild(detalheData);
-    // detalhe localização
-    const detalheLocalizacao = document.createElement('div');
-    detalheLocalizacao.classList.add('cards-pedidos-container__card__localizacao');
-    detalheLocalizacao.insertAdjacentHTML('beforeend', svgIcons.localizacao);
-    const detalheTextoLocalizacao = document.createElement('p');
-    detalheTextoLocalizacao.innerText = pedido.localizacao;
-    detalheLocalizacao.appendChild(detalheTextoLocalizacao);
-    cardDetalhes.appendChild(detalheLocalizacao);
-    cardInformacoesDiv.appendChild(cardDetalhes);
+    const modalidade = document.createElement('div');
+    modalidade.classList.add('info__modalidade');
+    modalidade.innerHTML = `<p class="info__p">${pedido.modalidade}</p>`;
 
-    // button
-    const btnVerMais = document.createElement('buttun');
-    btnVerMais.classList = 'button-purple paragrafo';
-    btnVerMais.innerText = 'Ver mais sobre o pedido';
+    heading.appendChild(nome);
+    heading.appendChild(modalidade);
+    cardBody.appendChild(heading);
 
-    // Coloca tudo no card
-    containerCards.appendChild(card);
-    card.appendChild(cardInformacoes);
-    card.appendChild(btnVerMais);
+    const descricao = document.createElement('p');
+    descricao.classList.add('paragrafo');
+    descricao.innerText = pedido.descricao;
+    cardBody.appendChild(descricao);
+
+    const detalhes = document.createElement('div');
+    detalhes.classList.add('cards-pedidos-container__card__detalhes');
+
+    const data = document.createElement('div');
+    data.classList.add('cards-pedidos-container__card__data');
+    data.insertAdjacentHTML('beforeend', svgIcons.data);
+    data.innerHTML += `<p>Há ${pedido.diasAtras} dias</p>`;
+
+    const localizacao = document.createElement('div');
+    localizacao.classList.add('cards-pedidos-container__card__localizacao');
+    localizacao.insertAdjacentHTML('beforeend', svgIcons.localizacao);
+    localizacao.innerHTML += `<p>${pedido.localizacao}</p>`;
+
+    detalhes.appendChild(data);
+    detalhes.appendChild(localizacao);
+
+    cardBody.appendChild(detalhes);
+    cardInfo.appendChild(cardBody);
+
+    const botao = document.createElement('button');
+    botao.classList.add('button-purple', 'paragrafo');
+    botao.innerText = 'Ver mais sobre o pedido';
+
+    card.appendChild(cardInfo);
+    card.appendChild(botao);
+
+    return card;
 }

@@ -74,13 +74,7 @@ export function criarCard(emergencia) {
     botao.innerText = 'Ver mais sobre os pedidos';
 
     botao.addEventListener("click", () => {
-        const telaPedidos = document.getElementById('telaPedidos');
-        if (telaPedidos.style.display === "flex") {
-            telaPedidos.style.display = "none";
-        } else {
-            telaPedidos.style.display = "block";
-            carregarPedidosPorEmergencia(emergencia.id);
-        }
+        carregarPedidosPorEmergencia(emergencia.id);
     });
 
     // Monta tudo no card
