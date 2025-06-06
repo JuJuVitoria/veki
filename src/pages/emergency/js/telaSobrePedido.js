@@ -1,4 +1,5 @@
 import { infoUsers } from "../../../js/data/userData.js";
+import { svgIcons } from "../../../js/shared/svgIcons.js";
 
 export function criarTelaPedido(IDpedido) {
     const usuario = infoUsers.find(user => user.idPedidoEmergencia === Number(IDpedido));
@@ -17,11 +18,11 @@ export function criarTelaPedido(IDpedido) {
 
     const btnBack = document.createElement('button');
     btnBack.classList.add('order-modal__button', 'order-modal__button--back');
-    btnBack.innerHTML = '←';
+    btnBack.insertAdjacentHTML('beforeend', svgIcons.arrowBack);
 
     const btnClose = document.createElement('button');
     btnClose.classList.add('order-modal__button', 'order-modal__button--close');
-    btnClose.innerHTML = '✖';
+    btnClose.insertAdjacentHTML('beforeend', svgIcons.close);
 
     actions.appendChild(btnBack);
     actions.appendChild(btnClose);
@@ -192,6 +193,12 @@ export function criarTelaPedido(IDpedido) {
     const btnClose1 = modal.querySelector('.order-modal__button--close');
     if (btnClose1) {
         btnClose1.addEventListener('click', () => modal.remove());
+    }
+
+    // Funcionalidade do botão "Voltar"
+    const btnBack1 = modal.querySelector('.order-modal__button--back');
+    if (btnBack1) {
+        btnBack1.addEventListener('click', () => modal.remove());
     }
 
     return modal;
