@@ -46,7 +46,7 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 55px 0;
+    padding: 46px 0;
     transition: 1s;
     background-color: var(--text-color-light);
 }
@@ -140,6 +140,13 @@ main {
 .input-container input:focus ~ .underline,
 .input-container input:valid ~ .underline {
   transform: scaleX(1);
+}
+
+.span-required{
+    display: none;
+    color: red;
+    font-size: 12px;
+    margin: -12px 0 0 1px;
 }
 
 /* Button */

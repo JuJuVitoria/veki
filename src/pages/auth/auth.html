@@ -15,46 +15,59 @@
     <main>
         <div id="login-container" class="login-container">
             <div class="form-container">
-                <form class="form form-login">
+                <form id="form" class="form form-login">
                     <h2 class="form-title">LOGIN</h2>
                     <div class="form-input-container">
-                        <div class="input-container">
-                            <input type="text" id="input" required="">
-                            <label for="input" class="label">Nome</label>
-                            <div class="underline"></div>
+                        <div class="input-container input-register">
+                            <input type="text" id="input" class="required" oninput="nameValidate()" required="">
+                            <label for="input" class="label required-text">Nome</label>
+                            <div class="underline required-linha"></div>
                         </div>
-                        <div class="input-container">
-                            <input type="password" id="input" required="">
-                            <label for="input" class="label">Senha</label>
-                            <div class="underline"></div>
+                        <span class="span-required">Nome deve ter pelo menos 3 caracteres</span>
+                       
+                        <div class="input-container input-register">
+                            <input type="password" id="input" class="required"  oninput="PassorwdValidateLogin()" required="">
+                            <label for="input" class="label required-text">Senha</label>
+                            <div class="underline required-linha"></div>
                         </div>
+                         <span class="span-required">A senha deve ter pelo menos 8 caracteres</span>
                     </div>
                     <button type="button" class="form-button">Logar</button>
                      <p class="mobile-text">Não tem conta? <a  id="open-register-mobile">Registre-se</a></p>
                 </form>
-                <form class="form form-register">
+                <form  id="form" class="form form-register">
                     <h2 class="form-title">Criar Conta</h2>
                     <div class="form-input-container">
                          <div class="input-container input-register">
-                            <input type="text" id="input" required="">
-                            <label for="input" class="label">Nome</label>
-                            <div class="underline"></div>
+                            <input type="text" id="input" class="required" oninput="nameValidate()" required="">
+                            <label for="input" class="label required-text">Nome</label>
+                            <div class="underline required-linha"></div>
                         </div>
+                        <span class="span-required">Nome deve ter pelo menos 3 caracteres</span>
                         <div class="input-container input-register">
-                            <input type="email" id="input" required="">
-                            <label for="input" class="label">Email</label>
-                            <div class="underline"></div>
+                            <input type="text" id="input" class="required" oninput="emailValidate()" required="">
+                            <label for="input" class="label required-text">Email</label>
+                            <div class="underline required-linha"></div>
                         </div>
+                         <span class="span-required">Email incorreto</span>
                         <div class="input-container input-register">
-                            <input type="tel" id="input" required="">
+                            <input type="password" id="input" class="required"  oninput="PassorwdValidate()" required="">
+                            <label for="input" class="label required-text">Senha</label>
+                            <div class="underline required-linha"></div>
+                        </div>
+                         <span class="span-required">A senha deve ter pelo menos 8 caracteres</span>
+                           <div class="input-container input-register">
+                            <input type="tel" id="input" class="required"  oninput="numerovalidate()" required="">
+                            <label for="input" class="label required-text">Numero</label>
+                            <div class="underline required-linha"></div>
+                        </div>
+                         <span class="span-required">O numero deve ter pelo menos 9 Digitos</span>
+                        <!-- <div class="input-container input-register">
+                            <input type="tel" id="input" class="required" oninput="numerovalidate()">
                             <label for="input" class="label">Telefone</label>
                             <div class="underline"></div>
                         </div>
-                        <div class="input-container input-register">
-                            <input type="password" id="input" required="">
-                            <label for="input" class="label">Senha</label>
-                            <div class="underline"></div>
-                        </div>
+                         <span class="span-required">O telefone deve ter pelo menos 8 ou 9 digitos</span> -->
                     </div>
                     <button type="button" class="form-button form-button-cadastrese">Cadastre-se</button>
                      <p class="mobile-text">Não tem conta? <a  id="open-login-mobile">Registre-se</a></p>
