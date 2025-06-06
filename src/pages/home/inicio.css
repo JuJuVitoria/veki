@@ -1,0 +1,622 @@
+* {
+    box-sizing: border-box;
+}
+
+.primeiraSessao_inteira {
+    width: 100%;
+    min-height: 1150px;
+    height: auto;
+    padding: 20px;
+    background-image: url(../../assets/img/index/imagem\ de\ fundo\ primeira\ sessao.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.alerta_banner {
+    padding: 15px;
+    background-color: #ffcec6;
+    border-radius: 25px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    gap: 10px;
+    color: var(--dark-purple);
+}
+
+.alerta_banner:hover {
+    transform: scale(1.03);
+}
+
+.icones_banner_alerta {
+    width: 25px;
+    height: 25px;
+    fill: var(--dark-purple);
+}
+
+.primeiraSessao_inicio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    padding: 0 20px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.alinhamento_banners {
+    display: flex;
+    gap: 40px;
+    height: fit-content;
+    align-items: stretch;
+}
+
+.banner_principal_ladoEsquerdo {
+    background-color: white;
+    border-radius: 20px;
+    padding: 25px;
+    width: 50%;
+    max-width: 600px;
+}
+
+.banner_principal_ladoEsquerdo,
+.mensagens_banner {
+    flex: 1;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .alinhamento_banners {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .banner_principal_ladoEsquerdo,
+    .mensagens_banner {
+        width: 100%;
+    }
+
+    .mensagens_banner {
+        margin-top: 20px;
+        align-items: center;
+    }
+
+    .mensagemAudio_banner {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+#texto_banner_principal {
+    text-align: left;
+    line-height: 70px;
+    align-items: top;
+    margin: 0 0 5px 10px;
+    color: var(--dark-purple);
+}
+
+#texto_banner_principal_laranja {
+    color: var(--medium-orange);
+}
+
+#texto_banner_principal_vermelho {
+    color: var(--dark-orange);
+}
+
+#texto_alerta_banner_principal {
+    color: var(--dark-purple);
+}
+
+.botao_cadastro {
+    background-color: var(--white);
+    color: var(--dark-purple);
+    padding: 15px 20px 15px 20px;
+    margin: 15px 25px 15px 15px;
+    border: solid;
+    border-color: var(--dark-purple);
+    border-radius: 25px;
+    box-shadow: var(--shadow-01);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+
+.botao_cadastro:hover {
+    background-color: var(--dark-purple);
+    color: white;
+    transform: scale(1.1)
+}
+
+.botao_saibaMais_texto {
+    text-decoration: none;
+    color: var(--dark-purple);
+}
+
+.icone_saibaMais {
+    fill: var(--dark-purple);
+}
+
+#botoes_banner_principal {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.descricao_banner_principal {
+    font-family: "Ubuntu", sans-serif;
+    color: var(--black);
+    font-size: 20px;
+    text-align: left;
+    margin: .8rem 0 .5rem 0;
+    line-height: 30px;
+}
+
+.lista_banner_principal {
+    color: var(--dark-orange);
+    line-height: 30px;
+    text-align: left;
+    margin: .8rem 0 .5rem 0;
+}
+
+.mensagens_banner {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.mensagens_banner_um {
+    color: var(--dark-purple);
+    align-items: left;
+    width: 60%;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.mensagemAudio_banner {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    gap: 25px;
+    width: 60%;
+    height: fit-content;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px 0;
+    margin-left: auto;
+}
+
+.svg_mensagem_audio_user {
+    width: 50px;
+    height: 50px;
+    fill: var(--dark-purple);
+}
+
+.imagem_som_audioBanner {
+    fill: var(--dark-purple);
+}
+
+.svg_mensagem_audio_play {
+    width: 50px;
+    height: 50px;
+    fill: var(--dark-purple);
+}
+
+.svg_mensagem_audio_som {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+    max-width: 120px;
+    height: 100%;
+    fill: var(--dark-purple);
+}
+
+.mensagens_banner_dois {
+    color: var(--dark-purple);
+    align-items: left;
+    width: 60%;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 25px;
+    margin: 20px 0;
+}
+
+.imagemBanner_mensagem_bannerPrincipal {
+    width: 50%;
+    height: 300px;
+    background-color: var(--white);
+    border-radius: 20px;
+    padding: 15px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+.imagem_mensagem_bannerPrincipal {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.estatistica_banner_principal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 20px 0;
+    color: var(--white);
+    margin-top: 80px;
+    position: relative;
+}
+
+.estatistica_item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.estatistica_item strong {
+    color: var(--dark-orange);
+}
+
+.estatistica_item span {
+    font-size: 16px;
+}
+
+.primeiro_texto {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.titulo_sobreProjeto {
+    color: var(--dark-purple);
+}
+
+.primeiro_textoParagrafo {
+    color: var(--black);
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tresCards_home {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px 20px;
+}
+
+.card_home {
+    background-color: var(--dark-purple);
+    border-radius: 25px;
+    width: 300px;
+    padding: 20px 20px 20px 20px;
+    color: var(--white);
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 270px;
+    max-width: 320px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone_card {
+    background-color: var(--dark-orange);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    display: flex;
+}
+
+.icone_card svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
+
+.card_home h3 {
+    margin-bottom: 15px;
+}
+
+.umCard_home {
+    background: linear-gradient(to right, #432273, #BF2929);
+    color: var(--white);
+    border-radius: 25px;
+    padding: 40px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.umCard_home h4 {
+    margin-bottom: 15px;
+}
+
+.umCard_home p {
+    margin-bottom: 25px;
+    max-width: 700px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.estatisticas_home {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.estatistica_item strong {
+    color: var(--medium-orange);
+}
+
+@media (max-width: 600px) {
+    .estatisticas_home {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.segundo_texto {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+    color: var(--black);
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.lista_segundoTexto {
+    padding: 15px 0;
+}
+
+.depoimentos_usuarios {
+    color: var(--dark-purple);
+    margin-top: 45px;
+}
+
+.subtitulo_laranja {
+    color: var(--dark-orange);
+}
+
+.container_cards_depoimentos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 40px 20px;
+}
+
+.tresCard_depoimentos {
+    width: 200px;
+    text-align: left;
+}
+
+.imagem_container {
+    width: 100%;
+    height: auto;
+}
+
+.imagem_container img {
+    width: 100%;
+    border-radius: 16px;
+}
+
+.texto_depoimentos {
+    margin-top: 25px;
+    color: var(--black);
+    text-align: left;
+}
+
+.texto_depoimentos_nome {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-heading-lg-sm);
+    margin: .8rem 0 .5rem 0;
+}
+
+.titulo_sessao {
+    color: var(--dark-purple);
+}
+
+.guia_plataforma {
+    max-width: 800px;
+    margin: 60px auto;
+    text-align: left;
+}
+
+.textos_sobrePlataforma_paragrafos {
+    padding: 0 20px;
+    color: var(--black);
+    margin: 20px 0 40px 0;
+}
+
+.titulo_sobrePlataforma {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: clamp(1.2rem, 1.2rem + 0.5vw, 1.8rem);;
+    margin: .8rem 0 .5rem 0;
+    color: var(--dark-purple);
+}
+
+
+.subtitulo_ultimosCards {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+    color: var(--black);
+    text-align: center;
+    max-width: 750px;
+    margin: 20px auto 40px auto;
+}
+
+.alinhamento_ultimosCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.ultimos_dois_cards {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 10px 10px;
+    margin-bottom: 20px;
+}
+
+.card_individual {
+    background-color: var(--white);
+    border-radius: 25px;
+    width: 300px;
+    padding: 20px 20px 20px 20px;
+    color: var(--white);
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 270px;
+    max-width: 320px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.titulo_ultimosCards_roxo {
+    color: var(--dark-purple);
+    text-align: center;
+}
+
+.titulo_ultimosCards_laranja {
+    color: var(--dark-orange);
+    text-align: center;
+}
+
+.paragrafo_ultimosCards {
+    color: var(--black);
+    text-align: center;
+    margin: 15px;
+}
+
+.icone_ultimosCards_roxo {
+    background-color: var(--dark-purple);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    display: flex;
+}
+
+.icone_ultimosCards_laranja {
+    background-color: var(--dark-orange);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    display: flex;
+}
+
+
+.btn_roxo_ultimosCards {
+    background-color: var(--dark-purple);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-01);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.btn_roxo_ultimosCards:hover {
+    background-color: var(--medium-purple);
+    color: white;
+    transform: scale(1.1)
+}
+
+.btn_laranja_ultimosCards {
+    background-color: var(--dark-orange);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    box-shadow: var(--shadow-01);
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+}
+
+.btn_laranja_ultimosCards:hover {
+    background-color: var(--medium-orange);
+    color: white;
+    transform: scale(1.1)
+}
+
+.alerta_banner_final {
+    width: 400px;
+    padding: 10px;
+    background-color: #ffcec6;
+    border-radius: 25px;
+}
+
+.texto_alerta_banner_final {
+    color: var(--dark-purple);
+    padding: 5px;
+    border-radius: 20px;
+    text-align: center;
+}
