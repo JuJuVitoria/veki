@@ -18,6 +18,12 @@ const spans = document.querySelectorAll('.span-required');
 const texto = document.querySelectorAll('.required-text');
 const emailRegex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim;
 
+const formlogin = document.getElementById('formlogin');
+const camposlogin = document.getElementsByClassName('required-login');
+const linhalogin = document.getElementsByClassName('required-linha-login');
+const spanslogin = document.querySelectorAll('.span-required-login');
+const textologin = document.querySelectorAll('.required-text-login');
+
 function setError(index){
   texto[index].style = 'color: #e63636'
   spans[index].style.display = 'block';
@@ -28,6 +34,18 @@ function removeError(index){
   texto[index].style = ''
   spans[index].style.display = 'none';
   linha[index].style = ''
+}
+
+function setErrorlogin(index){
+  textologin[index].style = 'color: #e63636'
+  spanslogin[index].style.display = 'block';
+  linhalogin[index].style = 'background-color: #e63636;'
+}
+
+function removeErrorlogin(index){
+  textologin[index].style = ''
+  spanslogin[index].style.display = 'none';
+  linhalogin[index].style = ''
 }
 
 
@@ -56,13 +74,7 @@ function emailValidate(){
             }
     }
 
-    function PassorwdValidateLogin(){
-            if(campos[1].value.length < 8){
-                setError(1)
-            }else{
-                removeError(1);
-            }
-    }
+    
     function numerovalidate(){
             if(campos[3].value.length < 8){
                 setError(3)
@@ -70,3 +82,22 @@ function emailValidate(){
                 removeError(3);
             }
     }
+
+
+    function PassorwdValidateLogin(){
+    if(camposlogin[1].value.length < 8){
+        setErrorlogin(1);
+    }
+    else{
+        removeErrorlogin(1)
+    }
+    }
+
+    function nameValidateLogin(){
+    if(camposlogin[0].value.length < 3){
+       setErrorlogin(0);
+    }
+    else{
+        removeErrorlogin(0)
+    }
+}
