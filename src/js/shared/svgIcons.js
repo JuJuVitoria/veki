@@ -18,5 +18,10 @@ export const svgIcons = {
     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
       <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
     </svg>
+  `,
+  arrowBack: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24" height="24" fill="#e3e3e3">
+      <path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z" />
+    </svg>
   `
 };
