@@ -7,14 +7,14 @@
     <title>Início - Veki</title>
     <link rel="stylesheet" href="../../style/components/carrossel.css">
     <link rel="stylesheet" href="../../style/global.css"> <!-- link css global -->
-    <link rel="stylesheet" href="../../style/components/alert.css">
+    <link rel="stylesheet" href="../../style/components/alert.css"> <!--link css componentes-->
     <link rel="stylesheet" href="../../style/layout/header.css"> <!-- link css header -->
-    <link rel="stylesheet" href="../../style/layout/footer.css">
-    <link rel="stylesheet" href="inicio.css">
-    <link rel="stylesheet" href="../../style/layout/footer.css">
+    <link rel="stylesheet" href="../../style/layout/footer.css"> <!--link css footer-->
+    <link rel="stylesheet" href="inicio.css"> <!--link css pagina inicio-->
 </head>
 
 <body>
+    <!--alerta de eventos acima don header-->
     <div class="alert-container">
         <div class="alert-emergencias-ativas">
             <svg class="alert-emergencias-ativas__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -26,7 +26,7 @@
             <div class="alert-emergencias-ativas__text">Mensagem padrão</div>
         </div>
     </div>
-
+    <!--HTML header-->
     <header class="header">
         <div class="header__logo">
             <div class="header__logo-icon">
@@ -74,6 +74,7 @@
             <a href="../auth/auth.html" class="header__button button-orange paragrafo">Entrar</a>
         </div>
     </header>
+    <!--inicio primeira sessao do site dividida em tres banners-->
     <div class="primeiraSessao_inteira">
         <div class="primeiraSessao_inicio">
             <!-- mini banner emergências  -->
@@ -86,7 +87,7 @@
                 <span class="paragrafo" id="texto_alerta_banner_principal">Emergências Crescem 83% No Brasil</span>
             </div>
             <div class="alinhamento_banners">
-                <!-- banner maior e principal primeira tela -->
+                <!-- inicio banner lado esquerdo com os botoes de cadastro e saiba mais -->
                 <div class="banner_principal_ladoEsquerdo">
                     <div class="texto_banner_principal">
                         <h1 class="texto_banner_principal">TRANSFORMANDO</h1>
@@ -95,7 +96,7 @@
                         <span class="texto_banner_principal_vermelho">IMPACTOS REAIS</span>
                     </div>
                     <div class="paragrafo" id="botoes_banner_principal">
-                        <a href="#" class="botao_cadastro">
+                        <a href="../auth/auth.html" class="botao_cadastro">
                             Cadastre-se Aqui!!!
                         </a>
                         <a href="#" class="botao_saibaMais_texto">
@@ -117,7 +118,7 @@
                     </ul>
                 </div>
                 <div class="mensagens_banner">
-                    <!-- mensagens ilustrativas banner principal - primeira mensagem -->
+                    <!-- inicio banner mensagens ilustrativas desktop -->
                     <div class="mensagens_banner_um">
                         <p class="paragrafo">
                             Oii!! Vim me voluntariar hoje, foi muito legal, o que acha de participar comigo da próxima
@@ -125,6 +126,7 @@
                         </p>
                     </div>
 
+                    <!--inicio mensagem de audio do banner de mensagens-->
                     <div class="mensagemAudio_banner">
                         <svg class="svg_mensagem_audio_play" xmlns="http://www.w3.org/2000/svg" height="24px"
                             viewBox="0 -960 960 960" width="24px" fill="#FFFFFF">
@@ -148,15 +150,16 @@
                                 d="M234-276q51-39 114-61.5T480-360q69 0 132 22.5T726-276q35-41 54.5-93T800-480q0-133-93.5-226.5T480-800q-133 0-226.5 93.5T160-480q0 59 19.5 111t54.5 93Zm246-164q-59 0-99.5-40.5T340-580q0-59 40.5-99.5T480-720q59 0 99.5 40.5T620-580q0 59-40.5 99.5T480-440Zm0 360q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q53 0 100-15.5t86-44.5q-39-29-86-44.5T480-280q-53 0-100 15.5T294-220q39 29 86 44.5T480-160Zm0-360q26 0 43-17t17-43q0-26-17-43t-43-17q-26 0-43 17t-17 43q0 26 17 43t43 17Zm0-60Zm0 360Z" />
                         </svg>
                     </div>
-                    <!-- mensagens ilustrativas banner principal - segunda mensagem  -->
+                    <!-- mensagens ilustrativas banner principal - segunda mensagem de texto -->
                     <div class="mensagens_banner_dois">
                         <p class="paragrafo">
                             Beleza!! Vamos juntos então!!! Conto com você na plataforma do Veki!!!
                         </p>
                     </div>
+                    <!--imagtem abaixo da segunda mensagem de texto-->
                     <div class="imagemBanner_mensagem_bannerPrincipal">
-                         <img class="imagem_mensagem_bannerPrincipal"
-                            src="../../assets/img/index/imagem_mensagens_inicio.jpg" alt=""> 
+                        <img class="imagem_mensagem_bannerPrincipal"
+                            src="../../assets/img/index/imagem_mensagens_inicio.jpg" alt="">
                         <div class="emoji_balao">
                             ❤️🤘
                         </div>
@@ -165,7 +168,7 @@
             </div>
 
         </div>
-
+        <!--inicio banner de estatisticas abaixo dos tres primeiros banners-->
         <div class="estatistica_banner_principal">
             <div class="estatistica_item">
                 <strong class="titulo-complementar">2.847</strong>
@@ -182,9 +185,6 @@
         </div>
     </div>
     </div>
-
-
-    <!-- estatísticas ilustrativas banner principal -->
 
     <!-- primeira sessão de texto - sobre o projeto -->
     <div class="primeiro_texto">
@@ -380,9 +380,7 @@
                 <div class="texto_depoimentos">
                     <h3 class="texto_depoimentos_nome">Matheus F.</h3>
                     <p class="paragrafo">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
-                        maiores
-                        tempore?
+                        Encontrei voluntários incríveis quando mais precisei. Gratidão pela Veki!
                     </p>
                 </div>
             </div>
@@ -396,9 +394,7 @@
                 <div class="texto_depoimentos">
                     <h3 class="texto_depoimentos_nome">Angela B.</h3>
                     <p class="paragrafo">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
-                        maiores
-                        tempore?
+                        Consegui ajudar minha comunidade em minutos. Plataforma simples, rápida e eficiente!
                     </p>
                 </div>
             </div>
@@ -412,9 +408,7 @@
                 <div class="texto_depoimentos">
                     <h3 class="texto_depoimentos_nome">Fernando A.</h3>
                     <p class="paragrafo">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel minima voluptatum dolor, non
-                        maiores
-                        tempore?
+                        Transformei meu tempo livre em impacto real. Experiência que muda vidas!
                     </p>
                 </div>
             </div>
@@ -614,6 +608,7 @@
         </div>
 
     </div>
+    <!--inicio ultima sessao do site com os dois cards -->
     <div class="ultima_sessao">
         <div class="titulo_sessao">
             <h1 class="subtitulo-primario">Pronto para fazer a diferença</h1>
@@ -641,7 +636,7 @@
                             Sua Ajuda.</p>
                     </div>
                     <div>
-                        <a href="#" class="btn_roxo_ultimosCards">Quero me voluntariar 🤍</a>
+                        <a href="../auth/auth.html" class="btn_roxo_ultimosCards">Quero me voluntariar 🤍</a>
                     </div>
                 </div>
                 <div class="card_individual">
@@ -660,7 +655,7 @@
                             Organizada.
                         </p>
                     </div>
-                    <a href="#" class="btn_laranja_ultimosCards">Solicitar Ajuda 📣</a>
+                    <a href="../auth/auth.html" class="btn_laranja_ultimosCards">Solicitar Ajuda 📣</a>
                 </div>
             </div>
 
@@ -676,8 +671,7 @@
 
     </div>
 
-
-
+    <!--inicio HTML footer-->
     </div>
     <footer class="footer">
         <div class="footer-conteudo">
@@ -732,8 +726,7 @@
             </p>
         </div>
     </footer>
-
-
+    <!--links js-->
     <script src="../../js/shared/carrossel.js"></script>
     <script type="module" src="../../js/main.js"></script>
 
