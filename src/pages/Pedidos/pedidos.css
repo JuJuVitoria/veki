@@ -1,6 +1,6 @@
 /* Configurações Globais */
 .pedidos-container {
-    margin: 0 auto;
+    margin: 3rem auto;
     padding: 0 1rem;
 }
 
@@ -9,18 +9,15 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    margin: 2rem 0;
 }
 
 .pedidos-filtros {
     width: 100%;
     max-width: 800px;
-    background: #ffffff;
-    border-radius: 12px;
+    background: var(--white);
+    border-radius: var(--radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    display: flex;
-    gap: 1rem;
+    /* padding: 1.5rem; */
 }
 
 .pedidos-pesquisa {
@@ -39,13 +36,20 @@
     font-size: 1rem;
 }
 
+.f-search-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+
 /* Layout Principal */
 .pedidos-layout {
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
     justify-content: center;
-    position: relative;
+    /* position: relative; */
 }
 
 /* Sidebar com Checkboxes (Esquerda) */
@@ -56,16 +60,21 @@
     height: fit-content;
 }
 
-.pedidos-checkbox-group {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+.f-filtros {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-01);
     padding: 1.5rem;
+    margin: 1.5rem;
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    position: relative;
-    margin: 10px;
+}
+
+.pedidos-checkbox-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 .checkbox-item {
@@ -76,7 +85,6 @@
     color: #444;
     cursor: pointer;
     user-select: none;
-    position: relative;
 }
 
 .checkbox-item input[type="checkbox"] {
@@ -113,45 +121,25 @@
     border-color: #5a3a8d;
 }
 
-/* Botão Aplicar Filtros */
-.button-roxo {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #432273;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1rem;
-    cursor: pointer;
-    align-self: center;
-    transition: background-color 0.2s;
-    position: relative;
-    z-index: 1;
-}
-
-.button-roxo:hover {
-    background-color: #5a3a8d;
-}
-
 /* Área de Conteúdo (Cards) */
 .pedidos-content {
-    flex: 1;
+    /* flex: 1; */
     margin: 30px;
     width: 230px;
 
 }
 
-.pedidos-grid {
+/* .pedidos-grid {
     display:flex;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-}
+} */
 
 .conteiner_cards {
-    background: #ffffff;
-    border-radius: 12px;
+    background: var(--white);
+    border-radius: var(--radius);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    /* margin: 20px; */
     flex: 1;
     width: 100%;
     justify-content: center;
@@ -159,103 +147,8 @@
     max-width: 800px;
 }
 
-/* Estilo dos Cards */
-.pedido-card {
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 0;
-}
-
-.pedido-card__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 1rem;
-}
-
-.pedido-tag-Saude {
-    background-color: #E5F6FF;
-    color: #0088CC;
-    padding: 0.25rem 0.75rem;
-    border-radius: 16px;
-    font-size: 0.875rem;
-    font-weight: 500;
-}
-
-.pedido-titulo {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
-}
-
-.pedido-card__content {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.pedido-descricao {
-    color: #666;
-    line-height: 1.5;
-    margin: 0;
-}
-
-.pedido-info {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #888;
-    font-size: 0.875rem;
-}
-
-.pedido-local {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.pedido-local svg {
-    fill: currentColor;
-}
-
-/* Botões dos Cards */
-.pedido-button {
-    width: 100%;
-    padding: 0.75rem;
-    border: none;
-    border-radius: 8px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    margin-top: 5px;
-}
-
-.button-laranja {
-    background-color: #FF6B00;
-    color: white;
-    margin: 10px;
-}
-
-.button-laranja:hover {
-    background-color: #E65C00;
-}
-
 /* Responsividade */
 @media (max-width: 768px) {
-    .pedidos-filtros {
-        flex-direction: column;
-    }
-
-    .pedidos-filter {
-        width: 100%;
-    }
-
     .pedidos-layout {
         flex-direction: column;
     }
@@ -267,9 +160,8 @@
 
     .pedidos-content {
         width: 100%;
-        max-width: 100%;
         margin: 0;
-        padding: 10px;
+        padding: 0.5rem;
     }
 
     .pedidos-grid {

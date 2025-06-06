@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,10 +11,13 @@
     <link rel="stylesheet" href="../../style/layout/header.css">
     <link rel="stylesheet" href="../../style/layout/footer.css">
     <link rel="stylesheet" href="../../style/components/alert.css">
-    <link rel="stylesheet" href="../../pages/Pedidos/pedidos.css">
+    <link rel="stylesheet" href="../../pages/pedidos/pedidos.css">
+    <link rel="stylesheet" href="./style/cardPedido.css">
+    <link rel="stylesheet" href="../../style/components/infoPedidos.css">
 </head>
+
 <body>
-    <div class="alert-container"> 
+    <div class="alert-container">
         <div class="alert-emergencias-ativas">
             <svg class="alert-emergencias-ativas__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                 viewBox="0 0 16 16" id="megafone">
@@ -21,7 +25,7 @@
                     d="M15.5 5.4L15 5V1c0-.6-.4-1-1-1s-1 .4-1 1v.5C11 2.4 8 4 5 4H2.5C1.1 4 0 5.2 0 6.5c0 .9.5 1.7 1.2 2.1l1.1 5.9c0 .3.3.5.7.5h.2l3.6-.7c.4-.1.6-.4.5-.7-.3-.6-.8-1.5-1.2-1.8-.2-.1-.5-.9-.7-1.8H6v-.9c2.7.3 6 1.6 7 2.4v.5c0 .6.4 1 1 1s1-.4 1-1V8l.4-.3c.4-.3.6-.7.6-1.1v-.2c0-.4-.2-.7-.5-1zM2 5h3v1H2V5zm3.6 7.6c.1 0 .3.3.5.7l-2.8.7-1-5h1.9c.2 1.3.6 3.2 1.4 3.6zm7.4-2.3c-1.6-.8-4.4-2-7-2.3V5c2.6-.3 5.4-1.4 7-2.3v7.6z">
                 </path>
             </svg>
-            <div class="alert-emergencias-ativas__text">ALERTA ATIVO: Deslizamentos em Santa Catarina - 42 pessoas desalojadas</div>
+            <div class="alert-emergencias-ativas__text"></div>
         </div>
     </div>
 
@@ -71,151 +75,700 @@
             </nav>
             <a href="../../pages/auth/auth.html" class="header__button button-orange paragrafo">Entrar</a>
         </div>
-    </header> 
+    </header>
 
     <main class="pedidos-container">
         <div class="search-bar-container">
-            <div class="pedidos-filtros">
-                <input type="pesquisa" placeholder="Buscar pedidos" class="pedidos-pesquisa">
-            </div>
+            <form class="pedidos-filtros">
+                <fieldset>
+                    <legend class="titulo-complementar">Filtro</legend>
+                    <div class="f-search-group">
+                        <label for="f-search" class="paragrafo">Buscar pedidos:</label>
+                        <input type="search" placeholder="Buscar pedidos" id="f-search" name="f-search"
+                            class="pedidos-pesquisa">
+                    </div>
+                </fieldset>
+            </form>
         </div>
 
         <div class="pedidos-layout">
             <aside class="pedidos-sidebar">
-                <div class="pedidos-checkbox-group">
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="saude" value="saude">
-                        Saúde
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="vida-cotidiana" value="vida-cotidiana">
-                        Vida Cotidiana
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="educacao" value="educacao">
-                        Educação
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="direito-cidadania" value="direito-cidadania">
-                        Direito Cidadania
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="moradia" value="moradia">
-                        Moradia
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="tecnologia" value="tecnologia">
-                        Tecnologia
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="transporte" value="transporte">
-                        Transporte
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="financeiro" value="financeiro">
-                        Financeiro
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="animal" value="animal">
-                        Animal
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="meio-ambiente" value="meio-ambiente">
-                        Meio Ambiente
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="saude-mental" value="saude-mental">
-                        Saúde Mental
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="documentacao" value="documentacao">
-                        Documentação
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="comercio" value="comercio">
-                        Comércio
-                    </label>
-                    <label class="checkbox-item">
-                        <input type="checkbox" name="trabalho" value="trabalho">
-                        Trabalho
-                    </label>
-                    <button class="button-roxo">Aplicar Filtros</button>
-                </div>
+                <form action="" class="f-filtros">
+                    <fieldset class="pedidos-checkbox-group">
+                        <legend class="paragrafo">Filtros</legend><br>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="saude" value="saude">
+                            <label class="paragrafo" for="saude">Saúde</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="vida-cotidiana" value="vida-cotidiana">
+                            <label class="paragrafo" for="vida-cotidiana">Vida Cotidiana</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="educacao" value="educacao">
+                            <label class="paragrafo" for="educacao">Educação</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="direito-cidadania" value="direito-cidadania">
+                            <label class="paragrafo" for="direito-cidadania">Direito Cidadania</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="moradia" value="moradia">
+                            <label class="paragrafo" for="moradia">Moradia</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="tecnologia" value="tecnologia">
+                            <label class="paragrafo" for="tecnologia">Tecnologia</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="transporte" value="transporte">
+                            <label class="paragrafo" for="transporte">Transporte</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="financeiro" value="financeiro">
+                            <label class="paragrafo" for="financeiro">Financeiro</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="animal" value="animal">
+                            <label class="paragrafo" for="animal">Animal</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="meio-ambiente" value="meio-ambiente">
+                            <label class="paragrafo" for="meio-ambiente">Meio Ambiente</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="saude-mental" value="saude-mental">
+                            <label class="paragrafo" for="saude-mental">Saúde Mental</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="documentacao" value="documentacao">
+                            <label class="paragrafo">Documentação</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="comercio" value="comercio">
+                            <label class="paragrafo" for="comercio">Comércio</label>
+                        </div>
+                        <div class="checkbox-item">
+                            <input type="checkbox" name="trabalho" value="trabalho">
+                            <label class="paragrafo" for="trabalho">Trabalho</label>
+                        </div>
+
+                        <button type="submit" class="button-purple">Aplicar Filtros</button>
+                    </fieldset>
+                </form>
             </aside>
+            <div class="cards-pedido-conteiner">
+                <div class="card-pedido" data-categoria="Saúde" data-modalidade="Remoto">
+                    <div class="card-info">
+                        <div class="card-info-tags">
+                            <div class="info__categoria">
+                                <p class="info__p">Saúde</p>
+                            </div>
+                            <div class="info__modalidade">
+                                <p class="info__p">Remoto</p>
+                            </div>
+                        </div>
 
-        <div class="conteiner_cards">
-            <section class="pedidos-content">
-                <div class="pedidos-grid">
-                    <article class="pedido-card">
-                        <div class="pedido-card__header">
-                            <span class="pedido-tag-Saude">saúde</span>
-                            <h3 class="pedido-titulo">Remarcação Consulta</h3>
-                        </div>
-                    <div class="pedido-card__content">
-                        <p class="pedido-descricao">Preciso de ajuda para remarcar consulta no Hospital São Lucas devido a problemas de locomoção.</p>
-                    </div>    
-                        <div class="pedido-info">
-                            <span class="pedido-local">
-                                <!-- icone GPS -->
-                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 384 512">
-                                    <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        <h3 class="card-titulo">Remarcação Consulta</h3>
+                        <div class="card-info-detalhes">
+                            <div class="card-info-detalhes__localizacao">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e3e3e3">
+                                    <path
+                                        d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
                                 </svg>
-                                <!-- icone GPS -->
-                                São Paulo, SP
-                            </span>
-                            <span class="pedido-data">Hoje</span>
+                                <p class="card-info-detalhes__localizacao__p">São Paulo, Brasil</p>
+                            </div>
+                            <div class="card-info-detalhes__data">
+                                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                    width="24px" fill="#e3e3e3">
+                                    <path
+                                        d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                </svg>
+                                <p class="card-info-detalhes__data__p">Pedido feito em 01 Jun 2025</p>
+                            </div>
                         </div>
-                        <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
-                  
-                </article>
+                        <p class="card-descricao">Preciso de ajuda para remarcar consulta no Hospital São Lucas devido a
+                            problemas de locomoção.</p>
+                    </div>
 
-                    <article class="pedido-card">
-                        <div class="pedido-card__header">
-                            <span class="pedido-tag-Saude">saúde</span>
-                            <h3 class="pedido-titulo">Remarcação Consulta</h3>
+                    <button class="button-orange">Ver detalhes do pedido</button>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Vida Cotidiana" data-modalidade="Presencial">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Vida Cotidiana</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Presencial</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Ajuda para Limpeza</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Petrópolis, RJ</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 02 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Casa foi invadida por lama. Preciso de ajuda para limpeza urgente.
+                            </p>
                         </div>
-                    <div class="pedido-card__content">
-                        <p class="pedido-descricao">Preciso de ajuda para remarcar consulta no Hospital São Lucas devido a problemas de locomoção.</p>
-                    </div>    
-                        <div class="pedido-info">
-                            <span class="pedido-local">
-                                <!-- icone GPS -->
-                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 384 512">
-                                    <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
-                                </svg>
-                                <!-- icone GPS -->
-                                São Paulo, SP
-                            </span>
-                            <span class="pedido-data">Hoje</span>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Educação" data-modalidade="Remoto">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Educação</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Remoto</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Aula de Reforço de Matemática</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Manaus, AM</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 03 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Meu filho perdeu aulas por causa da enchente e precisa de reforço
+                                escolar.</p>
                         </div>
-                        <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
-                  
-                </article>
-                 
-                    <article class="pedido-card">
-                        <div class="pedido-card__header">
-                            <span class="pedido-tag-Saude">saúde</span>
-                            <h3 class="pedido-titulo">Remarcação Consulta</h3>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Direito Cidadania" data-modalidade="Remoto">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Direito Cidadania</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Remoto</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Orientação Jurídica</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Recife, PE</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 04 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Preciso de orientação para acessar benefícios assistenciais após
+                                desastre.</p>
                         </div>
-                    <div class="pedido-card__content">
-                        <p class="pedido-descricao">Preciso de ajuda para remarcar consulta no Hospital São Lucas devido a problemas de locomoção.</p>
-                    </div>    
-                        <div class="pedido-info">
-                            <span class="pedido-local">
-                                <!-- icone GPS -->
-                                <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 384 512">
-                                    <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
-                                </svg>
-                                <!-- icone GPS -->
-                                São Paulo, SP
-                            </span>
-                            <span class="pedido-data">Hoje</span>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Moradia" data-modalidade="Presencial">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Moradia</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Presencial</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Ajuda com Abrigo Temporário</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Belo Horizonte, MG</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 05 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Fiquei sem moradia após deslizamento e preciso de abrigo
+                                emergencial.</p>
                         </div>
-                        <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
-                  
-                </article>
-                
-        </section>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Tecnologia" data-modalidade="Remoto">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Tecnologia</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Remoto</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Acesso à Internet</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Interior do Pará</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 06 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Família está sem acesso à internet para acompanhar aulas e
+                                serviços.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Transporte" data-modalidade="Presencial">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Transporte</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Presencial</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Carona Solidária</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Duque de Caxias, RJ</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 07 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Preciso de transporte para hospital após interrupção de linhas de
+                                ônibus.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Financeiro" data-modalidade="Remoto">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Financeiro</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Remoto</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Orientação Financeira</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Fortaleza, CE</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 08 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Busco ajuda para reorganizar dívidas e orçamento familiar após
+                                enchentes.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Animal" data-modalidade="Presencial">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Animal</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Presencial</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Resgate de Animais</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Joinville, SC</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 09 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Animais de rua precisam de resgate e abrigo após as enchentes.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Meio Ambiente" data-modalidade="Remoto">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Meio Ambiente</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Remoto</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Denúncia Ambiental</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Região Norte, MS</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 10 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Quero denunciar contaminação da água em minha comunidade.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Saúde Mental" data-modalidade="Remoto">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Saúde Mental</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Remoto</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Sessão com Psicólogo Voluntário</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Porto Alegre, RS</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 11 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Preciso conversar com profissional devido a ansiedade
+                                pós-desastre.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Documentação" data-modalidade="Remoto">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Documentação</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Remoto</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Ajuda para Segunda Via</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Natal, RN</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 12 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Preciso de ajuda para tirar 2ª via de documentos perdidos na
+                                enchente.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Comércio" data-modalidade="Presencial">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Comércio</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Presencial</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Recuperar Loja Atingida</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Aracaju, SE</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 13 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Minha loja foi alagada. Preciso de ajuda para limpeza e
+                                reorganização.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+
+                <div class="cards-pedido-conteiner">
+                    <div class="card-pedido" data-categoria="Trabalho" data-modalidade="Remoto">
+                        <div class="card-info">
+                            <div class="card-info-tags">
+                                <div class="info__categoria">
+                                    <p class="info__p">Trabalho</p>
+                                </div>
+                                <div class="info__modalidade">
+                                    <p class="info__p">Remoto</p>
+                                </div>
+                            </div>
+                            <h3 class="card-titulo">Recolocação Profissional</h3>
+                            <div class="card-info-detalhes">
+                                <div class="card-info-detalhes__localizacao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__localizacao__p">Campo Grande, MS</p>
+                                </div>
+                                <div class="card-info-detalhes__data">
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
+                                        width="24px" fill="#e3e3e3">
+                                        <path
+                                            d="M200-80q-33 0-56.5-23.5T120-160v-560q0-33 23.5-56.5T200-800h40v-80h80v80h320v-80h80v80h40q33 0 56.5 23.5T840-720v560q0 33-23.5 56.5T760-80H200Zm0-80h560v-400H200v400Zm0-480h560v-80H200v80Zm0 0v-80 80Zm280 240q-17 0-28.5-11.5T440-440q0-17 11.5-28.5T480-480q17 0 28.5 11.5T520-440q0 17-11.5 28.5T480-400Zm-160 0q-17 0-28.5-11.5T280-440q0-17 11.5-28.5T320-480q17 0 28.5 11.5T360-440q0 17-11.5 28.5T320-400Zm320 0q-17 0-28.5-11.5T600-440q0-17 11.5-28.5T640-480q17 0 28.5 11.5T680-440q0 17-11.5 28.5T640-400ZM480-240q-17 0-28.5-11.5T440-280q0-17 11.5-28.5T480-320q17 0 28.5 11.5T520-280q0 17-11.5 28.5T480-240Zm-160 0q-17 0-28.5-11.5T280-280q0-17 11.5-28.5T320-320q17 0 28.5 11.5T360-280q0 17-11.5 28.5T320-240Zm320 0q-17 0-28.5-11.5T600-280q0-17 11.5-28.5T640-320q17 0 28.5 11.5T680-280q0 17-11.5 28.5T640-240Z" />
+                                    </svg>
+                                    <p class="card-info-detalhes__data__p">Pedido feito em 14 Jun 2025</p>
+                                </div>
+                            </div>
+                            <p class="card-descricao">Busco orientação para voltar ao mercado após perder o emprego.</p>
+                        </div>
+                        <button class="button-orange">Ver detalhes do pedido</button>
+                    </div>
+                </div>
+
+            </div>
+            <!-- <div class="conteiner_cards">
+                <section class="pedidos-content">
+                    <div class="pedidos-grid">
+                        <article class="pedido-card">
+                            <div class="pedido-card__header">
+                                <span class="pedido-tag-Saude">saúde</span>
+                                <h3 class="pedido-titulo">Remarcação Consulta</h3>
+                            </div>
+                            <div class="pedido-card__content">
+                                <p class="pedido-descricao">Preciso de ajuda para remarcar consulta no Hospital São
+                                    Lucas devido a problemas de locomoção.</p>
+                            </div>
+                            <div class="pedido-info">
+                                <span class="pedido-local">
+                                    
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 384 512">
+                                        <path
+                                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                                    </svg>
+                                  
+                                    São Paulo, SP
+                                </span>
+                                <span class="pedido-data">Hoje</span>
+                            </div>
+                            <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
+
+                        </article>
+
+                        <article class="pedido-card">
+                            <div class="pedido-card__header">
+                                <span class="pedido-tag-Saude">saúde</span>
+                                <h3 class="pedido-titulo">Remarcação Consulta</h3>
+                            </div>
+                            <div class="pedido-card__content">
+                                <p class="pedido-descricao">Preciso de ajuda para remarcar consulta no Hospital São
+                                    Lucas devido a problemas de locomoção.</p>
+                            </div>
+                            <div class="pedido-info">
+                                <span class="pedido-local">
+                                   
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 384 512">
+                                        <path
+                                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                                    </svg>
+                                   
+                                    São Paulo, SP
+                                </span>
+                                <span class="pedido-data">Hoje</span>
+                            </div>
+                            <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
+
+                        </article>
+
+                        <article class="pedido-card">
+                            <div class="pedido-card__header">
+                                <span class="pedido-tag-Saude">saúde</span>
+                                <h3 class="pedido-titulo">Remarcação Consulta</h3>
+                            </div>
+                            <div class="pedido-card__content">
+                                <p class="pedido-descricao">Preciso de ajuda para remarcar consulta no Hospital São
+                                    Lucas devido a problemas de locomoção.</p>
+                            </div>
+                            <div class="pedido-info">
+                                <span class="pedido-local">
+                                   
+                                    <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16"
+                                        viewBox="0 0 384 512">
+                                        <path
+                                            d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z" />
+                                    </svg>
+                                  
+                                    São Paulo, SP
+                                </span>
+                                <span class="pedido-data">Hoje</span>
+                            </div>
+                            <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
+
+                        </article>
+
+                </section> -->
     </main>
 
     <footer class="footer">
@@ -267,10 +820,12 @@
         <div class="sepador_horizontal"></div>
         <div class="footer__creditos">
             <p class="paragrafo">© 2025 Plataforma Solidária Inteligente. Todos os direitos reservados.</p>
-            <p class="paragrafo-complementar">Desenvolvido com coração para transformar o mundo através da solidariedade</p>
+            <p class="paragrafo-complementar">Desenvolvido com coração para transformar o mundo através da solidariedade
+            </p>
         </div>
     </footer>
 
     <script type="module" src="../../js/main.js"></script>
 </body>
+
 </html>
