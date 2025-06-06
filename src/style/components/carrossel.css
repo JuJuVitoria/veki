@@ -107,3 +107,9 @@
         opacity: 1
     }
 }
+@media (max-width: 768px) {
+    .carrossel_home {
+        height: 250px;
+        margin-bottom: 15px;
+    }
+}
