@@ -2,6 +2,7 @@ import { emergencias } from '../../../js/data/emergenciasData.js';
 import { pedidosEmergencia } from '../../../js/data/pedidosEmergenciaData.js';
 import { svgIcons } from '../../../js/shared/svgIcons.js';
 import { imgs } from '../../../js/shared/imgs.js';
+import { criarTelaPedido } from './telaSobrePedido.js';
 
 export function carregarPedidosPorEmergencia(emergenciaID) {
     const emergenciaData = pedidosEmergencia.find(
@@ -15,7 +16,7 @@ export function carregarPedidosPorEmergencia(emergenciaID) {
         telaPedido.style.display = "block";
 
         exibeDescricaoEmergencia(emergencias, emergenciaID);
-        exibirPedidosNaTela(emergenciaData.pedidos);
+        exibirPedidosNaTela(emergenciaData.pedidos, emergenciaID);
     } else {
         console.warn('Nenhuma emergência encontrada com esse ID:', emergenciaID);
     }
@@ -85,15 +86,15 @@ function exibeDescricaoEmergencia(listaEmergencias, id) {
     telaPedido.appendChild(containerPedidos);
 }
 
-function exibirPedidosNaTela(pedidos) {
+function exibirPedidosNaTela(pedidos, id) {
     const container = document.querySelector('.tela-pedidos__cards-pedidos-container');
     pedidos.forEach(pedido => {
-        const card = criaCardPedido(pedido);
+        const card = criaCardPedido(pedido, id);
         container.appendChild(card);
     });
 }
 
-function criaCardPedido(pedido) {
+function criaCardPedido(pedido, idEmergencia) {
     const card = document.createElement('div');
     card.classList.add('cards-pedidos-container__card');
     card.dataset.modalidade = pedido.modalidade;
@@ -148,11 +149,21 @@ function criaCardPedido(pedido) {
     cardInfo.appendChild(cardBody);
 
     const botao = document.createElement('button');
-    botao.classList.add('button-purple', 'paragrafo');
+    botao.classList.add('button-purple', 'paragrafo', 'btnVerPedido');
+    botao.id = `idEmergencia-${idEmergencia}`
     botao.innerText = 'Ver mais sobre o pedido';
 
     card.appendChild(cardInfo);
     card.appendChild(botao);
+
+    botao.addEventListener('click', () => {
+        const oldModal = document.querySelector('.order-modal');
+        if (oldModal) oldModal.remove();
+
+        const modal = criarTelaPedido(idEmergencia);
+        console.log('Modal criado:', modal);
+        if (modal) document.body.appendChild(modal);
+    });
 
     return card;
 }
