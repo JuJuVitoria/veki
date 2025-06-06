@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../pages/Pedidos/pedidos.css">
 </head>
 <body>
-    <div class="alert-container">
+    <div class="alert-container"> 
         <div class="alert-emergencias-ativas">
             <svg class="alert-emergencias-ativas__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                 viewBox="0 0 16 16" id="megafone">
@@ -71,29 +71,12 @@
             </nav>
             <a href="" class="header__button button-orange paragrafo">Entrar</a>
         </div>
-    </header>
+    </header> 
 
     <main class="pedidos-container">
         <div class="search-bar-container">
             <div class="pedidos-filtros">
                 <input type="pesquisa" placeholder="Buscar pedidos" class="pedidos-pesquisa">
-                <select class="pedidos-filter">
-                    <option value="">Todos os tipos</option>
-                    <option value="Saúde">Saúde</option>
-                    <option value="Transporte">Transporte</option>
-                    <option value="Comercio">Comércio</option>
-                    <option value="Vida_cotidiana">Vida Cotidiana</option>
-                    <option value="Documentacao">Documentação</option>
-                    <option value="Moradia">Moradia</option>
-                    <option value="Educacao">Educação</option>
-                    <option value="Trabalho">Trabalho</option>
-                    <option value="Tecnologia">Tecnologia</option>
-                    <option value="Financeiro">Financeiro</option>
-                    <option value="Animal">Animal</option>
-                    <option value="Saude_Mental">Saúde Mental</option>
-                    <option value="Meio_Ambiente">Meio Ambiente</option>
-                    <option value="Direito_Cidadania">Direito Cidadania</option>
-                </select>
             </div>
         </div>
 
@@ -160,6 +143,7 @@
                 </div>
             </aside>
 
+        <div class="conteiner_cards">
             <section class="pedidos-content">
                 <div class="pedidos-grid">
                     <article class="pedido-card">
@@ -181,17 +165,18 @@
                             </span>
                             <span class="pedido-data">Hoje</span>
                         </div>
-                    </div>
-                    <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
+                        <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
+                  
                 </article>
 
-                <article class="pedido-card">
-                    <div class="pedido-card__header">
-                        <span class="pedido-tag-Saude">saúde</span>
-                        <h3 class="pedido-titulo">Aparelho De Pressão</h3>
-                    </div>
+                    <article class="pedido-card">
+                        <div class="pedido-card__header">
+                            <span class="pedido-tag-Saude">saúde</span>
+                            <h3 class="pedido-titulo">Remarcação Consulta</h3>
+                        </div>
                     <div class="pedido-card__content">
-                        <p class="pedido-descricao">Necessito de um aparelho de pressão para monitoramento diário em casa.</p>
+                        <p class="pedido-descricao">Preciso de ajuda para remarcar consulta no Hospital São Lucas devido a problemas de locomoção.</p>
+                    </div>    
                         <div class="pedido-info">
                             <span class="pedido-local">
                                 <!-- icone GPS -->
@@ -199,21 +184,22 @@
                                     <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
                                 </svg>
                                 <!-- icone GPS -->
-                                Rio de Janeiro, RJ
+                                São Paulo, SP
                             </span>
-                            <span class="pedido-data">Há 2 dias</span>
+                            <span class="pedido-data">Hoje</span>
                         </div>
-                    </div>
-                    <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
+                        <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
+                  
                 </article>
-
-                <article class="pedido-card">
-                    <div class="pedido-card__header">
-                        <span class="pedido-tag-Saude">saúde</span>
-                        <h3 class="pedido-titulo">Agendamento/Plano</h3>
-                    </div>
+                 
+                    <article class="pedido-card">
+                        <div class="pedido-card__header">
+                            <span class="pedido-tag-Saude">saúde</span>
+                            <h3 class="pedido-titulo">Remarcação Consulta</h3>
+                        </div>
                     <div class="pedido-card__content">
-                        <p class="pedido-descricao">Auxílio para agendar consulta com especialista e verificar cobertura do plano de saúde.</p>
+                        <p class="pedido-descricao">Preciso de ajuda para remarcar consulta no Hospital São Lucas devido a problemas de locomoção.</p>
+                    </div>    
                         <div class="pedido-info">
                             <span class="pedido-local">
                                 <!-- icone GPS -->
@@ -221,14 +207,14 @@
                                     <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
                                 </svg>
                                 <!-- icone GPS -->
-                                Curitiba, PR
+                                São Paulo, SP
                             </span>
-                            <span class="pedido-data">Há 3 dias</span>
+                            <span class="pedido-data">Hoje</span>
                         </div>
-                    </div>
-                </div>
-                <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
-            </article>
+                        <button class="pedido-button button-laranja">Ver mais sobre o pedido</button>
+                  
+                </article>
+                
         </section>
     </main>
 

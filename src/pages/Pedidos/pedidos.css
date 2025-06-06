@@ -1,6 +1,5 @@
 /* Configurações Globais */
 .pedidos-container {
-    max-width: 1400px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -45,6 +44,8 @@
     display: flex;
     gap: 2rem;
     margin-top: 2rem;
+    justify-content: center;
+    position: relative;
 }
 
 /* Sidebar com Checkboxes (Esquerda) */
@@ -63,6 +64,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    position: relative;
+    margin: 10px;
 }
 
 .checkbox-item {
@@ -72,6 +75,8 @@
     font-size: 0.9rem;
     color: #444;
     cursor: pointer;
+    user-select: none;
+    position: relative;
 }
 
 .checkbox-item input[type="checkbox"] {
@@ -80,46 +85,90 @@
     border: 2px solid #432273;
     border-radius: 3px;
     cursor: pointer;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: white;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.checkbox-item input[type="checkbox"]:checked {
+    background-color: #432273;
+    position: relative;
+}
+
+.checkbox-item input[type="checkbox"]:checked::before {
+    content: "✓";
+    position: absolute;
+    color: white;
+    font-size: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.checkbox-item:hover input[type="checkbox"] {
+    border-color: #5a3a8d;
 }
 
 /* Botão Aplicar Filtros */
 .button-roxo {
-    margin-top: 1rem;
-    padding: 0.75rem 1.5rem;
+    margin-top: 20px;
+    padding: 10px 20px;
     background-color: #432273;
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-    align-self: flex-end;
+    align-self: center;
     transition: background-color 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.button-roxo:hover {
+    background-color: #5a3a8d;
 }
 
 /* Área de Conteúdo (Cards) */
 .pedidos-content {
     flex: 1;
-    max-width: calc(100% - 250px - 2rem);
+    margin: 30px;
+    width: 230px;
+
 }
 
 .pedidos-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display:flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    justify-content: flex-start;
+}
+
+.conteiner_cards {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    flex: 1;
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+    max-width: 800px;
 }
 
 /* Estilo dos Cards */
 .pedido-card {
-    flex: 0 0 300px;
     background: #ffffff;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
-    margin: 10px;
+    width: 100%;
+    margin: 0;
 }
 
 .pedido-card__header {
@@ -190,6 +239,7 @@
 .button-laranja {
     background-color: #FF6B00;
     color: white;
+    margin: 10px;
 }
 
 .button-laranja:hover {
@@ -216,11 +266,14 @@
     }
 
     .pedidos-content {
+        width: 100%;
         max-width: 100%;
+        margin: 0;
+        padding: 10px;
     }
 
     .pedidos-grid {
-        justify-content: center;
+        grid-template-columns: 1fr;
     }
     
     .pedido-card {
