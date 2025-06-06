@@ -2,10 +2,11 @@
     box-sizing: border-box;
 }
 
+
 .primeiraSessao_inteira {
     width: 100%;
-    min-height: 1150px;
-    height: auto;
+    min-height: auto;
+    height: fit-content;
     padding: 20px;
     background-image: url(../../assets/img/index/imagem\ de\ fundo\ primeira\ sessao.jpg);
     background-size: cover;
@@ -52,64 +53,48 @@
 
 .alinhamento_banners {
     display: flex;
+    flex-direction: row;
     gap: 40px;
-    height: fit-content;
+    justify-content: space-between;
     align-items: stretch;
+}
+
+.banner_principal_ladoEsquerdo,
+.mensagens_banner {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
 }
 
 .banner_principal_ladoEsquerdo {
     background-color: white;
     border-radius: 20px;
     padding: 25px;
-    width: 50%;
     max-width: 600px;
+    flex-direction: column;
 }
 
-.banner_principal_ladoEsquerdo,
-.mensagens_banner {
-    flex: 1;
-    min-width: 0;
-}
-
-@media (max-width: 768px) {
-    .alinhamento_banners {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .banner_principal_ladoEsquerdo,
-    .mensagens_banner {
-        width: 100%;
-    }
-
-    .mensagens_banner {
-        margin-top: 20px;
-        align-items: center;
-    }
-
-    .mensagemAudio_banner {
-        width: 100%;
-        max-width: 300px;
-    }
-}
-
-#texto_banner_principal {
+.texto_banner_principal {
     text-align: left;
-    line-height: 70px;
+    line-height: 55px;
     align-items: top;
-    margin: 0 0 5px 10px;
+    margin: 0 0 5px 5px;
     color: var(--dark-purple);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-heading-lg-xl);
+    text-transform: uppercase;
 }
 
-#texto_banner_principal_laranja {
+.texto_banner_principal_laranja {
     color: var(--medium-orange);
 }
 
-#texto_banner_principal_vermelho {
+.texto_banner_principal_vermelho {
     color: var(--dark-orange);
 }
 
-#texto_alerta_banner_principal {
+.texto_alerta_banner_principal {
     color: var(--dark-purple);
 }
 
@@ -168,37 +153,6 @@
     margin: .8rem 0 .5rem 0;
 }
 
-.mensagens_banner {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.mensagens_banner_um {
-    color: var(--dark-purple);
-    align-items: left;
-    width: 60%;
-    background-color: var(--white);
-    border-radius: 20px;
-    padding: 25px;
-    margin: 20px 0;
-}
-
-.mensagemAudio_banner {
-    justify-content: space-between;
-    align-items: center;
-    display: flex;
-    gap: 25px;
-    width: 60%;
-    height: fit-content;
-    background-color: var(--white);
-    border-radius: 20px;
-    padding: 20px;
-    margin: 20px 0;
-    margin-left: auto;
-}
-
 .svg_mensagem_audio_user {
     width: 50px;
     height: 50px;
@@ -227,41 +181,79 @@
     fill: var(--dark-purple);
 }
 
-.mensagens_banner_dois {
-    color: var(--dark-purple);
-    align-items: left;
-    width: 60%;
-    background-color: var(--white);
-    border-radius: 20px;
-    padding: 25px;
-    margin: 20px 0;
-}
-
 .imagemBanner_mensagem_bannerPrincipal {
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 25px;
     height: 300px;
-    background-color: var(--white);
-    border-radius: 20px;
-    padding: 15px;
-    overflow: hidden;
-    margin: 10px 0;
+    position: relative;
+    z-index: 1;
+    background-image: url(src/pages/home/../../assets/img/index/imagem_som_mensagem_inicio.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
 }
 
 .imagem_mensagem_bannerPrincipal {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 25px;
+    display: block;
+}
+
+.emoji_balao {
+    position: absolute;
+    bottom: -12px;
+    left: 12px;
+    background: white;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 2;
+}
+
+.mensagens_banner {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+    padding: 0 16px;
+}
+
+.mensagens_banner_dois,
+.mensagens_banner_um {
+    background-color: var(--white);
     border-radius: 20px;
+    padding: 16px;
+    max-width: 60%;
+    font-size: 14px;
+    color: var(--dark-purple);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.mensagemAudio_banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    padding: 16px;
+    background-color: var(--white);
+    gap: 12px;
+    width: 60%;
+    margin-left: auto;
 }
 
 .estatistica_banner_principal {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    max-width: 700px;
     align-items: center;
-    gap: 100px;
     padding: 20px 0;
     color: var(--white);
-    margin-top: 80px;
+    margin: 2rem auto 2rem auto;
     position: relative;
 }
 
@@ -383,12 +375,6 @@
     color: var(--medium-orange);
 }
 
-@media (max-width: 600px) {
-    .estatisticas_home {
-        flex-direction: column;
-        gap: 20px;
-    }
-}
 
 .segundo_texto {
     max-width: 1200px;
@@ -469,7 +455,7 @@
 .titulo_sobrePlataforma {
     font-family: "Ubuntu", sans-serif;
     font-weight: var(--fw-regular);
-    font-size: clamp(1.2rem, 1.2rem + 0.5vw, 1.8rem);;
+    font-size: var(--fs-heading-lg-sm);
     margin: .8rem 0 .5rem 0;
     color: var(--dark-purple);
 }
@@ -477,7 +463,6 @@
 
 .subtitulo_ultimosCards {
     max-width: 1200px;
-    margin: 60px auto;
     padding: 0 20px;
     text-align: center;
     color: var(--black);
@@ -577,6 +562,9 @@
     margin: 4px 2px;
     cursor: pointer;
     transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text-lg);
 }
 
 .btn_roxo_ultimosCards:hover {
@@ -586,6 +574,9 @@
 }
 
 .btn_laranja_ultimosCards {
+    font-family: "Roboto", sans-serif;
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-text-lg);
     background-color: var(--dark-orange);
     color: var(--white);
     border: none;
@@ -619,4 +610,81 @@
     padding: 5px;
     border-radius: 20px;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .banner_principal_ladoEsquerdo {
+        max-width: 1100px;
+        width: 100%;
+        padding: 20px;
+        height: fit-content;
+    }
+
+    .primeiraSessao_inteira {
+        padding: 10px;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .primeiraSessao_inicio {
+        padding: 0 10px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        gap: 20px;
+    }
+
+    .alerta_banner {
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .texto_banner_principal,
+    .titulo_sessao {
+        font-size: 1.9rem;
+    }
+
+    .titulo_sobrePlataforma {
+        font-size: 1.5rem;
+    }
+
+    .subtitulo_laranja,
+    .titulo_sobrePlataforma,
+    .titulo_sessao {
+        padding: 0 15px;
+    }
+
+    .estatisticas_home {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .umCard_home {
+        border-radius: 0;
+        width: 100vw;
+        margin-left: 0;
+        margin-right: 0;
+        border-left: none;
+        border-right: none;
+    }
+
+    .mensagens_banner {
+        display: none;
+        padding: 0 12px;
+        align-items: center;
+    }
+
+    .mensagens_banner_um,
+    .mensagens_banner_dois,
+    .mensagemAudio_banner {
+        width: 100%;
+        max-width: 100%;
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .titulo_sobrePlataforma {
+        font-size: 1.8rem;
+    }
 }

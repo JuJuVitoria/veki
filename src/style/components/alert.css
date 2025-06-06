@@ -12,6 +12,7 @@
     align-items: center;
     padding: 0 2rem;
     background-image: linear-gradient(90deg, var(--dark-orange), var(--light-orange));
+    z-index: 950;
 }
 
 .alert-emergencias-ativas {
