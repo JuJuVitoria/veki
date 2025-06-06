@@ -18,7 +18,7 @@ const spans = document.querySelectorAll('.span-required');
 const texto = document.querySelectorAll('.required-text');
 const emailRegex = /^((?!\.)[\w-_.]*[^.])(@\w+)(\.\w+(\.\w+)?[^.\W])$/gim;
 
-const formlogin = document.getElementById('formlogin');
+const formlogin = document.getElementById('form-login');
 const camposlogin = document.getElementsByClassName('required-login');
 const linhalogin = document.getElementsByClassName('required-linha-login');
 const spanslogin = document.querySelectorAll('.span-required-login');

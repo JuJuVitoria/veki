@@ -13,7 +13,7 @@
 }
 
 .alert-box {
-  background: white;
+  background: var(--white);
   padding: 2rem;
   border-radius: 12px;
   max-width: 400px;
@@ -38,8 +38,8 @@
 }
 
 #alert-confirm {
-  background-color: #432273;
-  color: white;
+  background-color: var(--dark-purple);
+  color: var(--white);
 }
 
 #alert-cancel {

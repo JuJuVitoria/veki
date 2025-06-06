@@ -1,67 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro/Login</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="Color.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="../../style/global.css">
     <link rel="stylesheet" href="auth.css">
-    <title>Cadastro/Login</title>
 </head>
+
 <body>
     <main>
         <div id="login-container" class="login-container">
             <div class="form-container">
                 <form id="form-login" class="form form-login">
-                    <h2 class="form-title">LOGIN</h2>
-                   <div class="form-input-container">
-                         <div class="input-container input-register">
-                            <input type="text" id="input" class="required-login" oninput="nameValidateLogin()" required="">
-                            <label for="input" class="label required-text-login">Nome</label>
-                            <div class="underline required-linha-login"></div>
-                        </div>
-                        <span class="span-required-login">Nome deve ter pelo menos 3 caracteres</span>
-                       
-                        <div class="input-container input-register">
-                            <input type="password" id="input" class="required-login"  oninput="PassorwdValidateLogin()" required="">
-                            <label for="input" class="label required-text-login">Senha</label>
-                            <div class="underline required-linha-login"></div>
-                        </div>
-                         <span class="span-required-login">A senha deve ter pelo menos 8 caracteres</span>
-                    </div>
-                    <button type="button" class="form-button">Logar</button>
-                     <p class="mobile-text">Não tem conta? <a  id="open-register-mobile">Registre-se</a></p>
-                </form>
-                <form  id="form" class="form form-register">
-                    <h2 class="form-title">Criar Conta</h2>
+                    <h2 class="subtitulo-primario">LOGIN</h2>
                     <div class="form-input-container">
-                         <div class="input-container input-register">
+                        <div class="input-container input-register">
+                            <input type="text" id="input" class="required-login" oninput="nameValidateLogin()"
+                                required="">
+                            <label for="input" class="label required-text-login paragrafo">Nome</label>
+                            <div class="underline required-linha-login"></div>
+                        </div>
+                        <span class="span-required-login paragrafo">Nome deve ter pelo menos 3 caracteres</span>
+
+                        <div class="input-container input-register">
+                            <input type="password" id="input" class="required-login" oninput="PassorwdValidateLogin()"
+                                required="">
+                            <label for="input" class="label required-text-login paragrafo">Senha</label>
+                            <div class="underline required-linha-login"></div>
+                        </div>
+                        <span class="span-required-login paragrafo">A senha deve ter pelo menos 8 caracteres</span>
+                    </div>
+                    <button type="button" class="form-button paragrafo">Logar</button>
+                    <p class="mobile-text paragrafo">Não tem conta? <a id="open-register-mobile">Registre-se</a></p>
+                </form>
+                <form id="form" class="form form-register">
+                    <h2 class="subtitulo-primario">Criar Conta</h2>
+                    <div class="form-input-container">
+                        <div class="input-container input-register">
                             <input type="text" id="input" class="required" oninput="nameValidate()" required="">
-                            <label for="input" class="label required-text">Nome</label>
+                            <label for="input" class="label required-text paragrafo">Nome</label>
                             <div class="underline required-linha"></div>
                         </div>
-                        <span class="span-required">Nome deve ter pelo menos 3 caracteres</span>
+                        <span class="span-required paragrafo">Nome deve ter pelo menos 3 caracteres</span>
                         <div class="input-container input-register">
                             <input type="text" id="input" class="required" oninput="emailValidate()" required="">
-                            <label for="input" class="label required-text">Email</label>
+                            <label for="input" class="label required-text paragrafo">Email</label>
                             <div class="underline required-linha"></div>
                         </div>
-                         <span class="span-required">Email incorreto</span>
+                        <span class="span-required paragrafo">Email incorreto</span>
                         <div class="input-container input-register">
-                            <input type="password" id="input" class="required"  oninput="PassorwdValidate()" required="">
-                            <label for="input" class="label required-text">Senha</label>
+                            <input type="password" id="input" class="required" oninput="PassorwdValidate()" required="">
+                            <label for="input" class="label required-text paragrafo">Senha</label>
                             <div class="underline required-linha"></div>
                         </div>
-                         <span class="span-required">A senha deve ter pelo menos 8 caracteres</span>
-                           <div class="input-container input-register">
-                            <input type="tel" id="input" class="required"  oninput="numerovalidate()" required="">
-                            <label for="input" class="label required-text">Numero</label>
+                        <span class="span-required paragrafo">A senha deve ter pelo menos 8 caracteres</span>
+                        <div class="input-container input-register">
+                            <input type="tel" id="input" class="required" oninput="numerovalidate()" required="">
+                            <label for="input" class="label required-text paragrafo">Numero</label>
                             <div class="underline required-linha"></div>
                         </div>
-                         <span class="span-required">O numero deve ter pelo menos 9 digitos</span>
+                        <span class="span-required paragrafo">O numero deve ter pelo menos 9 digitos</span>
                         <!-- <div class="input-container input-register">
                             <input type="tel" id="input" class="required" oninput="numerovalidate()">
                             <label for="input" class="label">Telefone</label>
@@ -69,27 +80,29 @@
                         </div>
                          <span class="span-required">O telefone deve ter pelo menos 8 ou 9 digitos</span> -->
                     </div>
-                    <button type="button" class="form-button form-button-cadastrese">Cadastre-se</button>
-                     <p class="mobile-text">Não tem conta? <a  id="open-login-mobile">Registre-se</a></p>
+                    <button type="button" class="form-button form-button-cadastrese paragrafo">Cadastre-se</button>
+                    <p class="mobile-text paragrafo">Não tem conta? <a id="open-login-mobile">Registre-se</a></p>
                 </form>
             </div>
             <div class="overlay-container">
-                    <div class="overlay">
-                        <h2 class="form-title form-title-light">Ja tem conta?</h2>
-                        <p class="form-text">Para entrar em nossa plataforma faça login com suas informações</p>
-                        <button class="form-button-overlay form-button-light" id="open-login">Entrar</button>
-                    </div>
-                  <div class="overlay">
-                        <h2 class="form-title form-title-light">Não tem uma conta ainda?</h2>
-                        <p class="form-text">Cadastre-se e começe a usar nossa plataforma</p>
-                        <button class="form-button-overlay form-button-light form-button-mobile" id="open-register">Cadastre-se</button>
-                    </div>
+                <div class="overlay">
+                    <h2 class="subtitulo-primario">Ja tem conta?</h2>
+                    <p class="paragrafo">Para entrar em nossa plataforma faça login com suas informações</p>
+                    <button class="form-button-overlay form-button-light paragrafo" id="open-login">Entrar</button>
+                </div>
+                <div class="overlay">
+                    <h2 class="subtitulo-primario">Não tem uma conta ainda?</h2>
+                    <p class="paragrafo">Cadastre-se e começe a usar nossa plataforma</p>
+                    <button class="form-button-overlay form-button-light form-button-mobile paragrafo"
+                        id="open-register">Cadastre-se</button>
+                </div>
             </div>
-            
+
         </div>
 
     </main>
-    
+
     <script src="auth.js"></script>
 </body>
+
 </html>
