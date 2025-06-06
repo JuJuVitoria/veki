@@ -13,6 +13,3 @@ emergencias.forEach((emergencia) => {
 // Para aplicar o filtro nos cards de emergência
 const form = document.getElementById('formFiltro');
 form.addEventListener('submit', aplicarForm);
-
-const btnVerPedido = document.getElementsByClassName('btnVerPedido');
-console.log(btnVerPedido.id);

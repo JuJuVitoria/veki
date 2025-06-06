@@ -1,5 +1,6 @@
 import { infoUsers } from "../../../js/data/userData.js";
 import { svgIcons } from "../../../js/shared/svgIcons.js";
+import { alertVoluntariadoConfirmado } from "./alert.js";
 
 export function criarTelaPedido(IDpedido) {
     const usuario = infoUsers.find(user => user.idPedidoEmergencia === Number(IDpedido));
@@ -185,6 +186,7 @@ export function criarTelaPedido(IDpedido) {
     const btnVolunteer = document.createElement('button');
     btnVolunteer.classList.add('button-orange', 'order-modal__button-volunteer');
     btnVolunteer.innerText = 'Se voluntariar';
+    btnVolunteer.addEventListener('click', alertVoluntariadoConfirmado);
 
     // Montagem final
     modal.append(actions, profile, score, requestInfo, btnVolunteer);
