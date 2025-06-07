@@ -13,7 +13,7 @@
     justify-content: space-between;
     align-items: center;
     width: 290px;
-    height: 320px;
+    height: 380px;
     background-color: var(--white);
     margin: 0 1rem;
     padding: 1.5rem;
@@ -35,9 +35,9 @@
 .card-titulo {
     font-family: "Ubuntu", sans-serif;
     font-weight: var(--fw-medium);
-    font-size: var(--fs-heading-lg-md);
+    font-size: 1.5rem;
     text-align: center;
-    margin: 1rem 0;
+    margin: 1.2rem 0;
 }
 
 .card-descricao {

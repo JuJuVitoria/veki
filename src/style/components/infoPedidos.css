@@ -36,6 +36,58 @@
     --color-ctg-bg-ciclone-furacao: #D1E8FF;
     --color-ctg-tx-ciclone-furacao: #004C99;
 
+    /* Educação */
+    --color-ctg-bg-educacao: #faf1cf;
+    --color-ctg-tx-educacao: #fcac00;
+
+    /* Vida cotidiana */
+    --color-ctg-bg-vida-cotidiana: #ff7b00;
+    --color-ctg-tx-vida-cotidiana: #fefefe;
+
+    /* Direito e cidadania */
+    --color-ctg-bg-direito-cidadania: #9e501c;
+    --color-ctg-tx-direito-cidadania: #fefefe;
+
+    /* Moradia */
+    --color-ctg-bg-moradia: #fcacf5;
+    --color-ctg-tx-moradia: #66045e;
+
+    /* Tecnologia */
+    --color-ctg-bg-tecnologia: #4b4b4b;
+    --color-ctg-tx-tecnologia: #c5c5c5;
+
+    /* Transporte */
+    --color-ctg-bg-transporte: #aff8da;
+    --color-ctg-tx-transporte: #0f8a57;
+
+    /* Financeiro */
+    --color-ctg-bg-financeiro: #fac517;
+    --color-ctg-tx-financeiro: #f0f0f0;
+
+    /* Animal */
+    --color-ctg-bg-animal: #e61d49;
+    --color-ctg-tx-animal: #f0f0f0;
+
+    /* Meio ambiente */
+    --color-ctg-bg-meio-ambiente: #207a0e;
+    --color-ctg-tx-meio-ambiente: #d2f5bd;
+
+    /* Saúde mental */
+    --color-ctg-bg-saude-mental: #bbbbbb;
+    --color-ctg-tx-saude-mental: #1f1f1f;
+
+    /* Documentação */
+    --color-ctg-bg-documentacao: #ffd7b6;
+    --color-ctg-tx-documentacao: #b95a0c;
+
+    /* Comércio */
+    --color-ctg-bg-comercio: #0182d8;
+    --color-ctg-tx-comercio: #dddddd;
+
+    /* Trabalho */
+    --color-ctg-bg-trabalho: #000000;
+    --color-ctg-tx-trabalho: #dddddd;
+
     /* Cores info relevancia */
     /* Crítica */
     --color-rlv-bg-critica: #FFD2BA;
@@ -88,75 +140,19 @@
 
 /* INFO MODALIDADE */
 [data-modalidade="Remoto"] .info__modalidade {
-  background-color: var(--color-modalidade-bg-remoto);
-  color: var(--color-modalidade-tx-remoto);
-  border: 1px solid var(--color-modalidade-tx-remoto);
+    background-color: var(--color-modalidade-bg-remoto);
+    color: var(--color-modalidade-tx-remoto);
+    border: 1px solid var(--color-modalidade-tx-remoto);
 }
 
 [data-modalidade="Presencial"] .info__modalidade {
-  background-color: var(--color-modalidade-bg-presencial);
-  color: var(--color-modalidade-tx-presencial);
-  border: 1px solid var(--color-modalidade-tx-presencial);
+    background-color: var(--color-modalidade-bg-presencial);
+    color: var(--color-modalidade-tx-presencial);
+    border: 1px solid var(--color-modalidade-tx-presencial);
 }
 
 
-    /* INFO CATEGORIA */
-[data-categoria="educacao"] .info__categoria {
- background-color:rgb(228, 228, 19) ;
- color:rgb(214, 223, 197) ;   }
-
-[data-categoria="vida_cotidiana"] .info__categoria  {
- background-color: orangered;
- color:rgb(255, 255, 255) ;   }
-
-[ddata-categoria="direito_cidadania"] .info__categoria  {
- background-color:brown ;
- color:rgb(255, 255, 255) ;   }
-
-
- [data-categoria="moradia"] .info__categoria  {
- background-color:rgb(226, 143, 66) ;
- color:#fdfdfd ;   }
-
- [data-categoria="tecnologia"] .info__categoria  {   
-    background-color:rgb(191, 241, 235) ;
- color:rgb(255, 255, 255) ;   }
-
- [data-categoria="transporte"] .info__categoria  { 
- background-color: yellowgreen;
- color:rgb(255, 255, 255) ;   }
-
- [data-categoria="financeiro"] .info__categoria  {
- background-color: gold;
- color:rgb(255, 255, 255) ;   }
-
- [data-categoria="animal"] .info__categoria  {
- background-color:rgb(243, 115, 136) ;
- color: rgb(255, 255, 255);   }
-
- [data-categoria="meio_ambiente"] .info__categoria  {
- background-color: green;
- color:rgb(255, 255, 255) ;   }
-
- [data-categoria="saude_mental"] .info__categoria  {
- background-color:grey ;
- color: white;   }
-
- [data-categoria="documentacao"] .info__categoria {
- background-color: burlywood;
- color:rgb(214, 197, 175) ;   }
-
- [data-categoria="comercio"] .info__categoria  {
- background-color: var(--color-ctg-tx-ciclone-furacao);
- color: white;   }
-
- [data-categoria="trabalho"] .info__categoria  {
- background-color:black ;
- color: white  }
-
- [data-categoria="saude"] .info__modalidade {
- background-color: blue;
- color: white;   }
+/* INFO CATEGORIA */
 
 [data-categoria="Inundação"] .info__categoria {
     background-color: var(--color-ctg-bg-inundacao);
@@ -201,6 +197,72 @@
 [data-categoria="Ciclone e furacão"] .info__categoria {
     background-color: var(--color-ctg-bg-ciclone-furacao);
     color: var(--color-ctg-tx-ciclone-furacao);
+}
+
+[data-categoria="Educação"] .info__categoria {
+    background-color: var(--color-ctg-bg-educacao);
+    color: var(--color-ctg-tx-educacao);
+}
+
+[data-categoria="Vida Cotidiana"] .info__categoria {
+    background-color: var(--color-ctg-bg-vida-cotidiana);
+    color: var(--color-ctg-tx-vida-cotidiana);
+}
+
+[data-categoria="Direito Cidadania"] .info__categoria {
+    background-color: var(--color-ctg-bg-direito-cidadania);
+    color: var(--color-ctg-tx-direito-cidadania);
+}
+
+
+[data-categoria="Moradia"] .info__categoria {
+    background-color: var(--color-ctg-bg-moradia);
+    color: var(--color-ctg-tx-moradia);
+}
+
+[data-categoria="Tecnologia"] .info__categoria {
+    background-color: var(--color-ctg-bg-tecnologia);
+    color: var(--color-ctg-tx-tecnologia);
+}
+
+[data-categoria="Transporte"] .info__categoria {
+    background-color: var(--color-ctg-bg-transporte);
+    color: var(--color-ctg-tx-transporte);
+}
+
+[data-categoria="Financeiro"] .info__categoria {
+    background-color: var(--color-ctg-bg-financeiro);
+    color: var(--color-ctg-tx-financeiro);
+}
+
+[data-categoria="Animal"] .info__categoria {
+    background-color: var(--color-ctg-bg-animal);
+    color: var(--color-ctg-tx-animal);
+}
+
+[data-categoria="Meio ambiente"] .info__categoria {
+    background-color: var(--color-ctg-bg-meio-ambiente);
+    color: var(--color-ctg-tx-meio-ambiente);
+}
+
+[data-categoria="Saúde mental"] .info__categoria {
+    background-color: var(--color-ctg-bg-saude-mental);
+    color: var(--color-ctg-tx-saude-mental);
+}
+
+[data-categoria="Documentação"] .info__categoria {
+    background-color: var(--color-ctg-bg-documentacao);
+    color: var(--color-ctg-tx-documentacao);
+}
+
+[data-categoria="Comércio"] .info__categoria {
+    background-color: var(--color-ctg-bg-comercio);
+    color: var(--color-ctg-tx-comercio);
+}
+
+[data-categoria="Trabalho"] .info__categoria {
+    background-color: var(--color-ctg-bg-trabalho);
+    color: var(--color-ctg-tx-trabalho);
 }
 
 /* INFO RELEVANCIA */
