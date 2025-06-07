@@ -99,7 +99,64 @@
   border: 1px solid var(--color-modalidade-tx-presencial);
 }
 
-/* INFO CATEGORIA */
+
+    /* INFO CATEGORIA */
+[data-categoria="educacao"] .info__categoria {
+ background-color:rgb(228, 228, 19) ;
+ color:rgb(214, 223, 197) ;   }
+
+[data-categoria="vida_cotidiana"] .info__categoria  {
+ background-color: orangered;
+ color:rgb(255, 255, 255) ;   }
+
+[ddata-categoria="direito_cidadania"] .info__categoria  {
+ background-color:brown ;
+ color:rgb(255, 255, 255) ;   }
+
+
+ [data-categoria="moradia"] .info__categoria  {
+ background-color:rgb(226, 143, 66) ;
+ color:#fdfdfd ;   }
+
+ [data-categoria="tecnologia"] .info__categoria  {   
+    background-color:rgb(191, 241, 235) ;
+ color:rgb(255, 255, 255) ;   }
+
+ [data-categoria="transporte"] .info__categoria  { 
+ background-color: yellowgreen;
+ color:rgb(255, 255, 255) ;   }
+
+ [data-categoria="financeiro"] .info__categoria  {
+ background-color: gold;
+ color:rgb(255, 255, 255) ;   }
+
+ [data-categoria="animal"] .info__categoria  {
+ background-color:rgb(243, 115, 136) ;
+ color: rgb(255, 255, 255);   }
+
+ [data-categoria="meio_ambiente"] .info__categoria  {
+ background-color: green;
+ color:rgb(255, 255, 255) ;   }
+
+ [data-categoria="saude_mental"] .info__categoria  {
+ background-color:grey ;
+ color: white;   }
+
+ [data-categoria="documentacao"] .info__categoria {
+ background-color: burlywood;
+ color:rgb(214, 197, 175) ;   }
+
+ [data-categoria="comercio"] .info__categoria  {
+ background-color: var(--color-ctg-tx-ciclone-furacao);
+ color: white;   }
+
+ [data-categoria="trabalho"] .info__categoria  {
+ background-color:black ;
+ color: white  }
+
+ [data-categoria="saude"] .info__modalidade {
+ background-color: blue;
+ color: white;   }
 
 [data-categoria="Inundação"] .info__categoria {
     background-color: var(--color-ctg-bg-inundacao);
