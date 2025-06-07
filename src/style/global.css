@@ -3,6 +3,10 @@
 @import url('../style/components/typografy.css');
 @import url('../style/components/button.css');
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 html, body {
   height: 100%;
   margin: 0;
